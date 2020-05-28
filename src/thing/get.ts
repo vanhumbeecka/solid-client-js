@@ -408,23 +408,23 @@ function findAll<Object extends Quad_Object>(
   return matched;
 }
 
-const getNamedNodeMatcher = function (
+function getNamedNodeMatcher(
   predicate: Iri | IriString
 ): Matcher<NamedNode> {
   const predicateNode = asNamedNode(predicate);
 
-  const matcher = function (quad: Quad): quad is QuadWithObject<NamedNode> {
+  const matcher = function matcher(quad: Quad): quad is QuadWithObject<NamedNode> {
     return predicateNode.equals(quad.predicate) && isNamedNode(quad.object);
   };
   return matcher;
 };
 
-const getLiteralMatcher = function (
+function getLiteralMatcher(
   predicate: Iri | IriString
 ): Matcher<Literal> {
   const predicateNode = asNamedNode(predicate);
 
-  const matcher = function (quad: Quad): quad is QuadWithObject<Literal> {
+  const matcher = function matcher (quad: Quad): quad is QuadWithObject<Literal> {
     return predicateNode.equals(quad.predicate) && isLiteral(quad.object);
   };
   return matcher;
@@ -433,13 +433,13 @@ const getLiteralMatcher = function (
 type LiteralOfType<Type extends XmlSchemaTypeIri> = Literal & {
   datatype: { value: Type };
 };
-const getLiteralOfTypeMatcher = function <Datatype extends XmlSchemaTypeIri>(
+function getLiteralOfTypeMatcher <Datatype extends XmlSchemaTypeIri>(
   predicate: Iri | IriString,
   datatype: Datatype
 ): Matcher<LiteralOfType<Datatype>> {
   const predicateNode = asNamedNode(predicate);
 
-  const matcher = function (
+  const matcher = function matcher(
     quad: Quad
   ): quad is QuadWithObject<LiteralOfType<Datatype>> {
     return (
@@ -455,13 +455,13 @@ type LiteralLocaleString = Literal & {
   datatype: { value: typeof xmlSchemaTypes.langString };
   language: string;
 };
-const getLocaleStringMatcher = function (
+function getLocaleStringMatcher(
   predicate: Iri | IriString,
   locale: string
 ): Matcher<LiteralLocaleString> {
   const predicateNode = asNamedNode(predicate);
 
-  const matcher = function (
+  const matcher = function matcher(
     quad: Quad
   ): quad is QuadWithObject<LiteralLocaleString> {
     return (
