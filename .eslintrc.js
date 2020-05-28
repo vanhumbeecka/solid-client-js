@@ -5,8 +5,15 @@ module.exports = {
     node: true,
   },
   extends: [
+    "airbnb",
+    "airbnb/hooks",
+    "airbnb-base",
     "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:jest/recommended",
+    "plugin:jest/style",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint"
   ],
   globals: {
     Atomics: "readonly",
@@ -15,16 +22,67 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: 2018,
+    ecmaFeatures: {
+      jsx: true,
+    },
     sourceType: "module",
     tsconfigRootDir: __dirname,
     project: ["./tsconfig.json"],
   },
-  plugins: ["@typescript-eslint"],
+  plugins: [
+    "react",
+    "@typescript-eslint",
+    "jest",
+    "prettier",
+    "import",
+  ],
   rules: {
-    // There's a TypeScript-specific version of this rule;
-    // we disable the generic one, because it thinks imported types are unused
-    // when they're not:
-    "no-unused-vars": "off",
-    "@typescript-eslint/no-floating-promises": "error",
+    // Make everything work with .ts and .tsx as well
+    "import/extensions": [2, {
+      js: "never",
+      ts: "never",
+      tsx: "never",
+    }],
+
+    // Allow devDeps in test files
+    "import/no-extraneous-dependencies": [0, {
+      "devDependencies": ["**/*.test.ts", "**/*.test.tsx"],
+    }],
+
+    "prettier/prettier": "error",
+
+    // Use .tsx for jsx files
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+
+    // Import react by default via webpack config
+    "react/react-in-jsx-scope": 0,
+
+    // Order the properties of react components nicely
+    "react/static-property-placement": [2, "static public field"],
+
+    // Allow Nextjs <Link> tags to contain a href attribute
+    "jsx-a11y/anchor-is-valid": ["error", {
+      "components": ["Link"],
+      "specialLink": ["hrefLeft", "hrefRight"],
+      "aspects": ["invalidHref", "preferButton"]
+    }],
+
+    // Make everything work with .tsx as well as .ts
+    "import/extensions": [2, {
+      js: "never",
+      ts: "never",
+      tsx: "never",
+    }],
+
+    "@typescript-eslint/no-empty-function": [
+      "error", { "allow": ["arrowFunctions"] }
+    ]
+  },
+  settings: {
+    "import/resolver": {
+      node: {
+        extensions: [".js", ".ts", ".tsx"],
+      },
+    },
   },
 };
