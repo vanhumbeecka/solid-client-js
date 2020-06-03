@@ -1,4 +1,5 @@
-import { acl, rdf } from "./constants";
+import { RDF } from "@inrupt/lit-generated-vocab-common";
+import { ACL } from "@inrupt/lit-generated-vocab-solid-common";
 import {
   fetchLitDataset,
   defaultFetchOptions,
@@ -160,7 +161,7 @@ export function internal_getAclRules(
 }
 
 function isAclRule(thing: Thing): thing is unstable_AclRule {
-  return getIriAll(thing, rdf.type).includes(acl.Authorization);
+  return getIriAll(thing, RDF.type).includes(ACL.Authorization.iriAsString);
 }
 
 /** @internal */
@@ -171,7 +172,7 @@ export function internal_getResourceAclRules(
 }
 
 function isResourceAclRule(aclRule: unstable_AclRule): boolean {
-  return getIriOne(aclRule, acl.accessTo) !== null;
+  return getIriOne(aclRule, ACL.accessTo) !== null;
 }
 
 /** @internal */
@@ -186,7 +187,7 @@ function appliesToResource(
   aclRule: unstable_AclRule,
   resource: IriString
 ): boolean {
-  return getIriAll(aclRule, acl.accessTo).includes(resource);
+  return getIriAll(aclRule, ACL.accessTo).includes(resource);
 }
 
 /** @internal */
@@ -197,7 +198,7 @@ export function internal_getDefaultAclRules(
 }
 
 function isDefaultAclRule(aclRule: unstable_AclRule): boolean {
-  return getIriOne(aclRule, acl.default) !== null;
+  return getIriOne(aclRule, ACL.default_) !== null;
 }
 
 /** @internal */
@@ -212,14 +213,14 @@ function isDefaultForResource(
   aclRule: unstable_AclRule,
   resource: IriString
 ): boolean {
-  return getIriAll(aclRule, acl.default).includes(resource);
+  return getIriAll(aclRule, ACL.default_).includes(resource);
 }
 
 /** @internal */
 export function internal_getAccessModes(
   rule: unstable_AclRule
 ): unstable_AccessModes {
-  const ruleAccessModes = getIriAll(rule, acl.mode);
+  const ruleAccessModes = getIriAll(rule, ACL.mode);
   const writeAccess = ruleAccessModes.includes(unstable_accessModes.write);
   return writeAccess
     ? {

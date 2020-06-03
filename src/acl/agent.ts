@@ -1,3 +1,4 @@
+import { ACL } from "@inrupt/lit-generated-vocab-solid-common";
 import {
   DatasetInfo,
   LitDataset,
@@ -8,7 +9,6 @@ import {
   unstable_AclRule,
 } from "../index";
 import { getIriOne, getIriAll } from "../thing/get";
-import { acl } from "../constants";
 import {
   internal_getAclRules,
   internal_getResourceAclRulesForResource,
@@ -184,7 +184,7 @@ function getAgentAclRulesForAgent(
 }
 
 function appliesToAgent(aclRule: unstable_AclRule, agent: WebId): boolean {
-  return getIriAll(aclRule, acl.agent).includes(agent);
+  return getIriAll(aclRule, ACL.agent).includes(agent);
 }
 
 function getAgentAclRules(aclRules: unstable_AclRule[]): unstable_AclRule[] {
@@ -192,7 +192,7 @@ function getAgentAclRules(aclRules: unstable_AclRule[]): unstable_AclRule[] {
 }
 
 function isAgentAclRule(aclRule: unstable_AclRule): boolean {
-  return getIriOne(aclRule, acl.agent) !== null;
+  return getIriOne(aclRule, ACL.agent) !== null;
 }
 
 function getAccessModesByAgent(
@@ -201,7 +201,7 @@ function getAccessModesByAgent(
   const agentAccess: unstable_AgentAccess = {};
 
   aclRules.forEach((rule) => {
-    const ruleAgents = getIriAll(rule, acl.agent);
+    const ruleAgents = getIriAll(rule, ACL.agent);
     const accessModes = internal_getAccessModes(rule);
 
     // A rule might apply to multiple agents. If multiple rules apply to the same agent, the Access
