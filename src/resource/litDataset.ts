@@ -21,7 +21,11 @@
 
 import { Quad, NamedNode } from "rdf-js";
 import { dataset, DataFactory } from "../rdfjs";
-import { turtleToTriples, triplesToTurtle } from "../formats/turtle";
+import {
+  turtleToTriples,
+  triplesToTurtle,
+  turtleParser,
+} from "../formats/turtle";
 import { isLocalNode, resolveIriForLocalNodes } from "../datatypes";
 import {
   UrlString,
@@ -34,6 +38,8 @@ import {
   unstable_WithAcl,
   Url,
   internal_toIriString,
+  RdfFormat,
+  RdfFormatPreference,
 } from "../interfaces";
 import {
   internal_parseResourceInfo,
@@ -41,6 +47,17 @@ import {
   internal_fetchAcl,
   getFetchedFrom,
 } from "./resource";
+
+const defaultTurtleParser = { parser: turtleParser, q: 1.0 };
+
+const supportedFormats: RdfFormat = new Map<string, RdfFormatPreference>();
+supportedFormats.set("text/turtle", defaultTurtleParser);
+
+const defaultDatasetFetchOptions: typeof internal_defaultFetchOptions & {
+  formats: RdfFormat;
+} = Object.assign(internal_defaultFetchOptions, {
+  formats: supportedFormats,
+});
 
 /**
  * Initialise a new [[LitDataset]] in memory.
@@ -61,23 +78,35 @@ export function createLitDataset(): LitDataset {
 export async function fetchLitDataset(
   url: UrlString | Url,
   options: Partial<
-    typeof internal_defaultFetchOptions
-  > = internal_defaultFetchOptions
+    typeof defaultDatasetFetchOptions
+  > = defaultDatasetFetchOptions
 ): Promise<LitDataset & WithResourceInfo> {
   url = internal_toIriString(url);
   const config = {
-    ...internal_defaultFetchOptions,
+    ...defaultDatasetFetchOptions,
     ...options,
   };
+  let preferredFormat = "text/turtle";
+  let preferredSerialization = defaultTurtleParser;
+  options.formats?.forEach((value, key) => {
+    if (value.q > preferredSerialization.q) {
+      preferredSerialization = value;
+      preferredFormat = key;
+    }
+  });
 
-  const response = await config.fetch(url);
+  const response = await config.fetch(url, {
+    headers: {
+      Accept: `${preferredFormat};q=${preferredSerialization.q}`,
+    },
+  });
   if (!response.ok) {
     throw new Error(
       `Fetching the Resource failed: ${response.status} ${response.statusText}.`
     );
   }
   const data = await response.text();
-  const triples = await turtleToTriples(data, url);
+  const triples = await preferredSerialization.parser.parse(data, url);
   const resource = dataset();
   triples.forEach((triple) => resource.add(triple));
 

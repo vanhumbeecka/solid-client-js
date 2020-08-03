@@ -248,3 +248,15 @@ export function unstable_hasAccessibleAcl<Resource extends WithResourceInfo>(
  * A RequestInit restriction where the method is set by the library
  */
 export type unstable_UploadRequestInit = Omit<RequestInit, "method">;
+
+export interface Parser {
+  parse: (input: string, base: IriString) => Promise<Quad[]>;
+}
+/**
+ * Indication of the parser and q value associated to an RDF serialization
+ */
+export type RdfFormatPreference = { parser: Parser; q: number };
+/**
+ * Association between RDF IANA identifiers and the associated preferences (parser and q value)
+ */
+export type RdfFormat = Map<string, RdfFormatPreference>;

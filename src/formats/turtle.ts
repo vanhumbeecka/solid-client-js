@@ -20,6 +20,7 @@
  */
 
 import { Writer, Parser } from "n3";
+import { Parser as InternalParser } from "../interfaces";
 import { Quad } from "rdf-js";
 import { IriString } from "../interfaces";
 import { DataFactory } from "../rdfjs";
@@ -78,3 +79,7 @@ export async function turtleToTriples(
 
   return parsingPromise;
 }
+
+export const turtleParser: InternalParser = {
+  parse: turtleToTriples,
+};
