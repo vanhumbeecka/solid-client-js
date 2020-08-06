@@ -351,11 +351,11 @@
 <div class="section" id="functions">
 <h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p><a class="reference external" href="_acl_class_.md#getpublicaccess">getPublicAccess</a></p></li>
-<li><p><a class="reference external" href="_acl_class_.md#getpublicdefaultaccess">getPublicDefaultAccess</a></p></li>
-<li><p><a class="reference external" href="_acl_class_.md#getpublicresourceaccess">getPublicResourceAccess</a></p></li>
-<li><p><a class="reference external" href="_acl_class_.md#setpublicdefaultaccess">setPublicDefaultAccess</a></p></li>
-<li><p><a class="reference external" href="_acl_class_.md#setpublicresourceaccess">setPublicResourceAccess</a></p></li>
+<li><p><a class="reference external" href="_acl_class_.html#getpublicaccess">getPublicAccess</a></p></li>
+<li><p><a class="reference external" href="_acl_class_.html#getpublicdefaultaccess">getPublicDefaultAccess</a></p></li>
+<li><p><a class="reference external" href="_acl_class_.html#getpublicresourceaccess">getPublicResourceAccess</a></p></li>
+<li><p><a class="reference external" href="_acl_class_.html#setpublicdefaultaccess">setPublicDefaultAccess</a></p></li>
+<li><p><a class="reference external" href="_acl_class_.html#setpublicresourceaccess">setPublicResourceAccess</a></p></li>
 </ul>
 </div>
 </div>
@@ -363,8 +363,8 @@
 <h2>Functions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="getpublicaccess">
 <h3>getPublicAccess<a class="headerlink" href="#getpublicaccess" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getPublicAccess</strong>(<code class="docutils literal notranslate"><span class="pre">resourceInfo</span></code>: WithAcl &amp; <a class="reference external" href="_interfaces_.md#withresourceinfo">WithResourceInfo</a>): <em><a class="reference external" href="_interfaces_.md#access">Access</a> | null</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/5e7b309/src/acl/class.ts#L59">acl/class.ts:59</a></em></p>
+<p>▸ <strong>getPublicAccess</strong>(<code class="docutils literal notranslate"><span class="pre">resourceInfo</span></code>: WithAcl &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>): <em><a class="reference external" href="_interfaces_.html#access">Access</a> | null</em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/74b18be/src/acl/class.ts#L59">acl/class.ts:59</a></em></p>
 <p>Find out what Access Modes have been granted to everyone for a given Resource.</p>
 <p>Keep in mind that this function will not tell you what access specific Agents have through other ACL rules, e.g. agent- or group-specific permissions.</p>
 <p>Also, please note that this function is still experimental: its API can change in non-major releases.</p>
@@ -380,23 +380,23 @@
 <tbody>
 <tr>
 <td><code>resourceInfo</code></td>
-<td>WithAcl &amp; <a href="_interfaces_.md#withresourceinfo">WithResourceInfo</a></td>
+<td>WithAcl &amp; <a href="_interfaces_.html#withresourceinfo">WithResourceInfo</a></td>
 <td>Information about the Resource to which the given Agent may have been granted access.</td>
 </tr>
 </tbody>
-</table><p><strong>Returns:</strong> <em><a class="reference external" href="_interfaces_.md#access">Access</a> | null</em></p>
+</table><p><strong>Returns:</strong> <em><a class="reference external" href="_interfaces_.html#access">Access</a> | null</em></p>
 <p>Which Access Modes have been granted to everyone for the given SolidDataset, or <code class="docutils literal notranslate"><span class="pre">null</span></code> if it could not be determined (e.g. because the current user does not have Control Access to a given Resource or its Container).</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="getpublicdefaultaccess">
 <h3>getPublicDefaultAccess<a class="headerlink" href="#getpublicdefaultaccess" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getPublicDefaultAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.md#acldataset">AclDataset</a>): <em><a class="reference external" href="_interfaces_.md#access">Access</a></em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/5e7b309/src/acl/class.ts#L109">acl/class.ts:109</a></em></p>
+<p>▸ <strong>getPublicDefaultAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a>): <em><a class="reference external" href="_interfaces_.html#access">Access</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/74b18be/src/acl/class.ts#L109">acl/class.ts:109</a></em></p>
 <p>Given an ACL SolidDataset, find out which access modes it provides to everyone for the associated Container Resource’s child Resources.</p>
 <p>Keep in mind that this function will not tell you:</p>
 <ul class="simple">
 <li><p>what access specific Agents have through other ACL rules, e.g. agent- or group-specific permissions.</p></li>
-<li><p>what access anyone has to the Container Resource itself (see <a class="reference external" href="_acl_class_.md#getpublicresourceaccess">getPublicResourceAccess</a> for that).</p></li>
+<li><p>what access anyone has to the Container Resource itself (see <a class="reference external" href="_acl_class_.html#getpublicresourceaccess">getPublicResourceAccess</a> for that).</p></li>
 </ul>
 <p>Also, please note that this function is still experimental: its API can change in non-major releases.</p>
 <p><strong>Parameters:</strong></p>
@@ -411,18 +411,18 @@
 <tbody>
 <tr>
 <td><code>aclDataset</code></td>
-<td><a href="_interfaces_.md#acldataset">AclDataset</a></td>
+<td><a href="_interfaces_.html#acldataset">AclDataset</a></td>
 <td>The SolidDataset that contains Access-Control List rules for a certain Container.</td>
 </tr>
 </tbody>
-</table><p><strong>Returns:</strong> <em><a class="reference external" href="_interfaces_.md#access">Access</a></em></p>
+</table><p><strong>Returns:</strong> <em><a class="reference external" href="_interfaces_.html#access">Access</a></em></p>
 <p>Which Access Modes have been granted to everyone for the children of the Container associated with the given ACL SolidDataset.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="getpublicresourceaccess">
 <h3>getPublicResourceAccess<a class="headerlink" href="#getpublicresourceaccess" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getPublicResourceAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.md#acldataset">AclDataset</a>): <em><a class="reference external" href="_interfaces_.md#access">Access</a></em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/5e7b309/src/acl/class.ts#L83">acl/class.ts:83</a></em></p>
+<p>▸ <strong>getPublicResourceAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a>): <em><a class="reference external" href="_interfaces_.html#access">Access</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/74b18be/src/acl/class.ts#L83">acl/class.ts:83</a></em></p>
 <p>Given an ACL SolidDataset, find out which access modes it provides to everyone for its associated Resource.</p>
 <p>Keep in mind that this function will not tell you:</p>
 <ul class="simple">
@@ -442,18 +442,18 @@
 <tbody>
 <tr>
 <td><code>aclDataset</code></td>
-<td><a href="_interfaces_.md#acldataset">AclDataset</a></td>
+<td><a href="_interfaces_.html#acldataset">AclDataset</a></td>
 <td>The SolidDataset that contains Access-Control List rules.</td>
 </tr>
 </tbody>
-</table><p><strong>Returns:</strong> <em><a class="reference external" href="_interfaces_.md#access">Access</a></em></p>
+</table><p><strong>Returns:</strong> <em><a class="reference external" href="_interfaces_.html#access">Access</a></em></p>
 <p>Which Access Modes have been granted to everyone for the Resource the given ACL SolidDataset is associated with.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="setpublicdefaultaccess">
 <h3>setPublicDefaultAccess<a class="headerlink" href="#setpublicdefaultaccess" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>setPublicDefaultAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.md#acldataset">AclDataset</a>, <code class="docutils literal notranslate"><span class="pre">access</span></code>: <a class="reference external" href="_interfaces_.md#access">Access</a>): <em><a class="reference external" href="_interfaces_.md#acldataset">AclDataset</a> &amp; WithChangeLog</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/5e7b309/src/acl/class.ts#L185">acl/class.ts:185</a></em></p>
+<p>▸ <strong>setPublicDefaultAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a>, <code class="docutils literal notranslate"><span class="pre">access</span></code>: <a class="reference external" href="_interfaces_.html#access">Access</a>): <em><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a> &amp; WithChangeLog</em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/74b18be/src/acl/class.ts#L185">acl/class.ts:185</a></em></p>
 <p>Given an ACL SolidDataset, modify the ACL Rules to set specific default Access Modes for the public.</p>
 <p>If the given ACL SolidDataset already includes ACL Rules that grant a certain set of default Access Modes
 to the public, those will be overridden by the given Access Modes.</p>
@@ -475,22 +475,22 @@ to the public, those will be overridden by the given Access Modes.</p>
 <tbody>
 <tr>
 <td><code>aclDataset</code></td>
-<td><a href="_interfaces_.md#acldataset">AclDataset</a></td>
+<td><a href="_interfaces_.html#acldataset">AclDataset</a></td>
 <td>The SolidDataset that contains Access-Control List rules.</td>
 </tr>
 <tr>
 <td><code>access</code></td>
-<td><a href="_interfaces_.md#access">Access</a></td>
+<td><a href="_interfaces_.html#access">Access</a></td>
 <td>The Access Modes to grant to the public.</td>
 </tr>
 </tbody>
-</table><p><strong>Returns:</strong> <em><a class="reference external" href="_interfaces_.md#acldataset">AclDataset</a> &amp; WithChangeLog</em></p>
+</table><p><strong>Returns:</strong> <em><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a> &amp; WithChangeLog</em></p>
 </div>
 <hr class="docutils" />
 <div class="section" id="setpublicresourceaccess">
 <h3>setPublicResourceAccess<a class="headerlink" href="#setpublicresourceaccess" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>setPublicResourceAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.md#acldataset">AclDataset</a>, <code class="docutils literal notranslate"><span class="pre">access</span></code>: <a class="reference external" href="_interfaces_.md#access">Access</a>): <em><a class="reference external" href="_interfaces_.md#acldataset">AclDataset</a> &amp; WithChangeLog</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/5e7b309/src/acl/class.ts#L138">acl/class.ts:138</a></em></p>
+<p>▸ <strong>setPublicResourceAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a>, <code class="docutils literal notranslate"><span class="pre">access</span></code>: <a class="reference external" href="_interfaces_.html#access">Access</a>): <em><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a> &amp; WithChangeLog</em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/74b18be/src/acl/class.ts#L138">acl/class.ts:138</a></em></p>
 <p>Given an ACL SolidDataset, modify the ACL Rules to set specific Access Modes for the public.</p>
 <p>If the given ACL SolidDataset already includes ACL Rules that grant a certain set of Access Modes
 to the public, those will be overridden by the given Access Modes.</p>
@@ -512,16 +512,16 @@ to the public, those will be overridden by the given Access Modes.</p>
 <tbody>
 <tr>
 <td><code>aclDataset</code></td>
-<td><a href="_interfaces_.md#acldataset">AclDataset</a></td>
+<td><a href="_interfaces_.html#acldataset">AclDataset</a></td>
 <td>The SolidDataset that contains Access-Control List rules.</td>
 </tr>
 <tr>
 <td><code>access</code></td>
-<td><a href="_interfaces_.md#access">Access</a></td>
+<td><a href="_interfaces_.html#access">Access</a></td>
 <td>The Access Modes to grant to the public.</td>
 </tr>
 </tbody>
-</table><p><strong>Returns:</strong> <em><a class="reference external" href="_interfaces_.md#acldataset">AclDataset</a> &amp; WithChangeLog</em></p>
+</table><p><strong>Returns:</strong> <em><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a> &amp; WithChangeLog</em></p>
 </div>
 </div>
 </div>
