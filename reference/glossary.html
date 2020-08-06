@@ -253,10 +253,22 @@ system.</p>
 <code class="docutils literal notranslate"><span class="pre">https://cleopatra.solid.community/profile/</span></code> and
 <code class="docutils literal notranslate"><span class="pre">https://cleopatra.solid.community/</span></code> are Containers.</p>
 </dd>
+<dt id="term-Default-access">Default access</dt><dd><p>Rules defining <a class="reference internal" href="#term-Access-Modes"><span class="xref std std-term">Access Modes</span></a> that apply not to the <a class="reference internal" href="#term-Container"><span class="xref std std-term">Container</span></a>
+Resource directly, but are inherited by its children, their children if
+applicable, and so forth.</p>
+</dd>
+<dt id="term-Fallback-ACL">Fallback ACL</dt><dd><p>If a <a class="reference internal" href="#term-Resource"><span class="xref std std-term">Resource</span></a> does not have a <a class="reference internal" href="#term-Resource-ACL"><span class="xref std std-term">Resource ACL</span></a>:, the Fallback
+ACL is the <a class="reference internal" href="#term-ACL"><span class="xref std std-term">ACL</span></a> of the <a class="reference internal" href="#term-Container"><span class="xref std std-term">Container</span></a> closest to that Resource
+that has its own Resource ACL. Only the <a class="reference internal" href="#term-Default-access"><span class="xref std std-term">Default access</span></a> rules in
+the Fallback ACL apply.</p>
+</dd>
 <dt id="term-Pod">Pod</dt><dd><p>Storage location for your data. You manage the
 access to data stored in your Pod.</p>
 </dd>
 <dt id="term-Resource">Resource</dt><dd><p>The thing sent to you when you type a URL into a web browser.</p>
+</dd>
+<dt id="term-Resource-ACL">Resource ACL</dt><dd><p>The <a class="reference internal" href="#term-ACL"><span class="xref std std-term">ACL</span></a> that applies to a given <a class="reference internal" href="#term-Resource"><span class="xref std std-term">Resource</span></a>. If none exists,
+the <a class="reference internal" href="#term-Fallback-ACL"><span class="xref std std-term">Fallback ACL</span></a> applies.</p>
 </dd>
 <dt id="term-Read-Access">Read Access</dt><dd><p>When an <a class="reference internal" href="#term-ACL"><span class="xref std std-term">ACL</span></a> grants Read access, the grantee is allowed to
 view the contents of the applicable <a class="reference internal" href="#term-Resource"><span class="xref std std-term">Resource</span></a>.</p>
