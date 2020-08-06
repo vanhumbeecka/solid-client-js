@@ -258,7 +258,7 @@
 <p>This page provides information on reading and writing structured data
 stored in <a class="reference external" href="https://solidproject.org/">Solid</a> Pods. For information on
 reading and writing files (e.g., <code class="docutils literal notranslate"><span class="pre">.jpg</span></code> or <code class="docutils literal notranslate"><span class="pre">.json</span></code>) stored in
-<a class="reference external" href="https://solidproject.org/">Solid</a> Pods, see <a class="reference internal" href="read-write-files.html"><span class="doc">Read/Write Files</span></a>.</p>
+Solid Pods, see <a class="reference internal" href="read-write-files.html"><span class="doc">Read/Write Files</span></a>.</p>
 <p>When accessing data with <code class="docutils literal notranslate"><span class="pre">solid-client</span></code>,</p>
 <ul>
 <li><p>A <a class="reference internal" href="../reference/glossary.html#term-Thing"><span class="xref std std-term">Thing</span></a> refers to a data entity;
@@ -268,12 +268,12 @@ acts as its identifier.</p>
 to combine data, you can use a <code class="docutils literal notranslate"><span class="pre">Thing</span></code>’s URL to link to other data.</p>
 </li>
 <li><p>A <a class="reference internal" href="../reference/glossary.html#term-SolidDataset"><span class="xref std std-term">SolidDataset</span></a> is a set of <a class="reference internal" href="../reference/glossary.html#term-Thing"><span class="xref std std-term">Thing</span></a>s. Each
-<a class="reference internal" href="../reference/glossary.html#term-SolidDataset"><span class="xref std std-term">SolidDataset</span></a> ‘s URL acts as its identifier.</p>
+<a class="reference internal" href="../reference/glossary.html#term-SolidDataset"><span class="xref std std-term">SolidDataset</span></a>’s URL acts as its identifier.</p>
 <p>Typically, all <code class="docutils literal notranslate"><span class="pre">Thing</span></code>s in a <code class="docutils literal notranslate"><span class="pre">SolidDataset</span></code> have URLs relative
 to the <code class="docutils literal notranslate"><span class="pre">SolidDataset</span></code>’s URL.</p>
 </li>
 </ul>
-<p>From a <a class="reference internal" href="../reference/glossary.html#term-Thing"><span class="xref std std-term">Thing</span></a>, you can access specific property (i.e., data)
+<p>From a <a class="reference internal" href="../reference/glossary.html#term-Thing"><span class="xref std std-term">Thing</span></a>, you can access specific properties (i.e., data)
 about the Thing. For example, if a Thing represents a person’s contact
 information, specific properties for a person may include the person’s
 name, email addresses, etc. Each property’s URL acts as its identifier.</p>
@@ -295,7 +295,7 @@ use in your application when accessing data.</p>
 user who has been <a class="reference internal" href="manage-access-control-list.html"><span class="doc">granted appropriate access</span></a> to that data. For example, to
 write to a resource, the user must have <a class="reference internal" href="../reference/glossary.html#term-Write-Access"><span class="xref std std-term">Write Access</span></a> on the
 Resource.</p>
-<p>To authenticate, you can use Inrupt <a class="reference external" href="https://www.npmjs.com/package/&#64;inrupt/solid-client-authn">solid-client-authn</a> libraries.
+<p>To authenticate, you can use the Inrupt <a class="reference external" href="https://www.npmjs.com/package/&#64;inrupt/solid-client-authn">solid-client-authn</a> library.
 After authenticating with <code class="docutils literal notranslate"><span class="pre">solid-client-authn</span></code>, <code class="docutils literal notranslate"><span class="pre">solid-client</span></code> picks up
 the authenticated session and includes the user’s credentials with each
 request.</p>
@@ -328,7 +328,7 @@ request.</p>
 <div class="section" id="read-data">
 <h2>Read Data<a class="headerlink" href="#read-data" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span>
-  <span class="nx">fetchSolidDataset</span><span class="p">,</span>
+  <span class="nx">getSolidDataset</span><span class="p">,</span>
   <span class="nx">getThing</span><span class="p">,</span>
   <span class="nx">getStringNoLocale</span><span class="p">,</span>
 <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@inrupt/solid-client&quot;</span><span class="p">;</span>
@@ -338,7 +338,7 @@ request.</p>
 <span class="cm">   1. Fetch the Dataset located at the specified URL. </span>
 <span class="cm">*/</span>
 
-<span class="kr">const</span> <span class="nx">profileResource</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetchSolidDataset</span><span class="p">(</span>
+<span class="kr">const</span> <span class="nx">profileResource</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">getSolidDataset</span><span class="p">(</span>
   <span class="s2">&quot;https://docs-example.inrupt.net/profile/card&quot;</span>
 <span class="p">);</span>
 
@@ -358,7 +358,7 @@ request.</p>
 </div>
 <p>To read data with <code class="docutils literal notranslate"><span class="pre">solid-client</span></code>,</p>
 <ol class="arabic simple">
-<li><p>You first use <a class="reference internal" href="../api/modules/_resource_soliddataset_.html"><span class="doc">fetchSolidDataset</span></a> to fetch the dataset
+<li><p>You first use <a class="reference internal" href="../api/modules/_resource_soliddataset_.html"><span class="doc">getSolidDataset</span></a> to fetch the dataset
 from which you want to read your data.</p></li>
 <li><p>Then, use either:</p>
 <ul class="simple">
@@ -375,13 +375,13 @@ functions, see <a class="reference internal" href="../api/modules/_thing_get_.ht
 <h3>1. Fetch the Dataset<a class="headerlink" href="#fetch-the-dataset" title="Permalink to this headline">¶</a></h3>
 <p>To access data, first fetch the dataset (<code class="docutils literal notranslate"><span class="pre">SolidDataset</span></code>) that contains
 the data. To fetch a <code class="docutils literal notranslate"><span class="pre">SolidDataset</span></code>, pass its URL to
-<a class="reference internal" href="../api/modules/_resource_soliddataset_.html"><span class="doc">fetchSolidDataset</span></a> as
+<a class="reference internal" href="../api/modules/_resource_soliddataset_.html"><span class="doc">getSolidDataset</span></a> as
 in the following example:</p>
-<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">fetchSolidDataset</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@inrupt/solid-client&quot;</span><span class="p">;</span>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">getSolidDataset</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@inrupt/solid-client&quot;</span><span class="p">;</span>
 
 <span class="c1">// Fetch the Dataset located at the specified URL.</span>
 
-<span class="kr">const</span> <span class="nx">myDataset</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetchSolidDataset</span><span class="p">(</span>
+<span class="kr">const</span> <span class="nx">myDataset</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">getSolidDataset</span><span class="p">(</span>
   <span class="s2">&quot;https://example.com/some/interesting/resource&quot;</span>
 <span class="p">);</span>
 </pre></div>
@@ -539,7 +539,7 @@ existing data.</p></li>
 Instead, it creates a new object based on the provided object.</p>
 <p>As such, the various add/set/remove functions do not modify the
 passed-in object. Instead, these functions return a new object
-with the requested changes, and the passed-in object remain
+with the requested changes, and the passed-in object remains
 <strong>unchanged</strong>.</p>
 </div>
 <div class="section" id="create-thing-with-updated-data">
@@ -622,7 +622,7 @@ in its URL as well as the updated dataset.</p>
   <span class="nx">updatedDataset</span>
 </pre></div>
 </div>
-<p>If the given URL already contains a dataset, the dataset is replaced
+<p>If the given URL already contains a dataset, that dataset is replaced
 with the updated dataset.</p>
 <div class="toctree-wrapper compound">
 </div>

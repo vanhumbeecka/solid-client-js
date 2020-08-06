@@ -212,16 +212,6 @@
             <a href="#delete-a-file" class="nav-link">Delete a File</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#customize-requests" class="nav-link">Customize Requests</a><ul class="nav section-nav flex-column">
-                
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#restrictions" class="nav-link">Restrictions</a>
-        </li>
-    
-            </ul>
-        </li>
-    
     </ul>
 </nav>
 
@@ -253,10 +243,10 @@
   <div class="section" id="read-write-files">
 <h1>Read/Write Files<a class="headerlink" href="#read-write-files" title="Permalink to this headline">¶</a></h1>
 <p>Even if the core Solid data model is <strong>structured</strong> data (see
-<a class="reference internal" href="read-write-data.html"><span class="doc">Read/Write Data</span></a>, a Solid Pod can also act as a regular
+<a class="reference internal" href="read-write-data.html"><span class="doc">Read/Write Data</span></a>), a Solid Pod can also act as a regular
 general-purpose data store. Besides your profile document, your friend
 list and the likes, your Pod can also store your photos, PDFs and any
-other type of file. Note that the <a class="reference internal" href="manage-access-control-list.html"><span class="doc">access restrictions</span></a>) apply to files the same way
+other type of file. Note that the <a class="reference internal" href="manage-access-control-list.html"><span class="doc">access restrictions</span></a> apply to files the same way
 they apply to any other <a class="reference internal" href="../reference/glossary.html#term-Resource"><span class="xref std std-term">Resource</span></a>.</p>
 <p>Like anything else in your Pod, each file is a resource with a distinct
 URL, which may or may not contain a hint such as a <code class="docutils literal notranslate"><span class="pre">.jpg</span></code> extension
@@ -269,16 +259,16 @@ the functions is returned as a <a class="reference external" href="https://devel
 <p>Reading a file is just a matter of fetching the content available at a certain URL. You get a <cite>Response</cite> in return, which contains
 the fetched file as a blob. It is then up to you to decode it appropriately.</p>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span>
-  <span class="nx">fetchFile</span><span class="p">,</span>
+  <span class="nx">getFile</span><span class="p">,</span>
   <span class="nx">isRawData</span><span class="p">,</span>
   <span class="nx">getContentType</span><span class="p">,</span>
   <span class="nx">getSourceUrl</span><span class="p">,</span>
 <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@inrupt/solid-client&quot;</span><span class="p">;</span>
 
-<span class="kr">const</span> <span class="nx">file</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetchFile</span><span class="p">(</span>
+<span class="kr">const</span> <span class="nx">file</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">getFile</span><span class="p">(</span>
   <span class="s2">&quot;https://example.com/some/interesting/file&quot;</span>
 <span class="p">);</span>
-<span class="c1">// file is a Blob (see https://developer.mozilla.org/en-US/docs/Web/API/Blob)</span>
+<span class="c1">// file is a Blob (see https://developer.mozilla.org/docs/Web/API/Blob)</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
   <span class="sb">`Fetched a </span><span class="si">${</span><span class="nx">getContentType</span><span class="p">(</span><span class="nx">file</span><span class="p">)</span><span class="si">}</span><span class="sb"> file from </span><span class="si">${</span><span class="nx">getSourceUrl</span><span class="p">(</span><span class="nx">file</span><span class="p">)</span><span class="si">}</span><span class="sb">.`</span>
 <span class="p">);</span>
@@ -290,7 +280,7 @@ the fetched file as a blob. It is then up to you to decode it appropriately.</p>
 <h2>Write a File<a class="headerlink" href="#write-a-file" title="Permalink to this headline">¶</a></h2>
 <p>There are two approaches to writing files:</p>
 <ol class="arabic simple">
-<li><p>you know exactly at which URL your file should be saved (potentially overwriting any data that sat there previously)</p></li>
+<li><p>you know exactly at which URL your file should be saved (potentially overwriting any data that sat there previously).</p></li>
 <li><p>you know what [Container](../glossary#container) should be the parent of your file, like saving it into a folder.</p></li>
 </ol>
 <div class="section" id="write-a-file-directly-at-a-url">
@@ -305,7 +295,7 @@ the fetched file as a blob. It is then up to you to decode it appropriately.</p>
   <span class="c1">// Buffer.from(&quot;This is a plain piece of text&quot;, &quot;utf8&quot;), { type: &quot;plain/text&quot; })</span>
 <span class="p">);</span>
 <span class="k">if</span> <span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;File saved !&quot;</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;File saved!&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -313,72 +303,34 @@ the fetched file as a blob. It is then up to you to decode it appropriately.</p>
 <div class="section" id="save-a-file-into-a-parent-resource">
 <h3>Save a file into a parent resource<a class="headerlink" href="#save-a-file-into-a-parent-resource" title="Permalink to this headline">¶</a></h3>
 <p>With this approach, you kindly ask the server to come up with a name for your file, potentially using a <cite>slug</cite> if you
-provide one. Note that there is no guarantee about how the server will use the <cite>slug</cite>, if at all. In any case, if the <cite>slug</cite>
+provide one. Note that there is no guarantee about how the server will use the slug, if at all. In any case, if the slug
 you provide matches a file that already exists under the same target resource, the server will create a new name for your
 file so that no content is overwritten.</p>
 <p>This means that you don’t control the final name of your file though. To keep track of the name the server gave to your
-file, you’ll have to look up the <cite>Location</cite> header in the response, as shown in the code snippet below:</p>
-<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">saveFileInContainer</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@inrupt/solid-client&quot;</span><span class="p">;</span>
+file, you’ll have extract it from the return value, as shown in the code snippet below:</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">saveFileInContainer</span><span class="p">,</span> <span class="nx">getSourceUrl</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@inrupt/solid-client&quot;</span><span class="p">;</span>
 
-<span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">saveFileInContainer</span><span class="p">(</span>
+<span class="kr">const</span> <span class="nx">savedFile</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">saveFileInContainer</span><span class="p">(</span>
   <span class="s2">&quot;https://example.com/some/folder&quot;</span><span class="p">,</span>
   <span class="k">new</span> <span class="nx">Blob</span><span class="p">([</span><span class="s2">&quot;This is a plain piece of text&quot;</span><span class="p">],</span> <span class="p">{</span> <span class="nx">type</span><span class="o">:</span> <span class="s2">&quot;plain/text&quot;</span> <span class="p">}),</span>
   <span class="p">{</span> <span class="nx">slug</span><span class="o">:</span> <span class="s2">&quot;new-file&quot;</span> <span class="p">}</span>
 <span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">headers</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">headers</span><span class="p">;</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`File saved at </span><span class="si">${</span><span class="nx">headers</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;Location&quot;</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`File saved at </span><span class="si">${</span><span class="nx">getSourceUrl</span><span class="p">(</span><span class="nx">savedFile</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
 </pre></div>
 </div>
-<p>Note that the returned <cite>Location</cite> will be relative to the server’s origin, so in the previous example <cite>Location</cite> might
-be <cite>/some/folder/new-file-3869a250</cite>, which means the file is saved at the URL <cite>https://example.com/some/folder/new-file-3869a250</cite>.</p>
 </div>
 </div>
 <div class="section" id="delete-a-file">
 <h2>Delete a File<a class="headerlink" href="#delete-a-file" title="Permalink to this headline">¶</a></h2>
 <p>Deleting a file is also a simple operation: you just erase the content available at a certain URL.</p>
-<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">fetchFile</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@inrupt/solid-client&quot;</span><span class="p">;</span>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">deleteFile</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@inrupt/solid-client&quot;</span><span class="p">;</span>
 
-<span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">deleteFile</span><span class="p">(</span>
+<span class="nx">await</span> <span class="nx">deleteFile</span><span class="p">(</span>
   <span class="s2">&quot;https://example.com/some/boring/file&quot;</span>
 <span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;File deleted !&quot;</span><span class="p">);</span>
-<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;File deleted !&quot;</span><span class="p">);</span>
 </pre></div>
-</div>
-</div>
-<div class="section" id="customize-requests">
-<h2>Customize Requests<a class="headerlink" href="#customize-requests" title="Permalink to this headline">¶</a></h2>
-<p>If you need to customize the request eventually sent to the server, you
-can do so by using the optional <code class="docutils literal notranslate"><span class="pre">init</span></code> parameter. <code class="docutils literal notranslate"><span class="pre">init</span></code> conforms
-to the <a class="reference external" href="https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters">init parameter</a> of the <code class="docutils literal notranslate"><span class="pre">fetch</span></code> API.</p>
-<p>For instance, the following example sets a custom header:</p>
-<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">fetchFile</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@inrupt/solid-client&quot;</span><span class="p">;</span>
-
-<span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">deleteFile</span><span class="p">(</span>
-  <span class="s2">&quot;https://example.com/some/boring/file&quot;</span><span class="p">,</span>
-  <span class="p">{</span>
-    <span class="nx">init</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">headers</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;My-Custom-Header&quot;</span><span class="o">:</span> <span class="s2">&quot;Some fancy value&quot;</span><span class="p">,</span>
-      <span class="p">},</span>
-    <span class="p">},</span>
-  <span class="p">}</span>
-<span class="p">);</span>
-</pre></div>
-</div>
-<div class="section" id="restrictions">
-<h3>Restrictions<a class="headerlink" href="#restrictions" title="Permalink to this headline">¶</a></h3>
-<p>The following settings are reserved for the <code class="docutils literal notranslate"><span class="pre">solid-client</span></code> library and
-should not be set manually in the <code class="docutils literal notranslate"><span class="pre">init</span></code>:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">method</span></code> request method</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Content-Type</span></code> request header</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">Slug</span></code> request header</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">If-None-Match</span></code> request header</p></li>
-</ul>
 </div>
 </div>
 </div>

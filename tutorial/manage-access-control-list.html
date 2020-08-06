@@ -269,9 +269,9 @@ and retrieving a Resource with its ACL may result in extra HTTP
 requests being sent.</p>
 <div class="topic">
 <p class="topic-title">Trusted Applications</p>
-<p>An application can access a Resource’s or Container’s ACL only if an
-Authenticated User with <a class="reference internal" href="../reference/glossary.html#term-Control-Access"><span class="xref std std-term">Control Access</span></a> to
-the applicable Resource or Container has authorized the application
+<p>An application can access a Resource’s or Container’s ACL only if the
+Authenticated User has <a class="reference internal" href="../reference/glossary.html#term-Control-Access"><span class="xref std std-term">Control Access</span></a> to
+the applicable Resource or Container, and has authorized the application
 to manage access on their behalf.</p>
 </div>
 </div>
@@ -284,7 +284,7 @@ The returned value includes the Resource data, the <code class="docutils literal
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <a class="reference internal" href="../api/modules/_resource_soliddataset_.html"><span class="doc">getSolidDatasetWithAcl</span></a> function
-may result in extra HTTP requests being sent.</p>
+may result in many extra HTTP requests being sent.</p>
 </div>
 <div class="section" id="read-public-access">
 <h3>Read Public Access<a class="headerlink" href="#read-public-access" title="Permalink to this headline">¶</a></h3>
