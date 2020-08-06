@@ -369,7 +369,7 @@
   
               <div>
                 
-  <p><a class="reference internal" href="../README.html"><span class="doc">&#64;inrupt/solid-client</span></a> › <a class="reference internal" href="#"><span class="doc">“acl/agent”</span></a></p>
+  <p><a class="reference internal" href="../README.html"><span class="doc std std-doc">&#64;inrupt/solid-client</span></a> › <a class="reference internal" href="#"><span class="doc std std-doc">“acl/agent”</span></a></p>
 <div class="section" id="module-acl-agent">
 <h1>Module: “acl/agent”<a class="headerlink" href="#module-acl-agent" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="index">
@@ -399,7 +399,7 @@
 <div class="section" id="agentaccess">
 <h3>AgentAccess<a class="headerlink" href="#agentaccess" title="Permalink to this headline">¶</a></h3>
 <p>Ƭ <strong>AgentAccess</strong>: <em>Record‹<a class="reference external" href="_interfaces_.html#webid">WebId</a>, <a class="reference external" href="_interfaces_.html#access">Access</a>›</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/68c1086/src/acl/agent.ts#L58">acl/agent.ts:58</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/db8593f/src/acl/agent.ts#L58">acl/agent.ts:58</a></em></p>
 <p>Please note that the Web Access Control specification is not yet finalised, and hence, this
 interface is still experimental and can change in a non-major release.</p>
 </div>
@@ -409,15 +409,29 @@ interface is still experimental and can change in a non-major release.</p>
 <div class="section" id="getagentaccess">
 <h3>getAgentAccess<a class="headerlink" href="#getagentaccess" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getAgentAccess</strong>(<code class="docutils literal notranslate"><span class="pre">resourceInfo</span></code>: WithAcl &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>, <code class="docutils literal notranslate"><span class="pre">agent</span></code>: <a class="reference external" href="_interfaces_.html#webid">WebId</a>): <em><a class="reference external" href="_interfaces_.html#access">Access</a> | null</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/68c1086/src/acl/agent.ts#L71">acl/agent.ts:71</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/db8593f/src/acl/agent.ts#L71">acl/agent.ts:71</a></em></p>
 <p>Find out what Access Modes have been granted to a given Agent specifically for a given Resource.</p>
 <p>Keep in mind that this function will not tell you what access the given Agent has through other ACL rules, e.g. public or group-specific permissions.</p>
 <p>Also, please note that this function is still experimental: its API can change in non-major releases.</p>
 <p><strong>Parameters:</strong></p>
-<p>Name | Type | Description |
-—— | —— | —— |
-<code class="docutils literal notranslate"><span class="pre">resourceInfo</span></code> | WithAcl &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a> | Information about the Resource to which the given Agent may have been granted access. |
-<code class="docutils literal notranslate"><span class="pre">agent</span></code> | <a class="reference external" href="_interfaces_.html#webid">WebId</a> | WebID of the Agent for which to retrieve what access it has to the Resource. |</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">resourceInfo</span></code></p></td>
+<td><p>WithAcl &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a></p></td>
+<td><p>Information about the Resource to which the given Agent may have been granted access.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">agent</span></code></p></td>
+<td><p><a class="reference external" href="_interfaces_.html#webid">WebId</a></p></td>
+<td><p>WebID of the Agent for which to retrieve what access it has to the Resource.</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong> <em><a class="reference external" href="_interfaces_.html#access">Access</a> | null</em></p>
 <p>Which Access Modes have been granted to the Agent specifically for the given SolidDataset, or <code class="docutils literal notranslate"><span class="pre">null</span></code> if it could not be determined (e.g. because the current user does not have Control Access to a given Resource or its Container).</p>
 </div>
@@ -425,14 +439,25 @@ interface is still experimental and can change in a non-major release.</p>
 <div class="section" id="getagentaccessall">
 <h3>getAgentAccessAll<a class="headerlink" href="#getagentaccessall" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getAgentAccessAll</strong>(<code class="docutils literal notranslate"><span class="pre">resourceInfo</span></code>: WithAcl &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>): <em><a class="reference external" href="_acl_agent_.html#agentaccess">AgentAccess</a> | null</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/68c1086/src/acl/agent.ts#L94">acl/agent.ts:94</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/db8593f/src/acl/agent.ts#L94">acl/agent.ts:94</a></em></p>
 <p>Find out what Access Modes have been granted to specific Agents for a given Resource.</p>
 <p>Keep in mind that this function will not tell you what access arbitrary Agents might have through other ACL rules, e.g. public or group-specific permissions.</p>
 <p>Also, please note that this function is still experimental: its API can change in non-major releases.</p>
 <p><strong>Parameters:</strong></p>
-<p>Name | Type | Description |
-—— | —— | —— |
-<code class="docutils literal notranslate"><span class="pre">resourceInfo</span></code> | WithAcl &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a> | Information about the Resource to which Agents may have been granted access. |</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">resourceInfo</span></code></p></td>
+<td><p>WithAcl &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a></p></td>
+<td><p>Information about the Resource to which Agents may have been granted access.</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong> <em><a class="reference external" href="_acl_agent_.html#agentaccess">AgentAccess</a> | null</em></p>
 <p>Which Access Modes have been granted to which Agents specifically for the given SolidDataset, or <code class="docutils literal notranslate"><span class="pre">null</span></code> if it could not be determined (e.g. because the current user does not have Control Access to a given Resource or its Container).</p>
 </div>
@@ -440,7 +465,7 @@ interface is still experimental and can change in a non-major release.</p>
 <div class="section" id="getagentdefaultaccess">
 <h3>getAgentDefaultAccess<a class="headerlink" href="#getagentdefaultaccess" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getAgentDefaultAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a>, <code class="docutils literal notranslate"><span class="pre">agent</span></code>: <a class="reference external" href="_interfaces_.html#webid">WebId</a>): <em><a class="reference external" href="_interfaces_.html#access">Access</a></em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/68c1086/src/acl/agent.ts#L222">acl/agent.ts:222</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/db8593f/src/acl/agent.ts#L222">acl/agent.ts:222</a></em></p>
 <p>Given an ACL SolidDataset, find out which access modes it provides to an Agent for the associated Container Resource’s child Resources.</p>
 <p>Keep in mind that this function will not tell you:</p>
 <ul class="simple">
@@ -449,10 +474,24 @@ interface is still experimental and can change in a non-major release.</p>
 </ul>
 <p>Also, please note that this function is still experimental: its API can change in non-major releases.</p>
 <p><strong>Parameters:</strong></p>
-<p>Name | Type | Description |
-—— | —— | —— |
-<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code> | <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a> | The SolidDataset that contains Access-Control List rules for a certain Container. |
-<code class="docutils literal notranslate"><span class="pre">agent</span></code> | <a class="reference external" href="_interfaces_.html#webid">WebId</a> | WebID of the Agent for which to retrieve what access it has to the Container’s children. |</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aclDataset</span></code></p></td>
+<td><p><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a></p></td>
+<td><p>The SolidDataset that contains Access-Control List rules for a certain Container.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">agent</span></code></p></td>
+<td><p><a class="reference external" href="_interfaces_.html#webid">WebId</a></p></td>
+<td><p>WebID of the Agent for which to retrieve what access it has to the Container’s children.</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong> <em><a class="reference external" href="_interfaces_.html#access">Access</a></em></p>
 <p>Which Access Modes have been granted to the Agent specifically for the children of the Container associated with the given ACL SolidDataset.</p>
 </div>
@@ -460,7 +499,7 @@ interface is still experimental and can change in a non-major release.</p>
 <div class="section" id="getagentdefaultaccessall">
 <h3>getAgentDefaultAccessAll<a class="headerlink" href="#getagentdefaultaccessall" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getAgentDefaultAccessAll</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a>): <em><a class="reference external" href="_acl_agent_.html#agentaccess">AgentAccess</a></em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/68c1086/src/acl/agent.ts#L248">acl/agent.ts:248</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/db8593f/src/acl/agent.ts#L248">acl/agent.ts:248</a></em></p>
 <p>Given an ACL SolidDataset, find out which access modes it provides to specific Agents for the associated Container Resource’s child Resources.</p>
 <p>Keep in mind that this function will not tell you:</p>
 <ul class="simple">
@@ -469,9 +508,20 @@ interface is still experimental and can change in a non-major release.</p>
 </ul>
 <p>Also, please note that this function is still experimental: its API can change in non-major releases.</p>
 <p><strong>Parameters:</strong></p>
-<p>Name | Type | Description |
-—— | —— | —— |
-<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code> | <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a> | The SolidDataset that contains Access-Control List rules. |</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aclDataset</span></code></p></td>
+<td><p><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a></p></td>
+<td><p>The SolidDataset that contains Access-Control List rules.</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong> <em><a class="reference external" href="_acl_agent_.html#agentaccess">AgentAccess</a></em></p>
 <p>Which Access Modes have been granted to which Agents specifically for the children of the Container associated with the given ACL SolidDataset.</p>
 </div>
@@ -479,7 +529,7 @@ interface is still experimental and can change in a non-major release.</p>
 <div class="section" id="getagentresourceaccess">
 <h3>getAgentResourceAccess<a class="headerlink" href="#getagentresourceaccess" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getAgentResourceAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a>, <code class="docutils literal notranslate"><span class="pre">agent</span></code>: <a class="reference external" href="_interfaces_.html#webid">WebId</a>): <em><a class="reference external" href="_interfaces_.html#access">Access</a></em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/68c1086/src/acl/agent.ts#L121">acl/agent.ts:121</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/db8593f/src/acl/agent.ts#L121">acl/agent.ts:121</a></em></p>
 <p>Given an ACL SolidDataset, find out which access modes it provides to an Agent for its associated Resource.</p>
 <p>Keep in mind that this function will not tell you:</p>
 <ul class="simple">
@@ -488,10 +538,24 @@ interface is still experimental and can change in a non-major release.</p>
 </ul>
 <p>Also, please note that this function is still experimental: its API can change in non-major releases.</p>
 <p><strong>Parameters:</strong></p>
-<p>Name | Type | Description |
-—— | —— | —— |
-<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code> | <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a> | The SolidDataset that contains Access-Control List rules. |
-<code class="docutils literal notranslate"><span class="pre">agent</span></code> | <a class="reference external" href="_interfaces_.html#webid">WebId</a> | WebID of the Agent for which to retrieve what access it has to the Resource. |</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aclDataset</span></code></p></td>
+<td><p><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a></p></td>
+<td><p>The SolidDataset that contains Access-Control List rules.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">agent</span></code></p></td>
+<td><p><a class="reference external" href="_interfaces_.html#webid">WebId</a></p></td>
+<td><p>WebID of the Agent for which to retrieve what access it has to the Resource.</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong> <em><a class="reference external" href="_interfaces_.html#access">Access</a></em></p>
 <p>Which Access Modes have been granted to the Agent specifically for the Resource the given ACL SolidDataset is associated with.</p>
 </div>
@@ -499,7 +563,7 @@ interface is still experimental and can change in a non-major release.</p>
 <div class="section" id="getagentresourceaccessall">
 <h3>getAgentResourceAccessAll<a class="headerlink" href="#getagentresourceaccessall" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getAgentResourceAccessAll</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a>): <em><a class="reference external" href="_acl_agent_.html#agentaccess">AgentAccess</a></em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/68c1086/src/acl/agent.ts#L147">acl/agent.ts:147</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/db8593f/src/acl/agent.ts#L147">acl/agent.ts:147</a></em></p>
 <p>Given an ACL SolidDataset, find out which access modes it provides to specific Agents for the associated Resource.</p>
 <p>Keep in mind that this function will not tell you:</p>
 <ul class="simple">
@@ -508,9 +572,20 @@ interface is still experimental and can change in a non-major release.</p>
 </ul>
 <p>Also, please note that this function is still experimental: its API can change in non-major releases.</p>
 <p><strong>Parameters:</strong></p>
-<p>Name | Type | Description |
-—— | —— | —— |
-<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code> | <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a> | The SolidDataset that contains Access-Control List rules. |</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aclDataset</span></code></p></td>
+<td><p><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a></p></td>
+<td><p>The SolidDataset that contains Access-Control List rules.</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong> <em><a class="reference external" href="_acl_agent_.html#agentaccess">AgentAccess</a></em></p>
 <p>Which Access Modes have been granted to which Agents specifically for the Resource the given ACL SolidDataset is associated with.</p>
 </div>
@@ -518,7 +593,7 @@ interface is still experimental and can change in a non-major release.</p>
 <div class="section" id="setagentdefaultaccess">
 <h3>setAgentDefaultAccess<a class="headerlink" href="#setagentdefaultaccess" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>setAgentDefaultAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a>, <code class="docutils literal notranslate"><span class="pre">agent</span></code>: <a class="reference external" href="_interfaces_.html#webid">WebId</a>, <code class="docutils literal notranslate"><span class="pre">access</span></code>: <a class="reference external" href="_interfaces_.html#access">Access</a>): <em><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a> &amp; WithChangeLog</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/68c1086/src/acl/agent.ts#L275">acl/agent.ts:275</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/db8593f/src/acl/agent.ts#L275">acl/agent.ts:275</a></em></p>
 <p>Given an ACL SolidDataset, modify the ACL Rules to set specific default Access Modes for a given Agent.</p>
 <p>If the given ACL SolidDataset already includes ACL Rules that grant a certain set of default Access Modes
 to the given Agent, those will be overridden by the given Access Modes.</p>
@@ -529,18 +604,35 @@ to the given Agent, those will be overridden by the given Access Modes.</p>
 </ul>
 <p>Also, please note that this function is still experimental: its API can change in non-major releases.</p>
 <p><strong>Parameters:</strong></p>
-<p>Name | Type | Description |
-—— | —— | —— |
-<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code> | <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a> | The SolidDataset that contains Access-Control List rules. |
-<code class="docutils literal notranslate"><span class="pre">agent</span></code> | <a class="reference external" href="_interfaces_.html#webid">WebId</a> | The Agent to grant specific Access Modes. |
-<code class="docutils literal notranslate"><span class="pre">access</span></code> | <a class="reference external" href="_interfaces_.html#access">Access</a> | The Access Modes to grant to the Agent.  |</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aclDataset</span></code></p></td>
+<td><p><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a></p></td>
+<td><p>The SolidDataset that contains Access-Control List rules.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">agent</span></code></p></td>
+<td><p><a class="reference external" href="_interfaces_.html#webid">WebId</a></p></td>
+<td><p>The Agent to grant specific Access Modes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">access</span></code></p></td>
+<td><p><a class="reference external" href="_interfaces_.html#access">Access</a></p></td>
+<td><p>The Access Modes to grant to the Agent.</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong> <em><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a> &amp; WithChangeLog</em></p>
 </div>
 <hr class="docutils" />
 <div class="section" id="setagentresourceaccess">
 <h3>setAgentResourceAccess<a class="headerlink" href="#setagentresourceaccess" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>setAgentResourceAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a>, <code class="docutils literal notranslate"><span class="pre">agent</span></code>: <a class="reference external" href="_interfaces_.html#webid">WebId</a>, <code class="docutils literal notranslate"><span class="pre">access</span></code>: <a class="reference external" href="_interfaces_.html#access">Access</a>): <em><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a> &amp; WithChangeLog</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/68c1086/src/acl/agent.ts#L173">acl/agent.ts:173</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/db8593f/src/acl/agent.ts#L173">acl/agent.ts:173</a></em></p>
 <p>Given an ACL SolidDataset, modify the ACL Rules to set specific Access Modes for a given Agent.</p>
 <p>If the given ACL SolidDataset already includes ACL Rules that grant a certain set of Access Modes
 to the given Agent, those will be overridden by the given Access Modes.</p>
@@ -551,11 +643,28 @@ to the given Agent, those will be overridden by the given Access Modes.</p>
 </ul>
 <p>Also, please note that this function is still experimental: its API can change in non-major releases.</p>
 <p><strong>Parameters:</strong></p>
-<p>Name | Type | Description |
-—— | —— | —— |
-<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code> | <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a> | The SolidDataset that contains Access-Control List rules. |
-<code class="docutils literal notranslate"><span class="pre">agent</span></code> | <a class="reference external" href="_interfaces_.html#webid">WebId</a> | The Agent to grant specific Access Modes. |
-<code class="docutils literal notranslate"><span class="pre">access</span></code> | <a class="reference external" href="_interfaces_.html#access">Access</a> | The Access Modes to grant to the Agent.  |</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aclDataset</span></code></p></td>
+<td><p><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a></p></td>
+<td><p>The SolidDataset that contains Access-Control List rules.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">agent</span></code></p></td>
+<td><p><a class="reference external" href="_interfaces_.html#webid">WebId</a></p></td>
+<td><p>The Agent to grant specific Access Modes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">access</span></code></p></td>
+<td><p><a class="reference external" href="_interfaces_.html#access">Access</a></p></td>
+<td><p>The Access Modes to grant to the Agent.</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong> <em><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a> &amp; WithChangeLog</em></p>
 </div>
 </div>

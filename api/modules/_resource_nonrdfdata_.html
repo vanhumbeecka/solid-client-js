@@ -343,7 +343,7 @@
   
               <div>
                 
-  <p><a class="reference internal" href="../README.html"><span class="doc">&#64;inrupt/solid-client</span></a> › <a class="reference internal" href="#"><span class="doc">“resource/nonRdfData”</span></a></p>
+  <p><a class="reference internal" href="../README.html"><span class="doc std std-doc">&#64;inrupt/solid-client</span></a> › <a class="reference internal" href="#"><span class="doc std std-doc">“resource/nonRdfData”</span></a></p>
 <div class="section" id="module-resource-nonrdfdata">
 <h1>Module: “resource/nonRdfData”<a class="headerlink" href="#module-resource-nonrdfdata" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="index">
@@ -364,35 +364,69 @@
 <div class="section" id="deletefile">
 <h3>deleteFile<a class="headerlink" href="#deletefile" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>deleteFile</strong>(<code class="docutils literal notranslate"><span class="pre">input</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">options</span></code>: Partial‹GetFileOptions›): <em>Promise‹void›</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/68c1086/src/resource/nonRdfData.ts#L123">resource/nonRdfData.ts:123</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/db8593f/src/resource/nonRdfData.ts#L123">resource/nonRdfData.ts:123</a></em></p>
 <p>Deletes a file at a given URL</p>
 <p>Please note that this function is still experimental: its API can change in non-major releases.</p>
 <p><strong>Parameters:</strong></p>
-<p>Name | Type | Default | Description |
-—— | —— | —— | —— |
-<code class="docutils literal notranslate"><span class="pre">input</span></code> | <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a> | - | The URL of the file to delete  |
-<code class="docutils literal notranslate"><span class="pre">options</span></code> | Partial‹GetFileOptions› | defaultGetFileOptions | - |</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Default</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">input</span></code></p></td>
+<td><p><a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a></p></td>
+<td><p>-</p></td>
+<td><p>The URL of the file to delete</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
+<td><p>Partial‹GetFileOptions›</p></td>
+<td><p>defaultGetFileOptions</p></td>
+<td><p>-</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong> <em>Promise‹void›</em></p>
 </div>
 <hr class="docutils" />
 <div class="section" id="getfile">
 <h3>getFile<a class="headerlink" href="#getfile" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getFile</strong>(<code class="docutils literal notranslate"><span class="pre">input</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">options</span></code>: Partial‹GetFileOptions›): <em>Promise‹Blob &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>›</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/68c1086/src/resource/nonRdfData.ts#L60">resource/nonRdfData.ts:60</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/db8593f/src/resource/nonRdfData.ts#L60">resource/nonRdfData.ts:60</a></em></p>
 <p>Gets a file at a given URL, and returns it as a blob of data.</p>
 <p>Please note that this function is still experimental: its API can change in non-major releases.</p>
 <p><strong>Parameters:</strong></p>
-<p>Name | Type | Default | Description |
-—— | —— | —— | —— |
-<code class="docutils literal notranslate"><span class="pre">input</span></code> | <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a> | - | - |
-<code class="docutils literal notranslate"><span class="pre">options</span></code> | Partial‹GetFileOptions› | defaultGetFileOptions | Fetching options: a custom fetcher and/or headers.  |</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Default</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">input</span></code></p></td>
+<td><p><a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a></p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
+<td><p>Partial‹GetFileOptions›</p></td>
+<td><p>defaultGetFileOptions</p></td>
+<td><p>Fetching options: a custom fetcher and/or headers.</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong> <em>Promise‹Blob &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>›</em></p>
 </div>
 <hr class="docutils" />
 <div class="section" id="getfilewithacl">
 <h3>getFileWithAcl<a class="headerlink" href="#getfilewithacl" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getFileWithAcl</strong>(<code class="docutils literal notranslate"><span class="pre">input</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">options</span></code>: Partial‹GetFileOptions›): <em>Promise‹Blob &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a> &amp; WithAcl›</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/68c1086/src/resource/nonRdfData.ts#L103">resource/nonRdfData.ts:103</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/db8593f/src/resource/nonRdfData.ts#L103">resource/nonRdfData.ts:103</a></em></p>
 <p>Experimental: get a file and it’s associated Access Control List.</p>
 <p>This is an experimental function that gets both a file, the linked ACL Resource (if
 available), and the ACL that applies to it if the linked ACL Resource is not available. This can
@@ -405,10 +439,27 @@ undefined if the Resource’s linked ACL Resource could not be fetched (because 
 and <code class="docutils literal notranslate"><span class="pre">acl.fallbackAcl</span></code> will be null if the applicable Container’s ACL is not accessible to the
 authenticated user.</p>
 <p><strong>Parameters:</strong></p>
-<p>Name | Type | Default | Description |
-—— | —— | —— | —— |
-<code class="docutils literal notranslate"><span class="pre">input</span></code> | <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a> | - | - |
-<code class="docutils literal notranslate"><span class="pre">options</span></code> | Partial‹GetFileOptions› | defaultGetFileOptions | Fetching options: a custom fetcher and/or headers. |</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Default</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">input</span></code></p></td>
+<td><p><a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a></p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
+<td><p>Partial‹GetFileOptions›</p></td>
+<td><p>defaultGetFileOptions</p></td>
+<td><p>Fetching options: a custom fetcher and/or headers.</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong> <em>Promise‹Blob &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a> &amp; WithAcl›</em></p>
 <p>A file and the ACLs that apply to it, if available to the authenticated user.</p>
 </div>
@@ -416,34 +467,76 @@ authenticated user.</p>
 <div class="section" id="overwritefile">
 <h3>overwriteFile<a class="headerlink" href="#overwritefile" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>overwriteFile</strong>(<code class="docutils literal notranslate"><span class="pre">fileUrl</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">file</span></code>: Blob, <code class="docutils literal notranslate"><span class="pre">options</span></code>: Partial‹GetFileOptions›): <em>Promise‹Blob &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>›</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/68c1086/src/resource/nonRdfData.ts#L205">resource/nonRdfData.ts:205</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/db8593f/src/resource/nonRdfData.ts#L205">resource/nonRdfData.ts:205</a></em></p>
 <p>Saves a file at a given URL, erasing any previous content.</p>
 <p>If something went wrong saving the file, the returned Promise will be rejected with an Error.</p>
 <p>Please note that this function is still experimental: its API can change in non-major releases.</p>
 <p><strong>Parameters:</strong></p>
-<p>Name | Type | Default | Description |
-—— | —— | —— | —— |
-<code class="docutils literal notranslate"><span class="pre">fileUrl</span></code> | <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a> | - | The URL where the file is saved |
-<code class="docutils literal notranslate"><span class="pre">file</span></code> | Blob | - | The file to be written |
-<code class="docutils literal notranslate"><span class="pre">options</span></code> | Partial‹GetFileOptions› | defaultGetFileOptions | Additional parameters for file creation (e.g. a slug)  |</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Default</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">fileUrl</span></code></p></td>
+<td><p><a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a></p></td>
+<td><p>-</p></td>
+<td><p>The URL where the file is saved</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">file</span></code></p></td>
+<td><p>Blob</p></td>
+<td><p>-</p></td>
+<td><p>The file to be written</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
+<td><p>Partial‹GetFileOptions›</p></td>
+<td><p>defaultGetFileOptions</p></td>
+<td><p>Additional parameters for file creation (e.g. a slug)</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong> <em>Promise‹Blob &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>›</em></p>
 </div>
 <hr class="docutils" />
 <div class="section" id="savefileincontainer">
 <h3>saveFileInContainer<a class="headerlink" href="#savefileincontainer" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>saveFileInContainer</strong>(<code class="docutils literal notranslate"><span class="pre">folderUrl</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">file</span></code>: Blob, <code class="docutils literal notranslate"><span class="pre">options</span></code>: Partial‹SaveFileOptions›): <em>Promise‹Blob &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>›</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/68c1086/src/resource/nonRdfData.ts#L161">resource/nonRdfData.ts:161</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/db8593f/src/resource/nonRdfData.ts#L161">resource/nonRdfData.ts:161</a></em></p>
 <p>Saves a file in a folder at a given URL. The server will return the final
 filename (which may or may not be the given <code class="docutils literal notranslate"><span class="pre">slug</span></code>), it will return it in
 the response’s Location header.</p>
 <p>If something went wrong saving the file, the returned Promise will be rejected with an Error.</p>
 <p>Please note that this function is still experimental: its API can change in non-major releases.</p>
 <p><strong>Parameters:</strong></p>
-<p>Name | Type | Default | Description |
-—— | —— | —— | —— |
-<code class="docutils literal notranslate"><span class="pre">folderUrl</span></code> | <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a> | - | The URL of the folder where the new file is saved |
-<code class="docutils literal notranslate"><span class="pre">file</span></code> | Blob | - | The file to be written |
-<code class="docutils literal notranslate"><span class="pre">options</span></code> | Partial‹SaveFileOptions› | defaultGetFileOptions | Additional parameters for file creation (e.g. a slug)  |</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Default</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">folderUrl</span></code></p></td>
+<td><p><a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a></p></td>
+<td><p>-</p></td>
+<td><p>The URL of the folder where the new file is saved</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">file</span></code></p></td>
+<td><p>Blob</p></td>
+<td><p>-</p></td>
+<td><p>The file to be written</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
+<td><p>Partial‹SaveFileOptions›</p></td>
+<td><p>defaultGetFileOptions</p></td>
+<td><p>Additional parameters for file creation (e.g. a slug)</p></td>
+</tr>
+</tbody>
+</table>
 <p><strong>Returns:</strong> <em>Promise‹Blob &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>›</em></p>
 </div>
 </div>
