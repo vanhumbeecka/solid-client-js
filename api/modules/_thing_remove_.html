@@ -5,7 +5,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Module: “thing/remove” &#8212; Inrupt solid-client Documentation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link href="../../_static/css/index.css" rel="stylesheet">
@@ -379,7 +379,7 @@
 <div class="section" id="removeall">
 <h3>removeAll<a class="headerlink" href="#removeall" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>removeAll</strong>‹<strong>T</strong>›(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>): <em>T extends ThingLocal ? ThingLocal : ThingPersisted</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/0553739/src/thing/remove.ts#L55">thing/remove.ts:55</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1bcecde/src/thing/remove.ts#L55">thing/remove.ts:55</a></em></p>
 <p>Create a new Thing with all values removed for the given Property.</p>
 <p>The original <code class="docutils literal notranslate"><span class="pre">thing</span></code> is not modified; this function returns a cloned Thing with updated values.</p>
 <p><strong>Type parameters:</strong></p>
@@ -409,8 +409,8 @@
 <hr class="docutils" />
 <div class="section" id="const-removeboolean">
 <h3><code class="docutils literal notranslate"><span class="pre">Const</span></code> removeBoolean<a class="headerlink" href="#const-removeboolean" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>removeBoolean</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: string | NamedNode‹string›, <code class="docutils literal notranslate"><span class="pre">value</span></code>: boolean)</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/0553739/src/thing/remove.ts#L113">thing/remove.ts:113</a></em></p>
+<p>▸ <strong>removeBoolean</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: string | <a class="reference external" href="_interfaces_.html#url">Url</a>, <code class="docutils literal notranslate"><span class="pre">value</span></code>: boolean)</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1bcecde/src/thing/remove.ts#L113">thing/remove.ts:113</a></em></p>
 <p>Create a new Thing with the given boolean removed for the given Property.</p>
 <p>The original <code class="docutils literal notranslate"><span class="pre">thing</span></code> is not modified; this function returns a cloned Thing with updated values.</p>
 <p><strong>Parameters:</strong></p>
@@ -427,7 +427,7 @@
 <td><p>Thing to remove a boolean value from.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
-<td><p>string | NamedNode‹string›</p></td>
+<td><p>string | <a class="reference external" href="_interfaces_.html#url">Url</a></p></td>
 <td><p>Property for which to remove the given boolean value.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">value</span></code></p></td>
@@ -440,8 +440,8 @@
 <hr class="docutils" />
 <div class="section" id="const-removedatetime">
 <h3><code class="docutils literal notranslate"><span class="pre">Const</span></code> removeDatetime<a class="headerlink" href="#const-removedatetime" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>removeDatetime</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: string | NamedNode‹string›, <code class="docutils literal notranslate"><span class="pre">value</span></code>: Date)</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/0553739/src/thing/remove.ts#L136">thing/remove.ts:136</a></em></p>
+<p>▸ <strong>removeDatetime</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: string | <a class="reference external" href="_interfaces_.html#url">Url</a>, <code class="docutils literal notranslate"><span class="pre">value</span></code>: Date)</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1bcecde/src/thing/remove.ts#L136">thing/remove.ts:136</a></em></p>
 <p>Create a new Thing with the given datetime removed for the given Property.</p>
 <p>The original <code class="docutils literal notranslate"><span class="pre">thing</span></code> is not modified; this function returns a cloned Thing with updated values.</p>
 <p><strong>Parameters:</strong></p>
@@ -458,7 +458,7 @@
 <td><p>Thing to remove a datetime value from.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
-<td><p>string | NamedNode‹string›</p></td>
+<td><p>string | <a class="reference external" href="_interfaces_.html#url">Url</a></p></td>
 <td><p>Property for which to remove the given datetime value.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">value</span></code></p></td>
@@ -471,8 +471,8 @@
 <hr class="docutils" />
 <div class="section" id="const-removedecimal">
 <h3><code class="docutils literal notranslate"><span class="pre">Const</span></code> removeDecimal<a class="headerlink" href="#const-removedecimal" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>removeDecimal</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: string | NamedNode‹string›, <code class="docutils literal notranslate"><span class="pre">value</span></code>: number)</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/0553739/src/thing/remove.ts#L155">thing/remove.ts:155</a></em></p>
+<p>▸ <strong>removeDecimal</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: string | <a class="reference external" href="_interfaces_.html#url">Url</a>, <code class="docutils literal notranslate"><span class="pre">value</span></code>: number)</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1bcecde/src/thing/remove.ts#L155">thing/remove.ts:155</a></em></p>
 <p>Create a new Thing with the given decimal removed for the given Property.</p>
 <p>The original <code class="docutils literal notranslate"><span class="pre">thing</span></code> is not modified; this function returns a cloned Thing with updated values.</p>
 <p><strong>Parameters:</strong></p>
@@ -489,7 +489,7 @@
 <td><p>Thing to remove a decimal value from.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
-<td><p>string | NamedNode‹string›</p></td>
+<td><p>string | <a class="reference external" href="_interfaces_.html#url">Url</a></p></td>
 <td><p>Property for which to remove the given decimal value.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">value</span></code></p></td>
@@ -502,8 +502,8 @@
 <hr class="docutils" />
 <div class="section" id="const-removeinteger">
 <h3><code class="docutils literal notranslate"><span class="pre">Const</span></code> removeInteger<a class="headerlink" href="#const-removeinteger" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>removeInteger</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: string | NamedNode‹string›, <code class="docutils literal notranslate"><span class="pre">value</span></code>: number)</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/0553739/src/thing/remove.ts#L174">thing/remove.ts:174</a></em></p>
+<p>▸ <strong>removeInteger</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: string | <a class="reference external" href="_interfaces_.html#url">Url</a>, <code class="docutils literal notranslate"><span class="pre">value</span></code>: number)</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1bcecde/src/thing/remove.ts#L174">thing/remove.ts:174</a></em></p>
 <p>Create a new Thing with the given integer removed for the given Property.</p>
 <p>The original <code class="docutils literal notranslate"><span class="pre">thing</span></code> is not modified; this function returns a cloned Thing with updated values.</p>
 <p><strong>Parameters:</strong></p>
@@ -520,7 +520,7 @@
 <td><p>Thing to remove an integer value from.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
-<td><p>string | NamedNode‹string›</p></td>
+<td><p>string | <a class="reference external" href="_interfaces_.html#url">Url</a></p></td>
 <td><p>Property for which to remove the given integer value.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">value</span></code></p></td>
@@ -533,8 +533,8 @@
 <hr class="docutils" />
 <div class="section" id="const-removestringnolocale">
 <h3><code class="docutils literal notranslate"><span class="pre">Const</span></code> removeStringNoLocale<a class="headerlink" href="#const-removestringnolocale" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>removeStringNoLocale</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: string | NamedNode‹string›, <code class="docutils literal notranslate"><span class="pre">value</span></code>: string)</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/0553739/src/thing/remove.ts#L226">thing/remove.ts:226</a></em></p>
+<p>▸ <strong>removeStringNoLocale</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: string | <a class="reference external" href="_interfaces_.html#url">Url</a>, <code class="docutils literal notranslate"><span class="pre">value</span></code>: string)</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1bcecde/src/thing/remove.ts#L226">thing/remove.ts:226</a></em></p>
 <p>Create a new Thing with the given unlocalised string removed for the given Property.</p>
 <p>The original <code class="docutils literal notranslate"><span class="pre">thing</span></code> is not modified; this function returns a cloned Thing with updated values.</p>
 <p><strong>Parameters:</strong></p>
@@ -551,7 +551,7 @@
 <td><p>Thing to remove an unlocalised string value from.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
-<td><p>string | NamedNode‹string›</p></td>
+<td><p>string | <a class="reference external" href="_interfaces_.html#url">Url</a></p></td>
 <td><p>Property for which to remove the given string value.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">value</span></code></p></td>
@@ -565,7 +565,7 @@
 <div class="section" id="removestringwithlocale">
 <h3>removeStringWithLocale<a class="headerlink" href="#removestringwithlocale" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>removeStringWithLocale</strong>‹<strong>T</strong>›(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">value</span></code>: string, <code class="docutils literal notranslate"><span class="pre">locale</span></code>: string): <em>T extends ThingLocal ? ThingLocal : ThingPersisted</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/0553739/src/thing/remove.ts#L194">thing/remove.ts:194</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1bcecde/src/thing/remove.ts#L194">thing/remove.ts:194</a></em></p>
 <p>Create a new Thing with the given localised string removed for the given Property.</p>
 <p>The original <code class="docutils literal notranslate"><span class="pre">thing</span></code> is not modified; this function returns a cloned Thing with updated values.</p>
 <p><strong>Type parameters:</strong></p>
@@ -603,8 +603,8 @@
 <hr class="docutils" />
 <div class="section" id="const-removeurl">
 <h3><code class="docutils literal notranslate"><span class="pre">Const</span></code> removeUrl<a class="headerlink" href="#const-removeurl" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>removeUrl</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: string | NamedNode‹string›, <code class="docutils literal notranslate"><span class="pre">value</span></code>: string | NamedNode‹string› | DatasetCore‹Quad, Quad› &amp; object &amp; object | DatasetCore‹Quad, Quad› &amp; object &amp; object)</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/0553739/src/thing/remove.ts#L79">thing/remove.ts:79</a></em></p>
+<p>▸ <strong>removeUrl</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: string | <a class="reference external" href="_interfaces_.html#url">Url</a>, <code class="docutils literal notranslate"><span class="pre">value</span></code>: string | <a class="reference external" href="_interfaces_.html#url">Url</a> | DatasetCore‹Quad, Quad› &amp; object &amp; object | DatasetCore‹Quad, Quad› &amp; object &amp; object)</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1bcecde/src/thing/remove.ts#L79">thing/remove.ts:79</a></em></p>
 <p>Create a new Thing with the given URL removed for the given Property.</p>
 <p>The original <code class="docutils literal notranslate"><span class="pre">thing</span></code> is not modified; this function returns a cloned Thing with updated values.</p>
 <p><strong>Parameters:</strong></p>
@@ -621,11 +621,11 @@
 <td><p>Thing to remove a URL value from.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
-<td><p>string | NamedNode‹string›</p></td>
+<td><p>string | <a class="reference external" href="_interfaces_.html#url">Url</a></p></td>
 <td><p>Property for which to remove the given URL value.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">value</span></code></p></td>
-<td><p>string | NamedNode‹string› | DatasetCore‹Quad, Quad› &amp; object &amp; object | DatasetCore‹Quad, Quad› &amp; object &amp; object</p></td>
+<td><p>string | <a class="reference external" href="_interfaces_.html#url">Url</a> | DatasetCore‹Quad, Quad› &amp; object &amp; object | DatasetCore‹Quad, Quad› &amp; object &amp; object</p></td>
 <td><p>URL to remove from <code class="docutils literal notranslate"><span class="pre">thing</span></code> for the given <code class="docutils literal notranslate"><span class="pre">Property</span></code>.</p></td>
 </tr>
 </tbody>
