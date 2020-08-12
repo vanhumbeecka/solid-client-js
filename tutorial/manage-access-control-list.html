@@ -451,10 +451,47 @@ copy the currently applicable rules to a newly-initialised ACL.</p></li>
 </div>
 <div class="section" id="set-public-access">
 <h3>Set Public Access<a class="headerlink" href="#set-public-access" title="Permalink to this headline">¶</a></h3>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><code class="docutils literal notranslate"><span class="pre">solid-client</span></code> currently does not support setting public access.</p>
+<p>Given a Resource’s ACL obtained as specified in
+<a class="reference internal" href="#manage-acl-change-access-to-resource"><span class="std std-ref">Change Access to a Resource</span></a>, you can:</p>
+<ul>
+<li><p>Use <a class="reference internal" href="../api/modules/_acl_class_.html"><span class="doc">setPublicResourceAccess</span></a> to grant Access Modes
+to everybody (whether logged in or not) for the Resource itself:</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span>
+  <span class="nx">setPublicResourceAccess</span><span class="p">,</span>
+<span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@inrupt/solid-client&quot;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">resourceAcl</span> <span class="o">=</span> <span class="cm">/* Obtained previously in the section &quot;Change Access to a Resource&quot; */</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">updatedAcl</span> <span class="o">=</span> <span class="nx">setPublicResourceAccess</span><span class="p">(</span>
+  <span class="nx">resourceAcl</span><span class="p">,</span>
+  <span class="p">{</span> <span class="nx">read</span>: <span class="kt">true</span><span class="p">,</span> <span class="nx">append</span>: <span class="kt">true</span><span class="p">,</span> <span class="nx">write</span>: <span class="kt">false</span><span class="p">,</span> <span class="nx">control</span>: <span class="kt">false</span> <span class="p">},</span>
+<span class="p">);</span>
+
+<span class="c1">// `updatedAcl` can now be saved back to the Pod</span>
+<span class="c1">// using `saveAclFor()`.</span>
+</pre></div>
 </div>
+</li>
+<li><p>Use <a class="reference internal" href="../api/modules/_acl_agent_.html"><span class="doc">setPublicDefaultAccess</span></a> to grant Access Modes
+to everybody (whether logged in or not) for the Resource’s children if the
+Resource is a Container:</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span>
+  <span class="nx">setPublicDefaultAccess</span><span class="p">,</span>
+<span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@inrupt/solid-client&quot;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">resourceAcl</span> <span class="o">=</span> <span class="cm">/* Obtained previously in the section &quot;Change Access to a Resource&quot; */</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">updatedAcl</span> <span class="o">=</span> <span class="nx">setPublicDefaultAccess</span><span class="p">(</span>
+  <span class="nx">resourceAcl</span><span class="p">,</span>
+  <span class="p">{</span> <span class="nx">read</span>: <span class="kt">true</span><span class="p">,</span> <span class="nx">append</span>: <span class="kt">true</span><span class="p">,</span> <span class="nx">write</span>: <span class="kt">false</span><span class="p">,</span> <span class="nx">control</span>: <span class="kt">false</span> <span class="p">},</span>
+<span class="p">);</span>
+
+<span class="c1">// `updatedAcl` can now be saved back to the Pod</span>
+<span class="c1">// using `saveAclFor()`.</span>
+</pre></div>
+</div>
+</li>
+</ul>
 </div>
 <div class="section" id="set-agent-access">
 <h3>Set Agent Access<a class="headerlink" href="#set-agent-access" title="Permalink to this headline">¶</a></h3>
@@ -467,7 +504,7 @@ to an Agent for the Resource itself:</p>
   <span class="nx">setAgentResourceAccess</span><span class="p">,</span>
 <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@inrupt/solid-client&quot;</span><span class="p">;</span>
 
-<span class="kr">const</span> <span class="nx">resourceAcl</span> <span class="o">=</span> <span class="cm">/* Obtained previously in Change Access to a Resource section */</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">resourceAcl</span> <span class="o">=</span> <span class="cm">/* Obtained previously in the section &quot;Change Access to a Resource&quot; */</span><span class="p">;</span>
 <span class="kr">const</span> <span class="nx">webId</span> <span class="o">=</span> <span class="s2">&quot;https://example.com/profile#webid&quot;</span><span class="p">;</span>
 
 <span class="kr">const</span> <span class="nx">updatedAcl</span> <span class="o">=</span> <span class="nx">setAgentResourceAccess</span><span class="p">(</span>
@@ -488,7 +525,7 @@ Container:</p>
   <span class="nx">setAgentDefaultAccess</span><span class="p">,</span>
 <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@inrupt/solid-client&quot;</span><span class="p">;</span>
 
-<span class="kr">const</span> <span class="nx">resourceAcl</span> <span class="o">=</span> <span class="cm">/* Obtained previously in Change Access to a Resource section */</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">resourceAcl</span> <span class="o">=</span> <span class="cm">/* Obtained previously in the section &quot;Change Access to a Resource&quot; */</span><span class="p">;</span>
 <span class="kr">const</span> <span class="nx">webId</span> <span class="o">=</span> <span class="s2">&quot;https://example.com/profile#webid&quot;</span><span class="p">;</span>
 
 <span class="kr">const</span> <span class="nx">updatedAcl</span> <span class="o">=</span> <span class="nx">setAgentDefaultAccess</span><span class="p">(</span>
