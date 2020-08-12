@@ -322,14 +322,14 @@ as an option to <code class="docutils literal notranslate"><span class="pre">sol
   <span class="c1">// Redirect the user to their identity provider:</span>
   <span class="c1">// (This moves the user away from the current page.)</span>
   <span class="nx">session</span><span class="p">.</span><span class="nx">login</span><span class="p">({</span>
-      <span class="c1">// The URL of the user&#39;s OIDC issuer</span>
+      <span class="c1">// Specify the URL of the user&#39;s OIDC issuer.</span>
       <span class="nx">oidcIssuer</span><span class="o">:</span> <span class="s1">&#39;https://inrupt.net&#39;</span><span class="p">,</span>
-      <span class="c1">// The url the system should redirect to after login</span>
-      <span class="nx">redirectUrl</span><span class="o">:</span> <span class="s1">&#39;https://mysite.com/redirect&#39;</span><span class="p">,</span>
+      <span class="c1">// Specify the URL the system should redirect to after login.</span>
+      <span class="nx">redirectUrl</span><span class="o">:</span> <span class="s1">&#39;https://example.com/redirect&#39;</span><span class="p">,</span>
   <span class="p">});</span>
 <span class="p">}</span>
 
-<span class="c1">// At https://mysite.com/redirect:</span>
+<span class="c1">// At your redirect site (e.g., https://example.com/redirect):</span>
 <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">session</span><span class="p">.</span><span class="nx">sessionInfo</span><span class="p">.</span><span class="nx">isLoggedIn</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">await</span> <span class="nx">session</span><span class="p">.</span><span class="nx">handleIncomingRedirect</span><span class="p">(</span><span class="k">new</span> <span class="nx">URL</span><span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">));</span>
 <span class="p">}</span>
@@ -338,8 +338,7 @@ as an option to <code class="docutils literal notranslate"><span class="pre">sol
 <span class="nx">getSolidDataset</span><span class="p">(</span><span class="nx">session</span><span class="p">.</span><span class="nx">sessionInfo</span><span class="p">.</span><span class="nx">webId</span><span class="p">,</span> <span class="p">{</span> <span class="nx">fetch</span>: <span class="kt">session.fetch</span> <span class="p">});</span>
 </pre></div>
 </div>
-<p>For a more advanced example, see <cite>the solid-client-authn repository
-&lt;https://github.com/inrupt/solid-client-authn/tree/master/examples/single/bundle&gt;</cite>.</p>
+<p>For a more advanced example, see <a class="reference external" href="https://github.com/inrupt/solid-client-authn/tree/master/examples/single/bundle">the solid-client-authn repository</a>.</p>
 </div>
 <div class="section" id="read-data">
 <h2>Read Data<a class="headerlink" href="#read-data" title="Permalink to this headline">¶</a></h2>
@@ -448,33 +447,35 @@ of the Thing’s property you want.</p>
   <span class="nx">getUrlAll</span><span class="p">,</span>
 <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@inrupt/solid-client&quot;</span><span class="p">;</span>
 
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">FOAF</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@inrupt/vocab-common-rdf&quot;</span><span class="p">;</span>
+
 <span class="c1">// Get data from a retrieved Thing.</span>
-<span class="c1">// - Specifically, get the name (http://xmlns.com/foaf/0.1/name).</span>
+<span class="c1">// - Specifically, get the name (FOAF.name).</span>
 <span class="c1">// - Name is of type string.</span>
 <span class="c1">// - Use getStringNoLocale if expecting a single value.</span>
 <span class="c1">// - Use getStringNoLocaleAll if expecting multiple values.</span>
 
-<span class="kr">const</span> <span class="nx">names</span> <span class="o">=</span> <span class="nx">getStringNoLocaleAll</span><span class="p">(</span><span class="nx">thing</span><span class="p">,</span> <span class="s2">&quot;http://xmlns.com/foaf/0.1/name&quot;</span><span class="p">);</span>
-<span class="c1">// =&gt; an array of strings representing the `http://xmlns.com/foaf/0.1/name`.</span>
+<span class="kr">const</span> <span class="nx">names</span> <span class="o">=</span> <span class="nx">getStringNoLocaleAll</span><span class="p">(</span><span class="nx">thing</span><span class="p">,</span> <span class="nx">FOAF</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+<span class="c1">// =&gt; an array of strings representing FOAF.name (&quot;http://xmlns.com/foaf/0.1/name&quot;).</span>
 
 <span class="c1">// Get data from a retrieved Thing.</span>
-<span class="c1">// - Specifically, get the Skype ID (http://xmlns.com/foaf/0.1/skypeId).</span>
+<span class="c1">// - Specifically, get the Skype ID (FOAF.skypeId).</span>
 <span class="c1">// - Skype ID is of type string.</span>
 <span class="c1">// - Use getStringNoLocale if expecting a single value.</span>
 <span class="c1">// - Use getStringNoLocaleAll if expecting multiple values.</span>
 
-<span class="kr">const</span> <span class="nx">skypeId</span> <span class="o">=</span> <span class="nx">getStringNoLocale</span><span class="p">(</span><span class="nx">thing</span><span class="p">,</span> <span class="s2">&quot;http://xmlns.com/foaf/0.1/skypeId&quot;</span><span class="p">);</span>
-<span class="c1">// =&gt; one of the strings representing the `http://xmlns.com/foaf/0.1/skypeId`,</span>
+<span class="kr">const</span> <span class="nx">skypeId</span> <span class="o">=</span> <span class="nx">getStringNoLocale</span><span class="p">(</span><span class="nx">thing</span><span class="p">,</span> <span class="nx">FOAF</span><span class="p">.</span><span class="nx">skypeId</span><span class="p">);</span>
+<span class="c1">// =&gt; one of the strings representing the FOAF.skypeId (&quot;http://xmlns.com/foaf/0.1/skypeId&quot;),</span>
 <span class="c1">//    or null if there are none.</span>
 
 <span class="c1">// Get data from a retrieved Thing.</span>
-<span class="c1">// - Specifically, get the acquaintances (http://xmlns.com/foaf/0.1/knows).</span>
+<span class="c1">// - Specifically, get the acquaintances (FOAF.knows).</span>
 <span class="c1">// - Acquaintances is of type URL.</span>
 <span class="c1">// - Use getStringNoLocale expecting a single value.</span>
 <span class="c1">// - Use getStringNoLocaleAll if expecting multiple values.</span>
 
-<span class="kr">const</span> <span class="nx">acquaintances</span> <span class="o">=</span> <span class="nx">getUrlAll</span><span class="p">(</span><span class="nx">thing</span><span class="p">,</span> <span class="s2">&quot;http://xmlns.com/foaf/0.1/knows&quot;</span><span class="p">);</span>
-<span class="c1">// =&gt; an array of URLs, presumably pointing to the Things describing acquaintances.</span>
+<span class="kr">const</span> <span class="nx">acquaintances</span> <span class="o">=</span> <span class="nx">getUrlAll</span><span class="p">(</span><span class="nx">thing</span><span class="p">,</span> <span class="nx">FOAF</span><span class="p">.</span><span class="nx">knows</span><span class="p">);</span>
+<span class="c1">// =&gt; an array of URLs, pointing to the Things representing FOAF.knows (&quot;http://xmlns.com/foaf/0.1/knows&quot;)</span>
 </pre></div>
 </div>
 <p>For a list of the <code class="docutils literal notranslate"><span class="pre">get</span></code> functions, see <a class="reference internal" href="../api/modules/_thing_get_.html"><span class="doc">thing/get</span></a>.</p>
