@@ -222,7 +222,7 @@
 	
 	   <div class="tocsection editthispage">
 	       <i class="fas fa-edit"></i> 
-	       <a class="edit-link" href="https://github.com/inrupt/solid-client-js/blob/master/docs/source/tutorial/manage-access-control-list.rst" target="_blank" title="Edit tutorial/manage-access-control-list.txt on GitHub">
+	       <a class="edit-link" href="https://github.com/inrupt/solid-client-js/blob/master/docs/prose/source/tutorial/manage-access-control-list.rst" target="_blank" title="Edit tutorial/manage-access-control-list.txt on GitHub">
 	           <span>Edit on Github</span>
 	       </a>
 	   </div>
@@ -285,18 +285,18 @@ to manage access on their behalf.</p>
 <div class="section" id="read-access-information-for-a-resource">
 <h2>Read Access Information for a Resource<a class="headerlink" href="#read-access-information-for-a-resource" title="Permalink to this headline">¶</a></h2>
 <p>To retrieve the ACL for a resource in addition to the Resource itself,
-use the <a class="reference internal" href="../api/modules/_resource_soliddataset_.html"><span class="doc">getSolidDatasetWithAcl</span></a> function.
+use the <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_resource_soliddataset_.html#getSolidDatasetWithAcl">getSolidDatasetWithAcl</a> function.
 The returned value includes the Resource data, the <code class="docutils literal notranslate"><span class="pre">ResourceInfo</span></code>
 (i.e., metadata), and the ACL.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The <a class="reference internal" href="../api/modules/_resource_soliddataset_.html"><span class="doc">getSolidDatasetWithAcl</span></a> function
+<p>The <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_resource_soliddataset_.html#getSolidDatasetWithAcl">getSolidDatasetWithAcl</a> function
 may result in many extra HTTP requests being sent.</p>
 </div>
 <div class="section" id="read-public-access">
 <h3>Read Public Access<a class="headerlink" href="#read-public-access" title="Permalink to this headline">¶</a></h3>
 <p>From a <a class="reference internal" href="../reference/glossary.html#term-SolidDataset"><span class="xref std std-term">SolidDataset</span></a> that has an ACL attached, you can use
-<a class="reference internal" href="../api/modules/_acl_class_.html"><span class="doc">getPublicAccess</span></a> to retrieve the access granted
+<a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_acl_class_.html#getPublicAccess">getPublicAccess</a> to retrieve the access granted
 to the public in general, regardless of whether they are authenticated
 or not.</p>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span>
@@ -317,7 +317,7 @@ or not.</p>
 <h3>Reading Agent Access<a class="headerlink" href="#reading-agent-access" title="Permalink to this headline">¶</a></h3>
 <p>From a <a class="reference internal" href="../reference/glossary.html#term-SolidDataset"><span class="xref std std-term">SolidDataset</span></a> that has an ACL attached, you can use:</p>
 <ul>
-<li><p><a class="reference internal" href="../api/modules/_acl_agent_.html"><span class="doc">getAgentAccess</span></a> to retrieve the access
+<li><p><a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_acl_agent_.html#getAgentAccess">getAgentAccess</a> to retrieve the access
 granted to a specific agent:</p>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span>
   <span class="nx">getSolidDatasetWithAcl</span><span class="p">,</span>
@@ -334,7 +334,7 @@ granted to a specific agent:</p>
 </pre></div>
 </div>
 </li>
-<li><p><a class="reference internal" href="../api/modules/_acl_agent_.html"><span class="doc">getAgentAccessAll</span></a> to retrieve access
+<li><p><a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_acl_agent_.html#getAgentAccessAll">getAgentAccessAll</a> to retrieve access
 information for all agents that have access:</p>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span>
   <span class="nx">getSolidDatasetWithAcl</span><span class="p">,</span>
@@ -371,9 +371,9 @@ ACL.</p>
 </div>
 <p>To modify access to a Resource:</p>
 <ol class="arabic simple">
-<li><p>Use <a class="reference internal" href="../api/modules/_resource_soliddataset_.html"><span class="doc">getSolidDatasetWithAcl</span></a> to retrieve
-the Resource and its ACL.</p></li>
-<li><p>From the retrieved Resource, call <a class="reference internal" href="../api/modules/_acl_acl_.html"><span class="doc">getResourceACL</span></a> to obtain its Resource-specific
+<li><p>Use <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_resource_soliddataset_.html#getSolidDatasetWithAcl">getSolidDatasetWithAcl</a> to
+retrieve the Resource and its ACL.</p></li>
+<li><p>From the retrieved Resource, call <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_acl_acl_.html#getResourceACL">getResourceACL</a> to obtain its Resource-specific
 ACL. The function returns <code class="docutils literal notranslate"><span class="pre">null</span></code> if the Resource-specific ACL does
 not exists.</p></li>
 <li><p>If the Resource-specific ACL exists,</p>
@@ -389,7 +389,7 @@ ACL.</p></li>
 you save the new Resource-specific ACL, this ACL overrides the
 inherited fallback ACL.</p>
 <ol class="loweralpha simple">
-<li><p>To create a new ACL, you can use <a class="reference internal" href="../api/modules/_acl_acl_.html"><span class="doc">createAcl</span></a> to create a new empty ACL.</p></li>
+<li><p>To create a new ACL, you can use <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_acl_acl_.html#createAcl">createAcl</a> to create a new empty ACL.</p></li>
 <li><p>If you have access to the Resource’s fallback ACL, you can
 copy the currently applicable rules to a newly-initialised ACL.</p></li>
 <li><p>Ensure that the modified ACL includes at least one entry with
@@ -453,7 +453,7 @@ copy the currently applicable rules to a newly-initialised ACL.</p></li>
 <p>Given a Resource’s ACL obtained as specified in
 <a class="reference internal" href="#manage-acl-change-access-to-resource"><span class="std std-ref">Change Access to a Resource</span></a>, you can:</p>
 <ul>
-<li><p>Use <a class="reference internal" href="../api/modules/_acl_class_.html"><span class="doc">setPublicResourceAccess</span></a> to grant Access Modes
+<li><p>Use <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_acl_class_.html#setPublicResourceAccess">setPublicResourceAccess</a> to grant Access Modes
 to everybody (whether logged in or not) for the Resource itself:</p>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span>
   <span class="nx">setPublicResourceAccess</span><span class="p">,</span>
@@ -471,9 +471,9 @@ to everybody (whether logged in or not) for the Resource itself:</p>
 </pre></div>
 </div>
 </li>
-<li><p>Use <a class="reference internal" href="../api/modules/_acl_agent_.html"><span class="doc">setPublicDefaultAccess</span></a> to grant Access Modes
-to everybody (whether logged in or not) for the Resource’s children if the
-Resource is a Container:</p>
+<li><p>Use <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_acl_agent_.html#setPublicDefaultAccess">setPublicDefaultAccess</a> to grant Access Modes
+to everybody (whether logged in or not) for the Resource’s children
+if the Resource is a Container:</p>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span>
   <span class="nx">setPublicDefaultAccess</span><span class="p">,</span>
 <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@inrupt/solid-client&quot;</span><span class="p">;</span>
@@ -497,7 +497,7 @@ Resource is a Container:</p>
 <p>Given a Resource’s ACL obtained as specified in
 <a class="reference internal" href="#manage-acl-change-access-to-resource"><span class="std std-ref">Change Access to a Resource</span></a>, you can:</p>
 <ul>
-<li><p>Use <a class="reference internal" href="../api/modules/_acl_agent_.html"><span class="doc">setAgentResourceAccess</span></a> to grant Access Modes
+<li><p>Use <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_acl_agent_.html#setAgentResourceAccess">setAgentResourceAccess</a> to grant Access Modes
 to an Agent for the Resource itself:</p>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span>
   <span class="nx">setAgentResourceAccess</span><span class="p">,</span>
@@ -517,7 +517,7 @@ to an Agent for the Resource itself:</p>
 </pre></div>
 </div>
 </li>
-<li><p>Use <a class="reference internal" href="../api/modules/_acl_agent_.html"><span class="doc">setAgentDefaultAccess</span></a> to grant Access Modes
+<li><p>Use <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_acl_agent_.html#setAgentDefaultAccess">setAgentDefaultAccess</a> to grant Access Modes
 to an Agent for the Resource’s children if the Resource is a
 Container:</p>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span>
