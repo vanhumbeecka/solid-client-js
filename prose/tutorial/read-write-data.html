@@ -72,7 +72,7 @@
           <li class="nav-item"><a class="nav-link" href="#">Client Libraries </a>
                <ul class="nav-children">
                      <li class="nav-item nav-childitem">
-                        <a href="https://docs.inrupt.com/client-libraries/solid-client-js/"> JavaScript</a>
+                        <a href="https://docs.inrupt.com/developer-tools/javascript/client-libraries/"> JavaScript</a>
                      </li>
                </ul>
           </li>
@@ -128,13 +128,13 @@
              
              
                
-                  <ul>
-                      <li class=" toctree-l2"><a href="read-write-files.html">Read/Write Files</a>
              
-                      
-                      </li>
-                   </ul>
-               
+             </li> 
+           
+      
+         
+             <li class="nav-item  toctree-l1"> <a class="nav-link" href="read-write-files.html">Read/Write Files</a>
+             
              
              </li> 
            
@@ -373,24 +373,24 @@ as an option to <code class="docutils literal notranslate"><span class="pre">sol
 </div>
 <p>To read data with <code class="docutils literal notranslate"><span class="pre">solid-client</span></code>,</p>
 <ol class="arabic simple">
-<li><p>You first use <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_resource_soliddataset_.html#getSolidDataset">getSolidDataset</a> to fetch the
+<li><p>You first use <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/javascript/solid-client/modules/_resource_soliddataset_.html#getsoliddataset">getSolidDataset</a> to fetch the
 dataset from which you want to read your data.</p></li>
 <li><p>Then, use either:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_thing_thing_.html#getThing">getThing</a> to
+<li><p><a class="reference external" href="https://docs.inrupt.com/client-libraries/api/javascript/solid-client/modules/_thing_thing_.html#getthing">getThing</a> to
 get a single data entity from the dataset, or</p></li>
-<li><p><a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_thing_thing_.html#getThingAll">getThingAll</a>
+<li><p><a class="reference external" href="https://docs.inrupt.com/client-libraries/api/javascript/solid-client/modules/_thing_thing_.html#getthingall">getThingAll</a>
 to get all data entities from the dataset.</p></li>
 </ul>
 </li>
-<li><p>Then, from the data entity, you can <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_thing_get_.html">get</a> specific data. For a list of the <code class="docutils literal notranslate"><span class="pre">get</span></code>
-functions, see <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_thing_get_.html">apisolidclient</a>.</p></li>
+<li><p>Then, from the data entity, you can <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/javascript/solid-client/modules/_thing_get_.html">get</a> specific data. For a list of the <code class="docutils literal notranslate"><span class="pre">get</span></code>
+functions, see <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/javascript/solid-client/modules/_thing_get_.html">apisolidclient</a>.</p></li>
 </ol>
 <div class="section" id="fetch-the-dataset">
 <h3>1. Fetch the Dataset<a class="headerlink" href="#fetch-the-dataset" title="Permalink to this headline">¶</a></h3>
 <p>To access data, first fetch the dataset (<code class="docutils literal notranslate"><span class="pre">SolidDataset</span></code>) that
 contains the data. To fetch a <code class="docutils literal notranslate"><span class="pre">SolidDataset</span></code>, pass its URL to
-<a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_resource_soliddataset_.html#getSolidDataset">getSolidDataset</a> as in the following
+<a class="reference external" href="https://docs.inrupt.com/client-libraries/api/javascript/solid-client/modules/_resource_soliddataset_.html#getsoliddataset">getSolidDataset</a> as in the following
 example:</p>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">getSolidDataset</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@inrupt/solid-client&quot;</span><span class="p">;</span>
 
@@ -406,13 +406,13 @@ example:</p>
 <h3>2. Get the Data Entity <code class="docutils literal notranslate"><span class="pre">Thing</span></code><a class="headerlink" href="#get-the-data-entity-thing" title="Permalink to this headline">¶</a></h3>
 <p>From the fetched dataset, you can use either:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_thing_thing_.html#getThing">getThing</a> with the
+<li><p><a class="reference external" href="https://docs.inrupt.com/client-libraries/api/javascript/solid-client/modules/_thing_thing_.html#getthing">getThing</a> with the
 Thing’s URL to get a single data entity, or</p></li>
-<li><p><a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_thing_thing_.html#getThingAll">getThingAll</a> to
+<li><p><a class="reference external" href="https://docs.inrupt.com/client-libraries/api/javascript/solid-client/modules/_thing_thing_.html#getthingall">getThingAll</a> to
 get all data entities from the dataset.</p></li>
 </ul>
 <p>The following passes in a example entity’s URL to
-<a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_thing_thing_.html#getThing">getThing</a> to
+<a class="reference external" href="https://docs.inrupt.com/client-libraries/api/javascript/solid-client/modules/_thing_thing_.html#getthing">getThing</a> to
 retrieve the entity from the previously fetched dataset.</p>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">getThing</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@inrupt/solid-client&quot;</span><span class="p">;</span>
 
@@ -478,7 +478,7 @@ of the Thing’s property you want.</p>
 <span class="c1">// =&gt; an array of URLs, pointing to the Things representing FOAF.knows (&quot;http://xmlns.com/foaf/0.1/knows&quot;)</span>
 </pre></div>
 </div>
-<p>For a list of the <code class="docutils literal notranslate"><span class="pre">get</span></code> functions, see <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_thing_get_.html">thing/get</a>.</p>
+<p>For a list of the <code class="docutils literal notranslate"><span class="pre">get</span></code> functions, see <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/javascript/solid-client/modules/_thing_get_.html">thing/get</a>.</p>
 </div>
 </div>
 <div class="section" id="write-data">
@@ -531,24 +531,24 @@ access. For more information on access management, see
 <p>To start, you need a data entity (a Thing) entity from which to
 create the updated Thing:</p>
 <ul class="simple">
-<li><p>Use <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_thing_thing_.html#getThing">getThing</a>
+<li><p>Use <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/javascript/solid-client/modules/_thing_thing_.html#getthing">getThing</a>
 to start with an existing data entity, or</p></li>
-<li><p>Use <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_thing_thing_.html#createThing">createThing</a> to create a new data entity.</p></li>
+<li><p>Use <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/javascript/solid-client/modules/_thing_thing_.html#creatething">createThing</a> to create a new data entity.</p></li>
 </ul>
 <p>With this Thing as a starting point, use the following functions to
 create a <strong>new</strong> Thing with the modifications:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_thing_add_.html">thing/add</a> functions to
+<li><p><a class="reference external" href="https://docs.inrupt.com/client-libraries/api/javascript/solid-client/modules/_thing_add_.html">thing/add</a> functions to
 add new data,</p></li>
-<li><p><a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_thing_set_.html">thing/set</a> functions to
+<li><p><a class="reference external" href="https://docs.inrupt.com/client-libraries/api/javascript/solid-client/modules/_thing_set_.html">thing/set</a> functions to
 replace existing data, and</p></li>
-<li><p><a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_thing_remove_.html">thing/remove</a> functions
+<li><p><a class="reference external" href="https://docs.inrupt.com/client-libraries/api/javascript/solid-client/modules/_thing_remove_.html">thing/remove</a> functions
 to remove existing data.</p></li>
 </ul>
 </li>
-<li><p>Use <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_thing_thing_.html#setThing">setThing</a> to
+<li><p>Use <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/javascript/solid-client/modules/_thing_thing_.html#setthing">setThing</a> to
 return a <strong>new</strong> dataset with the updated Thing.</p></li>
-<li><p>Use <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_resource_soliddataset_.html#saveSolidDataSetAt">saveSolidDataSetAt</a> to save the
+<li><p>Use <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/javascript/solid-client/modules/_resource_soliddataset_.html#savesoliddatasetat">saveSolidDataSetAt</a> to save the
 dataset to the Pod.</p></li>
 </ol>
 <div class="topic">
@@ -565,12 +565,12 @@ with the requested changes, and the passed-in object remains
 <p>To start, you need a data entity (a Thing) entity from which to create
 the updated Thing:</p>
 <ul class="simple">
-<li><p>Use <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_thing_thing_.html#getThing">getThing</a> to
+<li><p>Use <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/javascript/solid-client/modules/_thing_thing_.html#getthing">getThing</a> to
 start with an existing data entity, or</p></li>
-<li><p>Use <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/module/_thing_thing_.html#createThing">createThing</a>
+<li><p>Use <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/javascript/solid-client/module/_thing_thing_.html#creatething">createThing</a>
 to create a new data entity.</p></li>
 </ul>
-<p>The following example uses <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_thing_thing_.html#createThing">createThing</a>.</p>
+<p>The following example uses <a class="reference external" href="https://docs.inrupt.com/client-libraries/api/javascript/solid-client/modules/_thing_thing_.html#creatething">createThing</a>.</p>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">createThing</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@inrupt/solid-client&quot;</span><span class="p">;</span>
 
 <span class="kr">const</span> <span class="nx">thing</span> <span class="o">=</span> <span class="nx">createThing</span><span class="p">();</span>
@@ -579,11 +579,11 @@ to create a new data entity.</p></li>
 <p>With this Thing as a starting point, use the following functions to
 create a <strong>new</strong> Thing with the modifications:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_thing_add_.html">thing/add</a> functions to
+<li><p><a class="reference external" href="https://docs.inrupt.com/client-libraries/api/javascript/solid-client/modules/_thing_add_.html">thing/add</a> functions to
 add new data,</p></li>
-<li><p><a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_thing_set_.html">thing/set</a> functions to
+<li><p><a class="reference external" href="https://docs.inrupt.com/client-libraries/api/javascript/solid-client/modules/_thing_set_.html">thing/set</a> functions to
 replace existing data, and</p></li>
-<li><p><a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_thing_remove_.html">thing/remove</a>
+<li><p><a class="reference external" href="https://docs.inrupt.com/client-libraries/api/javascript/solid-client/modules/_thing_remove_.html">thing/remove</a>
 functions to remove data.</p></li>
 </ul>
 <p>For example, the following example creates a new Thing <code class="docutils literal notranslate"><span class="pre">updatedThing</span></code>
@@ -632,7 +632,7 @@ data. For more information regarding access control, see
 <a class="reference internal" href="manage-access-control-list.html"><span class="doc">Manage Access to Data (ACL)</span></a>.</p>
 </div>
 <p>To save the updated dataset to a Pod, use
-<a class="reference external" href="https://docs.inrupt.com/client-libraries/api/js/solid-client/modules/_resource_soliddataset_.html#saveSolidDatasetAt">saveSolidDatasetAt</a>, passing in its
+<a class="reference external" href="https://docs.inrupt.com/client-libraries/api/javascript/solid-client/modules/_resource_soliddataset_.html#savesoliddatasetat">saveSolidDatasetAt</a>, passing in its
 URL as well as the updated dataset.</p>
 <div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">saveSolidDatasetAt</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&quot;@inrupt/solid-client&quot;</span><span class="p">;</span>
 
@@ -643,8 +643,6 @@ URL as well as the updated dataset.</p>
 </div>
 <p>If the given URL already contains a dataset, that dataset is replaced
 with the updated dataset.</p>
-<div class="toctree-wrapper compound">
-</div>
 </div>
 </div>
 </div>
