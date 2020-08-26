@@ -329,7 +329,7 @@
 <div class="section" id="createcontainerat">
 <h3>createContainerAt<a class="headerlink" href="#createcontainerat" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>createContainerAt</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a> | <a class="reference external" href="_interfaces_.html#url">Url</a>, <code class="docutils literal notranslate"><span class="pre">options</span></code>: Partial‹typeof internal_defaultFetchOptions›): <em>Promise‹<a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a> &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>›</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2d924b4/src/resource/solidDataset.ts#L232">resource/solidDataset.ts:232</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1eac8ff/src/resource/solidDataset.ts#L232">resource/solidDataset.ts:232</a></em></p>
 <p>Create an empty Container at the given URL.</p>
 <p>Throws an error if creating the Container failed, e.g. because the current user does not have
 permissions to, or because the Container already exists.</p>
@@ -362,7 +362,7 @@ permissions to, or because the Container already exists.</p>
 <div class="section" id="createcontainerincontainer">
 <h3>createContainerInContainer<a class="headerlink" href="#createcontainerincontainer" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>createContainerInContainer</strong>(<code class="docutils literal notranslate"><span class="pre">containerUrl</span></code>: <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a> | <a class="reference external" href="_interfaces_.html#url">Url</a>, <code class="docutils literal notranslate"><span class="pre">options</span></code>: SaveInContainerOptions): <em>Promise‹<a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a> &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>›</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2d924b4/src/resource/solidDataset.ts#L426">resource/solidDataset.ts:426</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1eac8ff/src/resource/solidDataset.ts#L426">resource/solidDataset.ts:426</a></em></p>
 <p>Create an empty Container inside the Container at the given URL.</p>
 <p>Throws an error if creating the Container failed, e.g. because the current user does not have
 permissions to.</p>
@@ -395,7 +395,7 @@ permissions to.</p>
 <div class="section" id="createsoliddataset">
 <h3>createSolidDataset<a class="headerlink" href="#createsoliddataset" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>createSolidDataset</strong>(): <em><a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a></em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2d924b4/src/resource/solidDataset.ts#L51">resource/solidDataset.ts:51</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1eac8ff/src/resource/solidDataset.ts#L51">resource/solidDataset.ts:51</a></em></p>
 <p>Initialise a new <a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a> in memory.</p>
 <p><strong>Returns:</strong> <em><a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a></em></p>
 <p>An empty <a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a>.</p>
@@ -404,7 +404,7 @@ permissions to.</p>
 <div class="section" id="getsoliddataset">
 <h3>getSolidDataset<a class="headerlink" href="#getsoliddataset" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getSolidDataset</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a> | <a class="reference external" href="_interfaces_.html#url">Url</a>, <code class="docutils literal notranslate"><span class="pre">options</span></code>: Partial‹typeof internal_defaultFetchOptions›): <em>Promise‹<a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a> &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>›</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2d924b4/src/resource/solidDataset.ts#L62">resource/solidDataset.ts:62</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1eac8ff/src/resource/solidDataset.ts#L62">resource/solidDataset.ts:62</a></em></p>
 <p>Fetch a SolidDataset from the given URL. Currently requires the SolidDataset to be available as <a class="reference external" href="https://www.w3.org/TR/turtle/">Turtle</a>.</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
@@ -435,7 +435,7 @@ permissions to.</p>
 <div class="section" id="getsoliddatasetwithacl">
 <h3>getSolidDatasetWithAcl<a class="headerlink" href="#getsoliddatasetwithacl" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getSolidDatasetWithAcl</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a> | <a class="reference external" href="_interfaces_.html#url">Url</a>, <code class="docutils literal notranslate"><span class="pre">options</span></code>: Partial‹typeof internal_defaultFetchOptions›): <em>Promise‹<a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a> &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a> &amp; WithAcl›</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2d924b4/src/resource/solidDataset.ts#L118">resource/solidDataset.ts:118</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1eac8ff/src/resource/solidDataset.ts#L118">resource/solidDataset.ts:118</a></em></p>
 <p>Experimental: fetch a SolidDataset and its associated Access Control List.</p>
 <p>This is an experimental function that fetches both a Resource, the linked ACL Resource (if
 available), and the ACL that applies to it if the linked ACL Resource is not available. This can
@@ -476,7 +476,7 @@ authenticated user.</p>
 <div class="section" id="savesoliddatasetat">
 <h3>saveSolidDatasetAt<a class="headerlink" href="#savesoliddatasetat" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>saveSolidDatasetAt</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a> | <a class="reference external" href="_interfaces_.html#url">Url</a>, <code class="docutils literal notranslate"><span class="pre">solidDataset</span></code>: <a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a>, <code class="docutils literal notranslate"><span class="pre">options</span></code>: Partial‹typeof internal_defaultFetchOptions›): <em>Promise‹<a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a> &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a> &amp; WithChangeLog›</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2d924b4/src/resource/solidDataset.ts#L137">resource/solidDataset.ts:137</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1eac8ff/src/resource/solidDataset.ts#L137">resource/solidDataset.ts:137</a></em></p>
 <p>Given a SolidDataset, store it in a Solid Pod (overwriting the existing data at the given URL).</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
@@ -512,7 +512,7 @@ authenticated user.</p>
 <div class="section" id="savesoliddatasetincontainer">
 <h3>saveSolidDatasetInContainer<a class="headerlink" href="#savesoliddatasetincontainer" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>saveSolidDatasetInContainer</strong>(<code class="docutils literal notranslate"><span class="pre">containerUrl</span></code>: <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a> | <a class="reference external" href="_interfaces_.html#url">Url</a>, <code class="docutils literal notranslate"><span class="pre">solidDataset</span></code>: <a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a>, <code class="docutils literal notranslate"><span class="pre">options</span></code>: SaveInContainerOptions): <em>Promise‹<a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a> &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>›</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2d924b4/src/resource/solidDataset.ts#L358">resource/solidDataset.ts:358</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1eac8ff/src/resource/solidDataset.ts#L358">resource/solidDataset.ts:358</a></em></p>
 <p>Given a SolidDataset, store it in a Solid Pod in a new Resource inside a Container.</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
