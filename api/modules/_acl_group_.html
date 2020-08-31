@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 
 <html>
@@ -7,11 +6,31 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Module: “acl/group” &#8212; Inrupt solid-client Documentation</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
-    <link href="../_static/css/index.css" rel="stylesheet">
+    
+  <link rel="stylesheet" href="../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/css/inrupt.css" type="text/css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.30270b6e4c972e43c488.js">
+
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -45,8 +64,8 @@
   <!-- End Matomo Code -->
 
   
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="docsearch:language" content="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
@@ -324,7 +343,7 @@
 <div class="section" id="getgroupaccess">
 <h3>getGroupAccess<a class="headerlink" href="#getgroupaccess" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getGroupAccess</strong>(<code class="docutils literal notranslate"><span class="pre">resourceInfo</span></code>: WithAcl &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>, <code class="docutils literal notranslate"><span class="pre">group</span></code>: <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>): <em><a class="reference external" href="_interfaces_.html#access">Access</a> | null</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1b7ba55/src/acl/group.ts#L58">acl/group.ts:58</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/a6fb079/src/acl/group.ts#L58">acl/group.ts:58</a></em></p>
 <p>Find out what Access Modes have been granted to a given Group of agents specifically for a given Resource.</p>
 <p>Keep in mind that this function will not tell you what access members of the given Group have through other ACL rules, e.g. public permissions.</p>
 <p>Also, please note that this function is still experimental: its API can change in non-major releases.</p>
@@ -354,7 +373,7 @@
 <div class="section" id="getgroupaccessall">
 <h3>getGroupAccessAll<a class="headerlink" href="#getgroupaccessall" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getGroupAccessAll</strong>(<code class="docutils literal notranslate"><span class="pre">resourceInfo</span></code>: WithAcl &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>): <em>Record‹IriString, <a class="reference external" href="_interfaces_.html#access">Access</a>› | null</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1b7ba55/src/acl/group.ts#L81">acl/group.ts:81</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/a6fb079/src/acl/group.ts#L81">acl/group.ts:81</a></em></p>
 <p>Find out what Access Modes have been granted to specific Groups of agents for a given Resource.</p>
 <p>Keep in mind that this function will not tell you what access members of each Group have through other ACL rules, e.g. public permissions.</p>
 <p>Also, please note that this function is still experimental: its API can change in non-major releases.</p>
@@ -380,7 +399,7 @@
 <div class="section" id="getgroupdefaultaccess">
 <h3>getGroupDefaultAccess<a class="headerlink" href="#getgroupdefaultaccess" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getGroupDefaultAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a>, <code class="docutils literal notranslate"><span class="pre">group</span></code>: <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>): <em><a class="reference external" href="_interfaces_.html#access">Access</a></em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1b7ba55/src/acl/group.ts#L158">acl/group.ts:158</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/a6fb079/src/acl/group.ts#L158">acl/group.ts:158</a></em></p>
 <p>Given an ACL SolidDataset, find out which access modes it provides to a given Group for the associated Container Resource’s child Resources.</p>
 <p>Keep in mind that this function will not tell you:</p>
 <ul class="simple">
@@ -414,7 +433,7 @@
 <div class="section" id="getgroupdefaultaccessall">
 <h3>getGroupDefaultAccessAll<a class="headerlink" href="#getgroupdefaultaccessall" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getGroupDefaultAccessAll</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a>): <em>Record‹<a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <a class="reference external" href="_interfaces_.html#access">Access</a>›</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1b7ba55/src/acl/group.ts#L184">acl/group.ts:184</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/a6fb079/src/acl/group.ts#L184">acl/group.ts:184</a></em></p>
 <p>Given an ACL SolidDataset, find out which access modes it provides to specific Groups for the associated Container Resource’s child Resources.</p>
 <p>Keep in mind that this function will not tell you:</p>
 <ul class="simple">
@@ -444,7 +463,7 @@
 <div class="section" id="getgroupresourceaccess">
 <h3>getGroupResourceAccess<a class="headerlink" href="#getgroupresourceaccess" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getGroupResourceAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a>, <code class="docutils literal notranslate"><span class="pre">group</span></code>: <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>): <em><a class="reference external" href="_interfaces_.html#access">Access</a></em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1b7ba55/src/acl/group.ts#L108">acl/group.ts:108</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/a6fb079/src/acl/group.ts#L108">acl/group.ts:108</a></em></p>
 <p>Given an ACL SolidDataset, find out which access modes it provides to a Group for its associated Resource.</p>
 <p>Keep in mind that this function will not tell you:</p>
 <ul class="simple">
@@ -478,7 +497,7 @@
 <div class="section" id="getgroupresourceaccessall">
 <h3>getGroupResourceAccessAll<a class="headerlink" href="#getgroupresourceaccessall" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getGroupResourceAccessAll</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a>): <em>Record‹<a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <a class="reference external" href="_interfaces_.html#access">Access</a>›</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1b7ba55/src/acl/group.ts#L134">acl/group.ts:134</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/a6fb079/src/acl/group.ts#L134">acl/group.ts:134</a></em></p>
 <p>Given an ACL SolidDataset, find out which access modes it provides to specific Groups for the associated Resource.</p>
 <p>Keep in mind that this function will not tell you:</p>
 <ul class="simple">
@@ -525,7 +544,10 @@
       </div>
     </div>
 
-    <script src="../_static/js/index.js"></script>
+    
+  <script src="../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
     <footer class="footer">
   <div class="container">
     <p>
