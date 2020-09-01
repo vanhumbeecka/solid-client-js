@@ -353,10 +353,10 @@
 <div class="section" id="createacl">
 <h3>createAcl<a class="headerlink" href="#createacl" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>createAcl</strong>(<code class="docutils literal notranslate"><span class="pre">targetResource</span></code>: <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a> &amp; <a class="reference external" href="_interfaces_.html#withaccessibleacl">WithAccessibleAcl</a>): <em><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a></em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/d07e057/src/acl/acl.ts#L250">acl/acl.ts:250</a></em></p>
-<p>Initialise an empty Resource ACL for a given Resource.</p>
-<p>Please note that the Web Access Control specification is not yet finalised, and hence, this
-function is still experimental and can change in a non-major release.</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c247e5/src/acl/acl.ts#L259">acl/acl.ts:259</a></em></p>
+<p>Creates an empty resource ACL (Access Control List) for a given Resource.</p>
+<p><em>Note</em>: The Web Access Control specification is not yet finalised. As such, this
+function is still experimental and subject to change, even in a non-major release.</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -373,16 +373,19 @@ function is still experimental and can change in a non-major release.</p>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a></em></p>
-<p>A Resource ACL for the given Resource, with no ACL Rules defined yet.</p>
+<p>An empty resource ACL for the given Resource.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="createaclfromfallbackacl">
 <h3>createAclFromFallbackAcl<a class="headerlink" href="#createaclfromfallbackacl" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>createAclFromFallbackAcl</strong>(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: <a class="reference external" href="_interfaces_.html#withfallbackacl">WithFallbackAcl</a> &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a> &amp; <a class="reference external" href="_interfaces_.html#withaccessibleacl">WithAccessibleAcl</a>): <em><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a></em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/d07e057/src/acl/acl.ts#L273">acl/acl.ts:273</a></em></p>
-<p>Create a Resource ACL for a given Resource, setting the same access permissions that currently apply to it from its Container.</p>
-<p>Please note that the Web Access Control specification is not yet finalised, and hence, this
-function is still experimental and can change in a non-major release.</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c247e5/src/acl/acl.ts#L285">acl/acl.ts:285</a></em></p>
+<p>Creates a resource ACL (Access Control List), initialised from the fallback ACL
+inherited from the given Resource’s Container (or another of its ancestor Containers).
+That is, the new ACL has the same rules/entries as the fallback ACL that currently
+applies to the Resource.</p>
+<p><em>Note</em>: The Web Access Control specification is not yet finalised. As such, this
+function is still experimental and subject to change, even in a non-major release.</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -394,21 +397,23 @@ function is still experimental and can change in a non-major release.</p>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">resource</span></code></p></td>
 <td><p><a class="reference external" href="_interfaces_.html#withfallbackacl">WithFallbackAcl</a> &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a> &amp; <a class="reference external" href="_interfaces_.html#withaccessibleacl">WithAccessibleAcl</a></p></td>
-<td><p>A Resource that does not have its own ACL (see <a class="reference external" href="_acl_acl_.html#hasresourceacl">hasResourceAcl</a>) and a known fallback ACL (see <a class="reference external" href="_acl_acl_.html#hasfallbackacl">hasFallbackAcl</a>).</p></td>
+<td><p>A Resource without its own resource ACL (see <a class="reference external" href="_acl_acl_.html#hasresourceacl">hasResourceAcl</a>) but with an accessible fallback ACL (see <a class="reference external" href="_acl_acl_.html#hasfallbackacl">hasFallbackAcl</a>).</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a></em></p>
-<p>A Resource ACL for the given Resource, with the default ACL Rules from the fallback ACL applied as Resource Rules.</p>
+<p>A resource ACL initialised with the rules/entries from the Resource’s fallback ACL.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="deleteaclfor">
 <h3>deleteAclFor<a class="headerlink" href="#deleteaclfor" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>deleteAclFor</strong>‹<strong>Resource</strong>›(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: Resource, <code class="docutils literal notranslate"><span class="pre">options</span></code>: Partial‹typeof internal_defaultFetchOptions›): <em>Promise‹Resource &amp; object›</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/d07e057/src/acl/acl.ts#L596">acl/acl.ts:596</a></em></p>
-<p>Remove the ACL of a Resource.</p>
-<p>Please note that the Web Access Control specification is not yet finalised, and hence, this
-function is still experimental and can change in a non-major release.</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c247e5/src/acl/acl.ts#L611">acl/acl.ts:611</a></em></p>
+<p>Removes the resource ACL (Access Control List) from a Resource.</p>
+<p>Once the resource ACL is removed from the Resource, the Resource relies on the
+fallback ACL inherited from the Resource’s parent Container (or another of its ancestor Containers).</p>
+<p><em>Note</em>: The Web Access Control specification is not yet finalised. As such, this
+function is still experimental and subject to change, even in a non-major release.</p>
 <p><strong>Type parameters:</strong></p>
 <p>▪ <strong>Resource</strong>: <em><a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a> &amp; <a class="reference external" href="_interfaces_.html#withaccessibleacl">WithAccessibleAcl</a></em></p>
 <p><strong>Parameters:</strong></p>
@@ -424,7 +429,7 @@ function is still experimental and can change in a non-major release.</p>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">resource</span></code></p></td>
 <td><p>Resource</p></td>
 <td><p>-</p></td>
-<td><p>The Resource for which you want to delete the Access Control List Resource.</p></td>
+<td><p>The Resource for which you want to delete the ACL.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
 <td><p>Partial‹typeof internal_defaultFetchOptions›</p></td>
@@ -439,12 +444,14 @@ function is still experimental and can change in a non-major release.</p>
 <div class="section" id="getfallbackacl">
 <h3>getFallbackAcl<a class="headerlink" href="#getfallbackacl" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getFallbackAcl</strong>(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: <a class="reference external" href="_interfaces_.html#withfallbackacl">WithFallbackAcl</a>): <em><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a></em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/d07e057/src/acl/acl.ts#L232">acl/acl.ts:232</a></em></p>
-<p>Access the fallback ACL attached to a Resource.</p>
-<p>Given a Resource that has a fallback ACL attached, this function will give you access to that
-ACL. To verify whether the fallback ACL is available, see <a class="reference external" href="_acl_acl_.html#hasfallbackacl">hasFallbackAcl</a>.</p>
-<p>Please note that the Web Access Control specification is not yet finalised, and hence, this
-function is still experimental and can change in a non-major release.</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c247e5/src/acl/acl.ts#L241">acl/acl.ts:241</a></em></p>
+<p>Returns the fallback ACL (Access Control List) attached to a Resource.</p>
+<p>If the Resource has a fallback ACL attached and is accessible by the user
+(see <a class="reference external" href="_acl_acl_.html#hasfallbackacl">hasFallbackAcl</a>), the function returns the fallback ACL.
+If the Resource does not hava a fallback ACL attached or is inaccessible by the user,
+the function returns <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p>
+<p><em>Note</em>: The Web Access Control specification is not yet finalised. As such, this
+function is still experimental and subject to change, even in a non-major release.</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -461,9 +468,9 @@ function is still experimental and can change in a non-major release.</p>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a></em></p>
-<p>The fallback ACL, or null if it coult not be accessed.</p>
+<p>The fallback ACL if available or <code class="docutils literal notranslate"><span class="pre">null</span></code> if not.</p>
 <p>▸ <strong>getFallbackAcl</strong>(<code class="docutils literal notranslate"><span class="pre">dataset</span></code>: WithAcl): <em><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a> | null</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/d07e057/src/acl/acl.ts#L233">acl/acl.ts:233</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c247e5/src/acl/acl.ts#L242">acl/acl.ts:242</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -483,12 +490,14 @@ function is still experimental and can change in a non-major release.</p>
 <div class="section" id="getresourceacl">
 <h3>getResourceAcl<a class="headerlink" href="#getresourceacl" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getResourceAcl</strong>(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: WithAcl &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a> &amp; <a class="reference external" href="_interfaces_.html#withresourceacl">WithResourceAcl</a>): <em><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a></em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/d07e057/src/acl/acl.ts#L184">acl/acl.ts:184</a></em></p>
-<p>Access the ACL attached to a Resource.</p>
-<p>Given a Resource that has an ACL attached, this function will give you access to that ACL. To
-verify whether the ACL is available, see <a class="reference external" href="_acl_acl_.html#hasresourceacl">hasResourceAcl</a>.</p>
-<p>Please note that the Web Access Control specification is not yet finalised, and hence, this
-function is still experimental and can change in a non-major release.</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c247e5/src/acl/acl.ts#L185">acl/acl.ts:185</a></em></p>
+<p>Returns the resource ACL (Access Control List) attached to a Resource.</p>
+<p>If the Resource has its resource ACL attached and is accessible by the user
+(see <a class="reference external" href="_acl_acl_.html#hasresourceacl">hasResourceAcl</a>), the function returns the resource ACL.
+If the Resource does not have a resource ACL attached or is inaccessible by the user,
+the function returns <code class="docutils literal notranslate"><span class="pre">null</span></code>.</p>
+<p><em>Note</em>: The Web Access Control specification is not yet finalised. As such, this
+function is still experimental and subject to change, even in a non-major release.</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -505,9 +514,9 @@ function is still experimental and can change in a non-major release.</p>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a></em></p>
-<p>The ACL, if available, and undefined if not.</p>
+<p>The resource ACL if available and <code class="docutils literal notranslate"><span class="pre">null</span></code> if not.</p>
 <p>▸ <strong>getResourceAcl</strong>(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: WithAcl &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>): <em><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a> | null</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/d07e057/src/acl/acl.ts#L187">acl/acl.ts:187</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c247e5/src/acl/acl.ts#L188">acl/acl.ts:188</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -527,14 +536,20 @@ function is still experimental and can change in a non-major release.</p>
 <div class="section" id="hasfallbackacl">
 <h3>hasFallbackAcl<a class="headerlink" href="#hasfallbackacl" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>hasFallbackAcl</strong>‹<strong>Resource</strong>›(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: Resource): <em>resource is Resource &amp; WithFallbackAcl</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/d07e057/src/acl/acl.ts#L214">acl/acl.ts:214</a></em></p>
-<p>Verify whether a fallback ACL was found for the given Resource.</p>
-<p>A Resource fetched with its ACL (e.g. using <a class="reference external" href="_resource_soliddataset_.html#getsoliddatasetwithacl">getSolidDatasetWithAcl</a>) <em>might</em> have a fallback ACL
-attached, but we cannot be sure: the currently authenticated user (if any) might not have Control
-access to one of the fetched Resource’s Containers.</p>
-<p>This function verifies that the fallback ACL is accessible.</p>
-<p>Please note that the Web Access Control specification is not yet finalised, and hence, this
-function is still experimental and can change in a non-major release.</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c247e5/src/acl/acl.ts#L221">acl/acl.ts:221</a></em></p>
+<p>Verifies whether the given Resource has a fallback ACL (Access Control List) attached.</p>
+<p>A fallback ACL for a Resource is inherited from the Resource’s parent Container
+(or another of its ancestor Containers) and applies if the Resource does
+not have its own resource ACL.</p>
+<p>The <a class="reference external" href="_acl_acl_.html#hasfallbackacl">hasFallbackAcl</a> function checks that:</p>
+<ul class="simple">
+<li><p>a given Resource has a fallback ACL attached, and</p></li>
+<li><p>the user calling <a class="reference external" href="_acl_acl_.html#hasfallbackacl">hasFallbackAcl</a> has Control access to the Container
+from which the Resource inherits its ACL.</p></li>
+</ul>
+<p>To retrieve a Resource with its ACLs, see <a class="reference external" href="_resource_soliddataset_.html#getsoliddatasetwithacl">getSolidDatasetWithAcl</a>.</p>
+<p><em>Note</em>: The Web Access Control specification is not yet finalised. As such, this
+function is still experimental and subject to change, even in a non-major release.</p>
 <p><strong>Type parameters:</strong></p>
 <p>▪ <strong>Resource</strong>: <em>WithAcl</em></p>
 <p><strong>Parameters:</strong></p>
@@ -553,21 +568,22 @@ function is still experimental and can change in a non-major release.</p>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>resource is Resource &amp; WithFallbackAcl</em></p>
-<p>Whether <code class="docutils literal notranslate"><span class="pre">dataset</span></code> has a fallback ACL attached.</p>
+<p><code class="docutils literal notranslate"><span class="pre">true</span></code> if the Resource has a fallback ACL attached that is accessible to the user.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="hasresourceacl">
 <h3>hasResourceAcl<a class="headerlink" href="#hasresourceacl" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>hasResourceAcl</strong>‹<strong>Resource</strong>›(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: Resource): <em>resource is Resource &amp; WithResourceAcl &amp; WithAccessibleAcl</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/d07e057/src/acl/acl.ts#L160">acl/acl.ts:160</a></em></p>
-<p>Verify whether an ACL was found for the given Resource.</p>
-<p>A Resource fetched with its ACL (e.g. using <a class="reference external" href="_resource_soliddataset_.html#getsoliddatasetwithacl">getSolidDatasetWithAcl</a>) <em>might</em> have a resource ACL attached, but
-we cannot be sure: it might be that none exists for this specific Resource (in which case the
-fallback ACL applies), or the currently authenticated user (if any) might not have Control access
-to the fetched Resource.</p>
-<p>This function verifies that the Resource’s ACL is accessible.</p>
-<p>Please note that the Web Access Control specification is not yet finalised, and hence, this
-function is still experimental and can change in a non-major release.</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c247e5/src/acl/acl.ts#L159">acl/acl.ts:159</a></em></p>
+<p>Verifies whether the given Resource has a resource ACL (Access Control List) attached.</p>
+<p>The <a class="reference external" href="_acl_acl_.html#hasresourceacl">hasResourceAcl</a> function checks that:</p>
+<ul class="simple">
+<li><p>a given Resource has a resource ACL attached, and</p></li>
+<li><p>the user calling <a class="reference external" href="_acl_acl_.html#hasresourceacl">hasResourceAcl</a> has Control access to the Resource.</p></li>
+</ul>
+<p>To retrieve a Resource with its ACLs, see <a class="reference external" href="_resource_soliddataset_.html#getsoliddatasetwithacl">getSolidDatasetWithAcl</a>.</p>
+<p><em>Note</em>: The Web Access Control specification is not yet finalised. As such, this
+function is still experimental and subject to change, even in a non-major release.</p>
 <p><strong>Type parameters:</strong></p>
 <p>▪ <strong>Resource</strong>: <em>WithAcl &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a></em></p>
 <p><strong>Parameters:</strong></p>
@@ -586,16 +602,16 @@ function is still experimental and can change in a non-major release.</p>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>resource is Resource &amp; WithResourceAcl &amp; WithAccessibleAcl</em></p>
-<p>Whether <code class="docutils literal notranslate"><span class="pre">dataset</span></code> has an ACL attached.</p>
+<p><code class="docutils literal notranslate"><span class="pre">true</span></code> if the Resource has a resource ACL attached that is accessible by the user.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="saveaclfor">
 <h3>saveAclFor<a class="headerlink" href="#saveaclfor" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>saveAclFor</strong>(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: <a class="reference external" href="_interfaces_.html#withaccessibleacl">WithAccessibleAcl</a>, <code class="docutils literal notranslate"><span class="pre">resourceAcl</span></code>: <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a>, <code class="docutils literal notranslate"><span class="pre">options</span></code>: Partial‹typeof internal_defaultFetchOptions›): <em>Promise‹<a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a> &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>›</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/d07e057/src/acl/acl.ts#L565">acl/acl.ts:565</a></em></p>
-<p>Save the ACL for a Resource.</p>
-<p>Please note that the Web Access Control specification is not yet finalised, and hence, this
-function is still experimental and can change in a non-major release.</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c247e5/src/acl/acl.ts#L577">acl/acl.ts:577</a></em></p>
+<p>Saves the resource ACL for a Resource.</p>
+<p><em>Note</em>: The Web Access Control specification is not yet finalised. As such, this
+function is still experimental and subject to change, even in a non-major release.</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -609,7 +625,7 @@ function is still experimental and can change in a non-major release.</p>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">resource</span></code></p></td>
 <td><p><a class="reference external" href="_interfaces_.html#withaccessibleacl">WithAccessibleAcl</a></p></td>
 <td><p>-</p></td>
-<td><p>The Resource to which the given ACL applies.</p></td>
+<td><p>The Resource to which the given resource ACL applies.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">resourceAcl</span></code></p></td>
 <td><p><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a></p></td>
