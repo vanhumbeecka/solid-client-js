@@ -343,10 +343,14 @@
 <div class="section" id="getgroupaccess">
 <h3>getGroupAccess<a class="headerlink" href="#getgroupaccess" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getGroupAccess</strong>(<code class="docutils literal notranslate"><span class="pre">resourceInfo</span></code>: WithAcl &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>, <code class="docutils literal notranslate"><span class="pre">group</span></code>: <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>): <em><a class="reference external" href="_interfaces_.html#access">Access</a> | null</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/e66a0a5/src/acl/group.ts#L58">acl/group.ts:58</a></em></p>
-<p>Find out what Access Modes have been granted to a given Group of agents specifically for a given Resource.</p>
-<p>Keep in mind that this function will not tell you what access members of the given Group have through other ACL rules, e.g. public permissions.</p>
-<p>Also, please note that this function is still experimental: its API can change in non-major releases.</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/a2081ab/src/acl/group.ts#L59">acl/group.ts:59</a></em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function is still experimental and subject to change, even in a non-major release.</p>
+</div>
+<p>Returns a Group’s explicity-granted Access Modes for a given Resource.</p>
+<p>The function does not return Access Modes granted indirectly to the Group through other
+ACL rules, e.g., public permissions.</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -367,16 +371,20 @@
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em><a class="reference external" href="_interfaces_.html#access">Access</a> | null</em></p>
-<p>Which Access Modes have been granted to the Group specifically for the given Resource, or <code class="docutils literal notranslate"><span class="pre">null</span></code> if it could not be determined (e.g. because the current user does not have Control Access to a given Resource or its Container).</p>
+<p>Access Modes that have been explicitly granted to the <code class="docutils literal notranslate"><span class="pre">group</span></code> for the given Resource, or <code class="docutils literal notranslate"><span class="pre">null</span></code> if it could not be determined (e.g. because the current user does not have Control Access to a given Resource or its Container).</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="getgroupaccessall">
 <h3>getGroupAccessAll<a class="headerlink" href="#getgroupaccessall" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getGroupAccessAll</strong>(<code class="docutils literal notranslate"><span class="pre">resourceInfo</span></code>: WithAcl &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>): <em>Record‹IriString, <a class="reference external" href="_interfaces_.html#access">Access</a>› | null</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/e66a0a5/src/acl/group.ts#L81">acl/group.ts:81</a></em></p>
-<p>Find out what Access Modes have been granted to specific Groups of agents for a given Resource.</p>
-<p>Keep in mind that this function will not tell you what access members of each Group have through other ACL rules, e.g. public permissions.</p>
-<p>Also, please note that this function is still experimental: its API can change in non-major releases.</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/a2081ab/src/acl/group.ts#L84">acl/group.ts:84</a></em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function is still experimental and subject to change, even in a non-major release.</p>
+</div>
+<p>Returns all explicitly-granted Access Modes per Group for the given Resource.</p>
+<p>The function does not return Access Modes granted indirectly to the Group through other
+ACL rules, e.g., public permissions.</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -393,20 +401,24 @@
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Record‹IriString, <a class="reference external" href="_interfaces_.html#access">Access</a>› | null</em></p>
-<p>Which Access Modes have been granted to which Groups specifically for the given Resource, or <code class="docutils literal notranslate"><span class="pre">null</span></code> if it could not be determined (e.g. because the current user does not have Control Access to a given Resource or its Container).</p>
+<p>Access Modes per Group that have been explicitly granted for the given Resource, or <code class="docutils literal notranslate"><span class="pre">null</span></code> if it could not be determined (e.g. because the current user does not have Control Access to a given Resource or its Container).</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="getgroupdefaultaccess">
 <h3>getGroupDefaultAccess<a class="headerlink" href="#getgroupdefaultaccess" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getGroupDefaultAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a>, <code class="docutils literal notranslate"><span class="pre">group</span></code>: <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>): <em><a class="reference external" href="_interfaces_.html#access">Access</a></em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/e66a0a5/src/acl/group.ts#L158">acl/group.ts:158</a></em></p>
-<p>Given an ACL SolidDataset, find out which access modes it provides to a given Group for the associated Container Resource’s child Resources.</p>
-<p>Keep in mind that this function will not tell you:</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/a2081ab/src/acl/group.ts#L168">acl/group.ts:168</a></em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function is still experimental and subject to change, even in a non-major release.</p>
+</div>
+<p>Returns a Group’s Access Modes explicitly granted for the children of the
+Container associated with an ACL (Access ControlList).</p>
+<p>The function does not return:</p>
 <ul class="simple">
-<li><p>what access members of the given Group have through other ACL rules, e.g. public permissions.</p></li>
-<li><p>what access members of the given Group have to the Container Resource itself (see <a class="reference external" href="_acl_group_.html#getgroupresourceaccess">getGroupResourceAccess</a> for that).</p></li>
+<li><p>Access Modes granted indirectly to the Group through other ACL rules, e.g. public permissions.</p></li>
+<li><p>Access Modes granted to the Group for the Container Resource itself (see <a class="reference external" href="_acl_group_.html#getgroupresourceaccess">getGroupResourceAccess</a> instead).</p></li>
 </ul>
-<p>Also, please note that this function is still experimental: its API can change in non-major releases.</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -418,7 +430,7 @@
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aclDataset</span></code></p></td>
 <td><p><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a></p></td>
-<td><p>The SolidDataset that contains Access-Control List rules for a certain Container.</p></td>
+<td><p>The SolidDataset that contains ACL rules for a certain Container.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">group</span></code></p></td>
 <td><p><a class="reference external" href="_interfaces_.html#urlstring">UrlString</a></p></td>
@@ -427,20 +439,24 @@
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em><a class="reference external" href="_interfaces_.html#access">Access</a></em></p>
-<p>Which Access Modes have been granted to the Group specifically for the children of the Container associated with the given ACL SolidDataset.</p>
+<p>Access Modes that have been explicitly granted to the Group for the children of the Container associated with the given ACL.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="getgroupdefaultaccessall">
 <h3>getGroupDefaultAccessAll<a class="headerlink" href="#getgroupdefaultaccessall" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getGroupDefaultAccessAll</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a>): <em>Record‹<a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <a class="reference external" href="_interfaces_.html#access">Access</a>›</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/e66a0a5/src/acl/group.ts#L184">acl/group.ts:184</a></em></p>
-<p>Given an ACL SolidDataset, find out which access modes it provides to specific Groups for the associated Container Resource’s child Resources.</p>
-<p>Keep in mind that this function will not tell you:</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/a2081ab/src/acl/group.ts#L196">acl/group.ts:196</a></em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function is still experimental and subject to change, even in a non-major release.</p>
+</div>
+<p>Returns the Access Modes, per Group, that have been explicitly granted for the children
+of the Container associated with the given ACL (Access Control List).</p>
+<p>The function does not return:</p>
 <ul class="simple">
-<li><p>what access arbitrary members of these Groups have through other ACL rules, e.g. public permissions.</p></li>
-<li><p>what access arbitrary members of these Groups have to the Container Resource itself (see <a class="reference external" href="_acl_group_.html#getgroupresourceaccessall">getGroupResourceAccessAll</a> for that).</p></li>
+<li><p>Access Modes granted indirectly to the Groups through other ACL rules, e.g. public permissions.</p></li>
+<li><p>Access Modes granted to the Groups for the Container Resource itself (see <a class="reference external" href="_acl_group_.html#getgroupresourceaccessall">getGroupResourceAccessAll</a> instead).</p></li>
 </ul>
-<p>Also, please note that this function is still experimental: its API can change in non-major releases.</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -452,25 +468,30 @@
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aclDataset</span></code></p></td>
 <td><p><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a></p></td>
-<td><p>The SolidDataset that contains Access-Control List rules for a certain Container.</p></td>
+<td><p>The SolidDataset that contains Access Control List rules for a certain Container.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Record‹<a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <a class="reference external" href="_interfaces_.html#access">Access</a>›</em></p>
-<p>Which Access Modes have been granted to which Groups specifically for the children of the Container associated with the given ACL SolidDataset.</p>
+<p>Access Modes per Group that have been explicitly granted for the children of the Container associated with the given ACL SolidDataset.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="getgroupresourceaccess">
 <h3>getGroupResourceAccess<a class="headerlink" href="#getgroupresourceaccess" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getGroupResourceAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a>, <code class="docutils literal notranslate"><span class="pre">group</span></code>: <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>): <em><a class="reference external" href="_interfaces_.html#access">Access</a></em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/e66a0a5/src/acl/group.ts#L108">acl/group.ts:108</a></em></p>
-<p>Given an ACL SolidDataset, find out which access modes it provides to a Group for its associated Resource.</p>
-<p>Keep in mind that this function will not tell you:</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/a2081ab/src/acl/group.ts#L114">acl/group.ts:114</a></em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function is still experimental and subject to change, even in a non-major release.</p>
+</div>
+<p>Returns the Access Modes explicitly granted to a Group for the Resource
+associated with an ACL (Access Control List).</p>
+<p>The function does not return:</p>
 <ul class="simple">
-<li><p>what access members of the given Group have through other ACL rules, e.g. public permissions.</p></li>
-<li><p>what access members of the given Group have to child Resources, in case the associated Resource is a Container (see [[getGroupDefaultAccessModes]] for that).</p></li>
+<li><p>Access Modes granted indirectly to the Group through other ACL rules, e.g., public permissions.</p></li>
+<li><p>Access Modes granted to the Group for the child Resources if the associated Resource is a Container
+(see <a class="reference external" href="_acl_group_.html#getgroupdefaultaccess">getGroupDefaultAccess</a> instead).</p></li>
 </ul>
-<p>Also, please note that this function is still experimental: its API can change in non-major releases.</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -482,7 +503,7 @@
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aclDataset</span></code></p></td>
 <td><p><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a></p></td>
-<td><p>The SolidDataset that contains Access-Control List rules.</p></td>
+<td><p>The SolidDataset that contains Access Control List rules.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">group</span></code></p></td>
 <td><p><a class="reference external" href="_interfaces_.html#urlstring">UrlString</a></p></td>
@@ -491,20 +512,24 @@
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em><a class="reference external" href="_interfaces_.html#access">Access</a></em></p>
-<p>Which Access Modes have been granted to the Group specifically for the Resource the given ACL SolidDataset is associated with.</p>
+<p>Access Modes explicitly granted to a Group for the Resource associated with an ACL.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="getgroupresourceaccessall">
 <h3>getGroupResourceAccessAll<a class="headerlink" href="#getgroupresourceaccessall" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getGroupResourceAccessAll</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a>): <em>Record‹<a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <a class="reference external" href="_interfaces_.html#access">Access</a>›</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/e66a0a5/src/acl/group.ts#L134">acl/group.ts:134</a></em></p>
-<p>Given an ACL SolidDataset, find out which access modes it provides to specific Groups for the associated Resource.</p>
-<p>Keep in mind that this function will not tell you:</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/a2081ab/src/acl/group.ts#L142">acl/group.ts:142</a></em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function is still experimental and subject to change, even in a non-major release.</p>
+</div>
+<p>Returns the explicitly granted Access Modes per Group for the Resource associated
+with an ACL (Access Control List).</p>
+<p>The function does not return:</p>
 <ul class="simple">
-<li><p>what access arbitrary members of these Groups might have been given through other ACL rules, e.g. public permissions.</p></li>
-<li><p>what access arbitrary members of these Groups have to child Resources, in case the associated Resource is a Container.</p></li>
+<li><p>Access Modes granted indirectly to the Group through other ACL rules, e.g., public permissions.</p></li>
+<li><p>Access Modes granted to Groups for the child Resources if the associated Resource is a Container.</p></li>
 </ul>
-<p>Also, please note that this function is still experimental: its API can change in non-major releases.</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -516,12 +541,12 @@
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aclDataset</span></code></p></td>
 <td><p><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a></p></td>
-<td><p>The SolidDataset that contains Access-Control List rules.</p></td>
+<td><p>The SolidDataset that contains Access Control List rules.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Record‹<a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <a class="reference external" href="_interfaces_.html#access">Access</a>›</em></p>
-<p>Which Access Modes have been granted to which Groups specifically for the Resource the given ACL SolidDataset is associated with.</p>
+<p>Access Modes per Group that have been explicitly granted for the Resource associated with an ACL.</p>
 </div>
 </div>
 </div>
