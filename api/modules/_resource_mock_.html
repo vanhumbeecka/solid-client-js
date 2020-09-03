@@ -328,13 +328,14 @@
 <div class="section" id="mockcontainerfrom">
 <h3>mockContainerFrom<a class="headerlink" href="#mockcontainerfrom" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>mockContainerFrom</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>): <em>Unpromisify‹ReturnType‹typeof getSolidDataset››</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/692dc1f/src/resource/mock.ts#L76">resource/mock.ts:76</a></em></p>
-<p>Function for use in unit tests to mock a persisted <a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a> representing a Container.</p>
-<p>Warning: do not use this function in actual production code.
-This function initialises a new SolidDataset but, as opposed to <a class="reference external" href="_resource_soliddataset_.html#createsoliddataset">createSolidDataset</a>,
-it adds metadata that would also have been present had an empty SolidDataset been fetched from
-the given URL, and was a Container. This is useful to mock a SolidDataset in tests of code that
-call e.g. <a class="reference external" href="_resource_resource_.html#iscontainer">isContainer</a>.</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/26e1fda/src/resource/mock.ts#L76">resource/mock.ts:76</a></em></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not use this function in production code. For use in <strong>unit tests</strong>.</p>
+</div>
+<p>This function initialises a new Container <a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a> with metadata as though the
+Container has been retrieved from the given URL. The mock SolidDataset can be used in
+unit tests that require persisted Containers; e.g., unit tests that call <a class="reference external" href="_resource_resource_.html#iscontainer">isContainer</a>.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">since</span></code></strong> 0.2.0</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
@@ -347,23 +348,25 @@ call e.g. <a class="reference external" href="_resource_resource_.html#iscontain
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">url</span></code></p></td>
 <td><p><a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a></p></td>
-<td><p>The URL from which the mocked Container pretends to be retrieved — this should end in a slash.</p></td>
+<td><p>The URL from which the returned Container appears to be retrieved. The <code class="docutils literal notranslate"><span class="pre">url</span></code> must end in a slash.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Unpromisify‹ReturnType‹typeof getSolidDataset››</em></p>
-<p>A mocked SolidDataset.</p>
+<p>A mock SolidDataset that appears to be retrieved from the <code class="docutils literal notranslate"><span class="pre">url</span></code>.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="mockfilefrom">
 <h3>mockFileFrom<a class="headerlink" href="#mockfilefrom" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>mockFileFrom</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: Partial‹object›): <em>Unpromisify‹ReturnType‹typeof getFile››</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/692dc1f/src/resource/mock.ts#L101">resource/mock.ts:101</a></em></p>
-<p>Function for use in unit tests to mock a persisted File.</p>
-<p>Warning: do not use this function in actual production code.
-This function initialises a new File, and adds metadata that would also have been present had an
-empty file been fetched from the given URL. This is useful to mock a File in tests of code that
-call e.g. <a class="reference external" href="_resource_resource_.html#getsourceurl">getSourceUrl</a>.</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/26e1fda/src/resource/mock.ts#L102">resource/mock.ts:102</a></em></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not use this function in production code. For use in <strong>unit tests</strong>.</p>
+</div>
+<p>This function initialises a new File with metadata as though the
+File has been retrieved from the given URL. The mock File can be used in
+unit tests that require persisted Files; e.g. unit tests that call <a class="reference external" href="_resource_resource_.html#getsourceurl">getSourceUrl</a>.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">since</span></code></strong> 0.2.0</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
@@ -376,7 +379,7 @@ call e.g. <a class="reference external" href="_resource_resource_.html#getsource
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">url</span></code></p></td>
 <td><p><a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a></p></td>
-<td><p>The URL from which the mocked File pretends to be retrieved.</p></td>
+<td><p>The URL from which the returned File appears to be retrieved.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">options?</span></code></p></td>
 <td><p>Partial‹object›</p></td>
@@ -385,19 +388,20 @@ call e.g. <a class="reference external" href="_resource_resource_.html#getsource
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Unpromisify‹ReturnType‹typeof getFile››</em></p>
-<p>A mocked File.</p>
+<p>A mock File that appears to be retrieved from the <code class="docutils literal notranslate"><span class="pre">url</span></code>.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="mocksoliddatasetfrom">
 <h3>mockSolidDatasetFrom<a class="headerlink" href="#mocksoliddatasetfrom" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>mockSolidDatasetFrom</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>): <em>Unpromisify‹ReturnType‹typeof getSolidDataset››</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/692dc1f/src/resource/mock.ts#L47">resource/mock.ts:47</a></em></p>
-<p>Function for use in unit tests to mock a persisted <a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a>.</p>
-<p>Warning: do not use this function in actual production code.
-This function initialises a new SolidDataset but, as opposed to <a class="reference external" href="_resource_soliddataset_.html#createsoliddataset">createSolidDataset</a>,
-it adds metadata that would also have been present had an empty SolidDataset been fetched from
-the given URL. This is useful to mock a SolidDataset in tests of code that call e.g.
-<a class="reference external" href="_resource_resource_.html#getsourceurl">getSourceUrl</a>.</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/26e1fda/src/resource/mock.ts#L47">resource/mock.ts:47</a></em></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not use this function in production code. For use in <strong>unit tests</strong>.</p>
+</div>
+<p>This function initialises a new <a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a> with metadata as though the
+SolidDataset has been retrieved from the given URL. The mock SolidDataset can be used in
+unit tests that require persisted SolidDatasets; e.g., unit tests that call <a class="reference external" href="_resource_resource_.html#getsourceurl">getSourceUrl</a>.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">since</span></code></strong> 0.2.0</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
@@ -410,12 +414,12 @@ the given URL. This is useful to mock a SolidDataset in tests of code that call 
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">url</span></code></p></td>
 <td><p><a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a></p></td>
-<td><p>The URL from which the mocked SolidDataset pretends to be retrieved.</p></td>
+<td><p>The URL from which the returned SolidDataset appears to be retrieved.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Unpromisify‹ReturnType‹typeof getSolidDataset››</em></p>
-<p>A mocked SolidDataset.</p>
+<p>A mock SolidDataset that appears to be retrieved from the <code class="docutils literal notranslate"><span class="pre">url</span></code>.</p>
 </div>
 </div>
 </div>
