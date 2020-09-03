@@ -323,13 +323,14 @@
 <div class="section" id="addmockfallbackaclto">
 <h3>addMockFallbackAclTo<a class="headerlink" href="#addmockfallbackaclto" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>addMockFallbackAclTo</strong>‹<strong>T</strong>›(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: T): <em>T &amp; <a class="reference external" href="_interfaces_.html#withfallbackacl">WithFallbackAcl</a></em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/a2081ab/src/acl/mock.ts#L88">acl/mock.ts:88</a></em></p>
-<p>Function for use in unit tests to mock a <a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a> that has one of its Container’s ACL attached.</p>
-<p>Warning: do not use this function in actual production code.
-This function initialises a new empty ACL and attaches it to a given [[SolidDataset] as its
-fallback ACL.
-This is useful to mock a SolidDataset with an ACL in tests of code that call e.g.
-<a class="reference external" href="_acl_acl_.html#getfallbackacl">getFallbackAcl</a>.</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/692dc1f/src/acl/mock.ts#L90">acl/mock.ts:90</a></em></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not use this function in production code.  For use in <strong>unit tests</strong> that require a
+<a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a> with a fallback ACL (Access Control List).</p>
+</div>
+<p>Initialises a new empty fallback ACL and attaches it to a given <a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a> for use
+in <strong>unit tests</strong>; e.g., unit tests that call <a class="reference external" href="_acl_acl_.html#getfallbackacl">getFallbackAcl</a>.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">since</span></code></strong> 0.2.0</p>
 <p><strong>Type parameters:</strong></p>
 <p>▪ <strong>T</strong>: <em><a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a></em></p>
@@ -344,23 +345,25 @@ This is useful to mock a SolidDataset with an ACL in tests of code that call e.g
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">resource</span></code></p></td>
 <td><p>T</p></td>
-<td><p>The Resource that we should pretend has one of its Container’s ACL attached.</p></td>
+<td><p>The Resource to mock up with new fallback ACL.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>T &amp; <a class="reference external" href="_interfaces_.html#withfallbackacl">WithFallbackAcl</a></em></p>
-<p>The input Resource, with an empty Fallback ACL attached.</p>
+<p>The input Resource with an empty fallback ACL attached.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="addmockresourceaclto">
 <h3>addMockResourceAclTo<a class="headerlink" href="#addmockresourceaclto" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>addMockResourceAclTo</strong>‹<strong>T</strong>›(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: T): <em>T &amp; <a class="reference external" href="_interfaces_.html#withresourceacl">WithResourceAcl</a></em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/a2081ab/src/acl/mock.ts#L46">acl/mock.ts:46</a></em></p>
-<p>Function for use in unit tests to mock a <a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a> that has its own ACL attached.</p>
-<p>Warning: do not use this function in actual production code.
-This function initialises a new empty ACL and attaches it to a given [[SolidDataset].
-This is useful to mock a SolidDataset with an ACL in tests of code that call e.g.
-<a class="reference external" href="_acl_acl_.html#getresourceacl">getResourceAcl</a>.</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/692dc1f/src/acl/mock.ts#L47">acl/mock.ts:47</a></em></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not use this function in production code. For use in <strong>unit tests</strong> that
+require a <a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a> with a resource ACL (Access Control List).</p>
+</div>
+<p>Initialises a new empty ACL and attaches it to a given <a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a> for use
+in <strong>unit tests</strong>; e.g., unit tests that call <a class="reference external" href="_acl_acl_.html#getresourceacl">getResourceAcl</a>.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">since</span></code></strong> 0.2.0</p>
 <p><strong>Type parameters:</strong></p>
 <p>▪ <strong>T</strong>: <em><a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a></em></p>
@@ -375,12 +378,12 @@ This is useful to mock a SolidDataset with an ACL in tests of code that call e.g
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">resource</span></code></p></td>
 <td><p>T</p></td>
-<td><p>The Resource that we should pretend has its own ACL.</p></td>
+<td><p>The Resource to mock up with a new resource ACL.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>T &amp; <a class="reference external" href="_interfaces_.html#withresourceacl">WithResourceAcl</a></em></p>
-<p>The input Resource, with an empty Resource ACL attached.</p>
+<p>The input Resource with an empty resource ACL attached.</p>
 </div>
 </div>
 </div>
