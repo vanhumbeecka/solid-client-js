@@ -373,9 +373,12 @@
 <div class="section" id="agentaccess">
 <h3>AgentAccess<a class="headerlink" href="#agentaccess" title="Permalink to this headline">¶</a></h3>
 <p>Ƭ <strong>AgentAccess</strong>: <em>Record‹<a class="reference external" href="_interfaces_.html#webid">WebId</a>, <a class="reference external" href="_interfaces_.html#access">Access</a>›</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/0d9d3bb/src/acl/agent.ts#L58">acl/agent.ts:58</a></em></p>
-<p><em>Note</em>: The Web Access Control specification is not yet finalised. As such, this
-interface is still experimental and subject to change, even in a non-major release.</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/ecfcd21/src/acl/agent.ts#L59">acl/agent.ts:59</a></em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Web Access Control specification is not yet finalised. As such, this
+function is still experimental and subject to change, even in a non-major release.</p>
+</div>
 </div>
 </div>
 <div class="section" id="id2">
@@ -383,11 +386,14 @@ interface is still experimental and subject to change, even in a non-major relea
 <div class="section" id="getagentaccess">
 <h3>getAgentAccess<a class="headerlink" href="#getagentaccess" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getAgentAccess</strong>(<code class="docutils literal notranslate"><span class="pre">resourceInfo</span></code>: WithAcl &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>, <code class="docutils literal notranslate"><span class="pre">agent</span></code>: <a class="reference external" href="_interfaces_.html#webid">WebId</a>): <em><a class="reference external" href="_interfaces_.html#access">Access</a> | null</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/0d9d3bb/src/acl/agent.ts#L72">acl/agent.ts:72</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/ecfcd21/src/acl/agent.ts#L75">acl/agent.ts:75</a></em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function is still experimental and subject to change, even in a non-major release.</p>
+</div>
 <p>Returns an Agent’s explicitly-granted Access Modes for the given Resource.</p>
 <p>The function does not return Access Modes granted indirectly to the Agent through other
 ACL rules, e.g., public or group-specific permissions.</p>
-<p><em>Note</em>: This function is still experimental and subject to change, even in a non-major release.</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -414,11 +420,14 @@ ACL rules, e.g., public or group-specific permissions.</p>
 <div class="section" id="getagentaccessall">
 <h3>getAgentAccessAll<a class="headerlink" href="#getagentaccessall" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getAgentAccessAll</strong>(<code class="docutils literal notranslate"><span class="pre">resourceInfo</span></code>: WithAcl &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>): <em><a class="reference external" href="_acl_agent_.html#agentaccess">AgentAccess</a> | null</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/0d9d3bb/src/acl/agent.ts#L96">acl/agent.ts:96</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/ecfcd21/src/acl/agent.ts#L100">acl/agent.ts:100</a></em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function is still experimental and subject to change, even in a non-major release.</p>
+</div>
 <p>Returns all explicitly-granted Access Modes per Agent for the given Resource.</p>
 <p>The function does not return Access Modes granted indirectly to Agents through other
 ACL rules, e.g., public or group-specific permissions.</p>
-<p><em>Note</em>: This function is still experimental and subject to change, even in a non-major release.</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -441,7 +450,11 @@ ACL rules, e.g., public or group-specific permissions.</p>
 <div class="section" id="getagentdefaultaccess">
 <h3>getAgentDefaultAccess<a class="headerlink" href="#getagentdefaultaccess" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getAgentDefaultAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a>, <code class="docutils literal notranslate"><span class="pre">agent</span></code>: <a class="reference external" href="_interfaces_.html#webid">WebId</a>): <em><a class="reference external" href="_interfaces_.html#access">Access</a></em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/0d9d3bb/src/acl/agent.ts#L234">acl/agent.ts:234</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/ecfcd21/src/acl/agent.ts#L245">acl/agent.ts:245</a></em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function is still experimental and subject to change, even in a non-major release.</p>
+</div>
 <p>Returns an Agent’s Access Modes explicitly granted for the children of the
 Container associated with the given ACL (Access Control List).</p>
 <p>The function does not return:</p>
@@ -449,7 +462,6 @@ Container associated with the given ACL (Access Control List).</p>
 <li><p>Access Modes granted indirectly to the Agent through other ACL rules, e.g. public or group-specific permissions.</p></li>
 <li><p>Access Modes granted to the Agent for the Container Resource itself (see <a class="reference external" href="_acl_agent_.html#getagentresourceaccess">getAgentResourceAccess</a> instead).</p></li>
 </ul>
-<p><em>Note</em>: This function is still experimental and subject to change, even in a non-major release.</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -476,7 +488,11 @@ Container associated with the given ACL (Access Control List).</p>
 <div class="section" id="getagentdefaultaccessall">
 <h3>getAgentDefaultAccessAll<a class="headerlink" href="#getagentdefaultaccessall" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getAgentDefaultAccessAll</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a>): <em><a class="reference external" href="_acl_agent_.html#agentaccess">AgentAccess</a></em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/0d9d3bb/src/acl/agent.ts#L262">acl/agent.ts:262</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/ecfcd21/src/acl/agent.ts#L275">acl/agent.ts:275</a></em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function is still experimental and subject to change, even in a non-major release.</p>
+</div>
 <p>Returns the Access Modes, per Agent, that have been explicitly granted for the children
 of the Container associated with the given ACL (Access Control List).</p>
 <p>The function does not return:</p>
@@ -484,7 +500,6 @@ of the Container associated with the given ACL (Access Control List).</p>
 <li><p>Access Modes granted indirectly to the Agents through other ACL rules, e.g. public or group-specific permissions.</p></li>
 <li><p>Access Modes granted to the Agents for the Container Resource itself (see <a class="reference external" href="_acl_agent_.html#getagentresourceaccessall">getAgentResourceAccessAll</a> instead).</p></li>
 </ul>
-<p><em>Note</em>: This function is still experimental and subject to change, even in a non-major release.</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -507,7 +522,11 @@ of the Container associated with the given ACL (Access Control List).</p>
 <div class="section" id="getagentresourceaccess">
 <h3>getAgentResourceAccess<a class="headerlink" href="#getagentresourceaccess" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getAgentResourceAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a>, <code class="docutils literal notranslate"><span class="pre">agent</span></code>: <a class="reference external" href="_interfaces_.html#webid">WebId</a>): <em><a class="reference external" href="_interfaces_.html#access">Access</a></em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/0d9d3bb/src/acl/agent.ts#L125">acl/agent.ts:125</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/ecfcd21/src/acl/agent.ts#L131">acl/agent.ts:131</a></em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function is still experimental and subject to change, even in a non-major release.</p>
+</div>
 <p>Returns the Access Modes explicitly granted to an Agent for the Resource
 associated with an ACL (Access ControlList).</p>
 <p>The function does not return:</p>
@@ -515,7 +534,6 @@ associated with an ACL (Access ControlList).</p>
 <li><p>Access Modes granted indirectly to the Agent through other ACL rules, e.g., public or group-specific permissions.</p></li>
 <li><p>Access Modes granted to the Agent for the child Resources if the associated Resource is a Container (see <a class="reference external" href="_acl_agent_.html#getagentdefaultaccess">getAgentDefaultAccess</a> instead).</p></li>
 </ul>
-<p><em>Note</em>: This function is still experimental and subject to change, even in a non-major release.</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -542,7 +560,11 @@ associated with an ACL (Access ControlList).</p>
 <div class="section" id="getagentresourceaccessall">
 <h3>getAgentResourceAccessAll<a class="headerlink" href="#getagentresourceaccessall" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getAgentResourceAccessAll</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a>): <em><a class="reference external" href="_acl_agent_.html#agentaccess">AgentAccess</a></em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/0d9d3bb/src/acl/agent.ts#L153">acl/agent.ts:153</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/ecfcd21/src/acl/agent.ts#L161">acl/agent.ts:161</a></em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function is still experimental and subject to change, even in a non-major release.</p>
+</div>
 <p>Returns the explicitly granted Access Modes per Agent for the Resource associated
 with an ACL (Access Control List).</p>
 <p>The function does not return:</p>
@@ -550,7 +572,6 @@ with an ACL (Access Control List).</p>
 <li><p>Access Modes granted indirectly to Agents through other ACL rules, e.g., public or group-specific permissions.</p></li>
 <li><p>Access Modes granted to Agents for the child Resources if the associated Resource is a Container.</p></li>
 </ul>
-<p><em>Note</em>: This function is still experimental and subject to change, even in a non-major release.</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -573,7 +594,11 @@ with an ACL (Access Control List).</p>
 <div class="section" id="setagentdefaultaccess">
 <h3>setAgentDefaultAccess<a class="headerlink" href="#setagentdefaultaccess" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>setAgentDefaultAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a>, <code class="docutils literal notranslate"><span class="pre">agent</span></code>: <a class="reference external" href="_interfaces_.html#webid">WebId</a>, <code class="docutils literal notranslate"><span class="pre">access</span></code>: <a class="reference external" href="_interfaces_.html#access">Access</a>): <em><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a> &amp; WithChangeLog</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/0d9d3bb/src/acl/agent.ts#L292">acl/agent.ts:292</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/ecfcd21/src/acl/agent.ts#L307">acl/agent.ts:307</a></em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function is still experimental and subject to change, even in a non-major release.</p>
+</div>
 <p>Modifies the default ACL (Access Control List) to set an Agent’s Access Modes for the Container’s children.
 Specifically, the function returns a new default ACL initialised with the given ACL and
 new rules for the Agent’s access.</p>
@@ -584,7 +609,6 @@ new rules for the Agent’s access.</p>
 <li><p>Access Modes granted to the Agent for the Container Resource itself.</p></li>
 <li><p>The original ACL.</p></li>
 </ul>
-<p><em>Note</em>: This function is still experimental and subject to change, even in a non-major release.</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -615,7 +639,11 @@ new rules for the Agent’s access.</p>
 <div class="section" id="setagentresourceaccess">
 <h3>setAgentResourceAccess<a class="headerlink" href="#setagentresourceaccess" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>setAgentResourceAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a>, <code class="docutils literal notranslate"><span class="pre">agent</span></code>: <a class="reference external" href="_interfaces_.html#webid">WebId</a>, <code class="docutils literal notranslate"><span class="pre">access</span></code>: <a class="reference external" href="_interfaces_.html#access">Access</a>): <em><a class="reference external" href="_interfaces_.html#acldataset">AclDataset</a> &amp; WithChangeLog</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/0d9d3bb/src/acl/agent.ts#L184">acl/agent.ts:184</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/ecfcd21/src/acl/agent.ts#L193">acl/agent.ts:193</a></em></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function is still experimental and subject to change, even in a non-major release.</p>
+</div>
 <p>Modifies the resource ACL (Access Control List) to set the Access Modes for the given Agent.
 Specifically, the function returns a new resource ACL initialised with the given ACL and
 new rules for the Agent’s access.</p>
@@ -627,7 +655,6 @@ they are replaced by the new rules.</p>
 <li><p>Access Modes granted to Agents for the child Resources if the associated Resource is a Container.</p></li>
 <li><p>The original ACL.</p></li>
 </ul>
-<p><em>Note</em>: This function is still experimental and subject to change, even in a non-major release.</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
 <thead>
