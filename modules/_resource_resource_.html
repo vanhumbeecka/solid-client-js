@@ -286,6 +286,10 @@
         </li>
     
         <li class="nav-item toc-entry toc-h3">
+            <a href="#getresourceinfo" class="nav-link">getResourceInfo</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
             <a href="#getsourceurl" class="nav-link">getSourceUrl</a>
         </li>
     
@@ -327,6 +331,7 @@
 <ul class="simple">
 <li><p><a class="reference external" href="_resource_resource_.html#fetchresourceinfowithacl">fetchResourceInfoWithAcl</a></p></li>
 <li><p><a class="reference external" href="_resource_resource_.html#getcontenttype">getContentType</a></p></li>
+<li><p><a class="reference external" href="_resource_resource_.html#getresourceinfo">getResourceInfo</a></p></li>
 <li><p><a class="reference external" href="_resource_resource_.html#getsourceurl">getSourceUrl</a></p></li>
 <li><p><a class="reference external" href="_resource_resource_.html#iscontainer">isContainer</a></p></li>
 <li><p><a class="reference external" href="_resource_resource_.html#israwdata">isRawData</a></p></li>
@@ -338,7 +343,7 @@
 <div class="section" id="fetchresourceinfowithacl">
 <h3>fetchResourceInfoWithAcl<a class="headerlink" href="#fetchresourceinfowithacl" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>fetchResourceInfoWithAcl</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">options</span></code>: Partial‹typeof internal_defaultFetchOptions›): <em>Promise‹<a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a> &amp; WithAcl›</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/d26d4d8/src/resource/resource.ts#L123">resource/resource.ts:123</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/340414a/src/resource/resource.ts#L123">resource/resource.ts:123</a></em></p>
 <p>Experimental: fetch a Resource’s metadata and its associated Access Control List.</p>
 <p>This is an experimental function that fetches both a Resource’s metadata, the linked ACL Resource (if
 available), and the ACL that applies to it if the linked ACL Resource is not available (if accessible). This can
@@ -377,7 +382,7 @@ applicable Container’s ACL is not accessible to the authenticated user, <code 
 <div class="section" id="getcontenttype">
 <h3>getContentType<a class="headerlink" href="#getcontenttype" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getContentType</strong>(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>): <em>string | null</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/d26d4d8/src/resource/resource.ts#L206">resource/resource.ts:206</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/340414a/src/resource/resource.ts#L200">resource/resource.ts:200</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -397,10 +402,43 @@ applicable Container’s ACL is not accessible to the authenticated user, <code 
 <p>The Content Type, if known, or null if not known.</p>
 </div>
 <hr class="docutils" />
+<div class="section" id="getresourceinfo">
+<h3>getResourceInfo<a class="headerlink" href="#getresourceinfo" title="Permalink to this headline">¶</a></h3>
+<p>▸ <strong>getResourceInfo</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">options</span></code>: Partial‹typeof internal_defaultFetchOptions›): <em>Promise‹<a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>›</em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/340414a/src/resource/resource.ts#L52">resource/resource.ts:52</a></em></p>
+<p>Retrieve the information about a resource (e.g. access permissions) without
+fetching the resource itself.</p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">since</span></code></strong> Not released yet</p>
+<p><strong>Parameters:</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Default</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">url</span></code></p></td>
+<td><p><a class="reference external" href="_interfaces_.html#urlstring">UrlString</a></p></td>
+<td><p>-</p></td>
+<td><p>URL to fetch Resource metadata from.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
+<td><p>Partial‹typeof internal_defaultFetchOptions›</p></td>
+<td><p>internal_defaultFetchOptions</p></td>
+<td><p>Optional parameter <code class="docutils literal notranslate"><span class="pre">options.fetch</span></code>: An alternative <code class="docutils literal notranslate"><span class="pre">fetch</span></code> function to make the HTTP request, compatible with the browser-native <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters">fetch API</a>.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Promise‹<a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>›</em></p>
+<p>Promise resolving to the metadata describing the given Resource, or rejecting if fetching it failed.</p>
+</div>
+<hr class="docutils" />
 <div class="section" id="getsourceurl">
 <h3>getSourceUrl<a class="headerlink" href="#getsourceurl" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getSourceUrl</strong>(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>): <em>string</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/d26d4d8/src/resource/resource.ts#L214">resource/resource.ts:214</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/340414a/src/resource/resource.ts#L208">resource/resource.ts:208</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -417,7 +455,7 @@ applicable Container’s ACL is not accessible to the authenticated user, <code 
 <p><strong>Returns:</strong> <em>string</em></p>
 <p>The URL from which the Resource has been fetched, or null if it is not known.</p>
 <p>▸ <strong>getSourceUrl</strong>(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: <a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a> | Blob): <em>string | null</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/d26d4d8/src/resource/resource.ts#L215">resource/resource.ts:215</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/340414a/src/resource/resource.ts#L209">resource/resource.ts:209</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -437,7 +475,7 @@ applicable Container’s ACL is not accessible to the authenticated user, <code 
 <div class="section" id="iscontainer">
 <h3>isContainer<a class="headerlink" href="#iscontainer" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>isContainer</strong>(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>): <em>boolean</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/d26d4d8/src/resource/resource.ts#L188">resource/resource.ts:188</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/340414a/src/resource/resource.ts#L182">resource/resource.ts:182</a></em></p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
 <thead>
@@ -460,7 +498,7 @@ applicable Container’s ACL is not accessible to the authenticated user, <code 
 <div class="section" id="israwdata">
 <h3>isRawData<a class="headerlink" href="#israwdata" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>isRawData</strong>(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>): <em>boolean</em></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/d26d4d8/src/resource/resource.ts#L198">resource/resource.ts:198</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/340414a/src/resource/resource.ts#L192">resource/resource.ts:192</a></em></p>
 <p>This function will tell you whether a given Resource contains raw data, or a SolidDataset.</p>
 <p><strong>Parameters:</strong></p>
 <table class="colwidths-auto table">
