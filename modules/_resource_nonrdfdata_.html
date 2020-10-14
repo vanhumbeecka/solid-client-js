@@ -324,6 +324,10 @@
             <a href="#savefileincontainer" class="nav-link">saveFileInContainer</a><ul class="nav section-nav flex-column">
                 
         <li class="nav-item toc-entry toc-h4">
+            <a href="#type-parameters" class="nav-link">Type parameters:</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
             <a href="#id5" class="nav-link">Parameters:</a>
         </li>
     
@@ -374,7 +378,7 @@
 <div class="section" id="deletefile">
 <h3>deleteFile<a class="headerlink" href="#deletefile" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>deleteFile</strong>(<code class="docutils literal notranslate"><span class="pre">file</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a> | <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>, <code class="docutils literal notranslate"><span class="pre">options</span></code>: Partial&lt;GetFileOptions&gt;): Promise&lt;void&gt;</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/e447dea/src/resource/nonRdfData.ts#L135">resource/nonRdfData.ts:135</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/16a128d/src/resource/nonRdfData.ts#L139">resource/nonRdfData.ts:139</a></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -409,8 +413,8 @@
 <hr class="docutils" />
 <div class="section" id="getfile">
 <h3>getFile<a class="headerlink" href="#getfile" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getFile</strong>(<code class="docutils literal notranslate"><span class="pre">input</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">options</span></code>: Partial&lt;GetFileOptions&gt;): Promise&lt;<a class="reference external" href="_interfaces_.html#file">File</a> &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>&gt;</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/e447dea/src/resource/nonRdfData.ts#L71">resource/nonRdfData.ts:71</a></em></p>
+<p>▸ <strong>getFile</strong>(<code class="docutils literal notranslate"><span class="pre">input</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">options</span></code>: Partial&lt;GetFileOptions&gt;): Promise&lt;<a class="reference external" href="_interfaces_.html#file">File</a> &amp; <a class="reference external" href="_interfaces_.html#withserverresourceinfo">WithServerResourceInfo</a>&gt;</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/16a128d/src/resource/nonRdfData.ts#L72">resource/nonRdfData.ts:72</a></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -439,15 +443,15 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> Promise&lt;<a class="reference external" href="_interfaces_.html#file">File</a> &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>&gt;</p>
+<p><strong>Returns:</strong> Promise&lt;<a class="reference external" href="_interfaces_.html#file">File</a> &amp; <a class="reference external" href="_interfaces_.html#withserverresourceinfo">WithServerResourceInfo</a>&gt;</p>
 <p>The file as a blob.</p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getfilewithacl">
 <h3>getFileWithAcl<a class="headerlink" href="#getfilewithacl" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getFileWithAcl</strong>(<code class="docutils literal notranslate"><span class="pre">input</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">options</span></code>: Partial&lt;GetFileOptions&gt;): Promise&lt;<a class="reference external" href="_interfaces_.html#file">File</a> &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a> &amp; WithAcl&gt;</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/e447dea/src/resource/nonRdfData.ts#L119">resource/nonRdfData.ts:119</a></em></p>
+<p>▸ <strong>getFileWithAcl</strong>(<code class="docutils literal notranslate"><span class="pre">input</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">options</span></code>: Partial&lt;GetFileOptions&gt;): Promise&lt;<a class="reference external" href="_interfaces_.html#file">File</a> &amp; <a class="reference external" href="_interfaces_.html#withserverresourceinfo">WithServerResourceInfo</a> &amp; WithAcl&gt;</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/16a128d/src/resource/nonRdfData.ts#L123">resource/nonRdfData.ts:123</a></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -489,7 +493,7 @@ request as mandated by the Solid spec. As such, prefer <a class="reference exter
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> Promise&lt;<a class="reference external" href="_interfaces_.html#file">File</a> &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a> &amp; WithAcl&gt;</p>
+<p><strong>Returns:</strong> Promise&lt;<a class="reference external" href="_interfaces_.html#file">File</a> &amp; <a class="reference external" href="_interfaces_.html#withserverresourceinfo">WithServerResourceInfo</a> &amp; WithAcl&gt;</p>
 <p>A file and its ACLs, if available to the authenticated user, as a blob.</p>
 </div>
 </div>
@@ -497,7 +501,7 @@ request as mandated by the Solid spec. As such, prefer <a class="reference exter
 <div class="section" id="overwritefile">
 <h3>overwriteFile<a class="headerlink" href="#overwritefile" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>overwriteFile</strong>(<code class="docutils literal notranslate"><span class="pre">fileUrl</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">file</span></code>: <a class="reference external" href="_interfaces_.html#file">File</a>, <code class="docutils literal notranslate"><span class="pre">options</span></code>: Partial&lt;GetFileOptions&gt;): Promise&lt;<a class="reference external" href="_interfaces_.html#file">File</a> &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>&gt;</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/e447dea/src/resource/nonRdfData.ts#L231">resource/nonRdfData.ts:231</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/16a128d/src/resource/nonRdfData.ts#L224">resource/nonRdfData.ts:224</a></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -537,14 +541,29 @@ request as mandated by the Solid spec. As such, prefer <a class="reference exter
 <hr class="docutils" />
 <div class="section" id="savefileincontainer">
 <h3>saveFileInContainer<a class="headerlink" href="#savefileincontainer" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>saveFileInContainer</strong>(<code class="docutils literal notranslate"><span class="pre">folderUrl</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">file</span></code>: <a class="reference external" href="_interfaces_.html#file">File</a>, <code class="docutils literal notranslate"><span class="pre">options</span></code>: Partial&lt;SaveFileOptions&gt;): Promise&lt;<a class="reference external" href="_interfaces_.html#file">File</a> &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a> | null&gt;</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/e447dea/src/resource/nonRdfData.ts#L174">resource/nonRdfData.ts:174</a></em></p>
+<p>▸ <strong>saveFileInContainer</strong>&lt;FileExt&gt;(<code class="docutils literal notranslate"><span class="pre">folderUrl</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">file</span></code>: FileExt, <code class="docutils literal notranslate"><span class="pre">options</span></code>: Partial&lt;SaveFileOptions&gt;): Promise&lt;FileExt &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>&gt;</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/16a128d/src/resource/nonRdfData.ts#L178">resource/nonRdfData.ts:178</a></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
 </div>
 <p>Saves a file in a folder associated with the given URL. The final filename may or may
 not be the given <code class="docutils literal notranslate"><span class="pre">slug</span></code>.</p>
+<div class="section" id="type-parameters">
+<h4>Type parameters:<a class="headerlink" href="#type-parameters" title="Permalink to this headline">¶</a></h4>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">FileExt</span></code></p></td>
+<td><p><a class="reference external" href="_interfaces_.html#file">File</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="section" id="id5">
 <h4>Parameters:<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -562,7 +581,7 @@ not be the given <code class="docutils literal notranslate"><span class="pre">sl
 <td><p>The URL of the folder where the new file is saved.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">file</span></code></p></td>
-<td><p><a class="reference external" href="_interfaces_.html#file">File</a></p></td>
+<td><p>FileExt</p></td>
 <td><p>-</p></td>
 <td><p>The file to be written.</p></td>
 </tr>
@@ -573,7 +592,7 @@ not be the given <code class="docutils literal notranslate"><span class="pre">sl
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> Promise&lt;<a class="reference external" href="_interfaces_.html#file">File</a> &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a> | null&gt;</p>
+<p><strong>Returns:</strong> Promise&lt;FileExt &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>&gt;</p>
 <p>A Promise that resolves to the saved file, if available, or <code class="docutils literal notranslate"><span class="pre">null</span></code> if the current user does not have Read access to the newly-saved file. It rejects if saving fails.</p>
 </div>
 </div>
