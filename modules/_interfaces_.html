@@ -488,7 +488,7 @@
 <div class="section" id="access">
 <h3>Access<a class="headerlink" href="#access" title="Permalink to this headline">¶</a></h3>
 <p>Ƭ  <strong>Access</strong>: { append: boolean ; control: boolean ; read: boolean ; write: boolean  }</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/5247f4d/src/interfaces.ts#L100">interfaces.ts:100</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/44dd747/src/interfaces.ts#L100">interfaces.ts:100</a></em></p>
 <p>An object with the boolean properties <code class="docutils literal notranslate"><span class="pre">read</span></code>, <code class="docutils literal notranslate"><span class="pre">append</span></code>, <code class="docutils literal notranslate"><span class="pre">write</span></code> and <code class="docutils literal notranslate"><span class="pre">control</span></code>, representing the
 respective Access Modes defined by the Web Access Control specification.</p>
 <p>Since that specification is not finalised yet, this interface is still experimental.</p>
@@ -521,7 +521,7 @@ respective Access Modes defined by the Web Access Control specification.</p>
 <div class="section" id="acldataset">
 <h3>AclDataset<a class="headerlink" href="#acldataset" title="Permalink to this headline">¶</a></h3>
 <p>Ƭ  <strong>AclDataset</strong>: <a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a> &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a> &amp; { internal_accessTo: <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>  }</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/5247f4d/src/interfaces.ts#L86">interfaces.ts:86</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/44dd747/src/interfaces.ts#L86">interfaces.ts:86</a></em></p>
 <p>A <a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a> containing Access Control rules for another SolidDataset.</p>
 <p>Please note that the Web Access Control specification is not yet finalised, and hence, this
 function is still experimental and can change in a non-major release.</p>
@@ -530,28 +530,28 @@ function is still experimental and can change in a non-major release.</p>
 <div class="section" id="file">
 <h3>File<a class="headerlink" href="#file" title="Permalink to this headline">¶</a></h3>
 <p>Ƭ  <strong>File</strong>: Blob</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/5247f4d/src/interfaces.ts#L49">interfaces.ts:49</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/44dd747/src/interfaces.ts#L49">interfaces.ts:49</a></em></p>
 <p>A File is anything stored on a Pod in a format that solid-client does not have special affordances for, e.g. an image, or a plain JSON file.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="resource">
 <h3>Resource<a class="headerlink" href="#resource" title="Permalink to this headline">¶</a></h3>
 <p>Ƭ  <strong>Resource</strong>: <a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a> | <a class="reference external" href="_interfaces_.html#file">File</a></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/5247f4d/src/interfaces.ts#L54">interfaces.ts:54</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/44dd747/src/interfaces.ts#L54">interfaces.ts:54</a></em></p>
 <p>A Resource is something that can be fetched from a Pod - either structured data in a <a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a>, or any other <a class="reference external" href="_interfaces_.html#file">File</a>.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="soliddataset">
 <h3>SolidDataset<a class="headerlink" href="#soliddataset" title="Permalink to this headline">¶</a></h3>
 <p>Ƭ  <strong>SolidDataset</strong>: DatasetCore</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/5247f4d/src/interfaces.ts#L44">interfaces.ts:44</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/44dd747/src/interfaces.ts#L44">interfaces.ts:44</a></em></p>
 <p>A SolidDataset represents all Quads from a single Resource.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="thing">
 <h3>Thing<a class="headerlink" href="#thing" title="Permalink to this headline">¶</a></h3>
 <p>Ƭ  <strong>Thing</strong>: DatasetCore &amp; { internal_url: <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>  } | { internal_localSubject: LocalNode  }</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/5247f4d/src/interfaces.ts#L60">interfaces.ts:60</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/44dd747/src/interfaces.ts#L60">interfaces.ts:60</a></em></p>
 <p>A Thing represents all Quads with a given Subject URL and a given Named
 Graph, from a single Resource.</p>
 </div>
@@ -559,21 +559,21 @@ Graph, from a single Resource.</p>
 <div class="section" id="thinglocal">
 <h3>ThingLocal<a class="headerlink" href="#thinglocal" title="Permalink to this headline">¶</a></h3>
 <p>Ƭ  <strong>ThingLocal</strong>: <a class="reference external" href="_interfaces_.html#thing">Thing</a> &amp; { internal_localSubject: LocalNode  }</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/5247f4d/src/interfaces.ts#L69">interfaces.ts:69</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/44dd747/src/interfaces.ts#L69">interfaces.ts:69</a></em></p>
 <p>A <a class="reference external" href="_interfaces_.html#thing">Thing</a> whose full Subject URL will be determined when it is persisted.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="thingpersisted">
 <h3>ThingPersisted<a class="headerlink" href="#thingpersisted" title="Permalink to this headline">¶</a></h3>
 <p>Ƭ  <strong>ThingPersisted</strong>: <a class="reference external" href="_interfaces_.html#thing">Thing</a> &amp; { internal_url: <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>  }</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/5247f4d/src/interfaces.ts#L65">interfaces.ts:65</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/44dd747/src/interfaces.ts#L65">interfaces.ts:65</a></em></p>
 <p>A <a class="reference external" href="_interfaces_.html#thing">Thing</a> for which we know what the full Subject URL is.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="uploadrequestinit">
 <h3>UploadRequestInit<a class="headerlink" href="#uploadrequestinit" title="Permalink to this headline">¶</a></h3>
 <p>Ƭ  <strong>UploadRequestInit</strong>: Omit&lt;RequestInit, “method”&gt;</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/5247f4d/src/interfaces.ts#L315">interfaces.ts:315</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/44dd747/src/interfaces.ts#L315">interfaces.ts:315</a></em></p>
 <p>A RequestInit restriction where the method is set by the library</p>
 <p>Please note that this function is still experimental and can change in a non-major release.</p>
 </div>
@@ -581,28 +581,28 @@ Graph, from a single Resource.</p>
 <div class="section" id="url">
 <h3>Url<a class="headerlink" href="#url" title="Permalink to this headline">¶</a></h3>
 <p>Ƭ  <strong>Url</strong>: NamedNode</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/5247f4d/src/interfaces.ts#L27">interfaces.ts:27</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/44dd747/src/interfaces.ts#L27">interfaces.ts:27</a></em></p>
 <p>Alias to indicate where we expect to be given a URL represented as an RDF/JS NamedNode.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="urlstring">
 <h3>UrlString<a class="headerlink" href="#urlstring" title="Permalink to this headline">¶</a></h3>
 <p>Ƭ  <strong>UrlString</strong>: string</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/5247f4d/src/interfaces.ts#L33">interfaces.ts:33</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/44dd747/src/interfaces.ts#L33">interfaces.ts:33</a></em></p>
 <p>Alias to indicate where we expect to be given a URL.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="webid">
 <h3>WebId<a class="headerlink" href="#webid" title="Permalink to this headline">¶</a></h3>
 <p>Ƭ  <strong>WebId</strong>: <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/5247f4d/src/interfaces.ts#L39">interfaces.ts:39</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/44dd747/src/interfaces.ts#L39">interfaces.ts:39</a></em></p>
 <p>Alias to indicate where we expect to be given a WebId.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="withaccessibleacl">
 <h3>WithAccessibleAcl<a class="headerlink" href="#withaccessibleacl" title="Permalink to this headline">¶</a></h3>
 <p>Ƭ  <strong>WithAccessibleAcl</strong>&lt;ResourceExt&gt;: ResourceExt &amp; { internal_resourceInfo: { aclUrl: Exclude&lt;WithServerResourceInfo[“internal_resourceInfo”][“aclUrl”], undefined&gt;  }  }</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/5247f4d/src/interfaces.ts#L281">interfaces.ts:281</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/44dd747/src/interfaces.ts#L281">interfaces.ts:281</a></em></p>
 <p>If this type applies to a Resource, its Access Control List, if it exists, is accessible to the currently authenticated user.</p>
 <p>Please note that the Web Access Control specification is not yet finalised, and hence, this
 function is still experimental and can change in a non-major release.</p>
@@ -628,7 +628,7 @@ function is still experimental and can change in a non-major release.</p>
 <div class="section" id="withfallbackacl">
 <h3>WithFallbackAcl<a class="headerlink" href="#withfallbackacl" title="Permalink to this headline">¶</a></h3>
 <p>Ƭ  <strong>WithFallbackAcl</strong>&lt;ResourceExt&gt;: ResourceExt &amp; { internal_acl: { fallbackAcl: Exclude&lt;WithAcl[“internal_acl”][“fallbackAcl”], null&gt;  }  }</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/5247f4d/src/interfaces.ts#L214">interfaces.ts:214</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/44dd747/src/interfaces.ts#L214">interfaces.ts:214</a></em></p>
 <p>If this type applies to a Resource, the Access Control List that applies to its nearest Container with an ACL is accessible to the currently authenticated user.</p>
 <p>Please note that the Web Access Control specification is not yet finalised, and hence, this
 function is still experimental and can change in a non-major release.</p>
@@ -654,7 +654,7 @@ function is still experimental and can change in a non-major release.</p>
 <div class="section" id="withresourceacl">
 <h3>WithResourceAcl<a class="headerlink" href="#withresourceacl" title="Permalink to this headline">¶</a></h3>
 <p>Ƭ  <strong>WithResourceAcl</strong>&lt;ResourceExt&gt;: ResourceExt &amp; { internal_acl: { resourceAcl: Exclude&lt;WithAcl[“internal_acl”][“resourceAcl”], null&gt;  }  }</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/5247f4d/src/interfaces.ts#L200">interfaces.ts:200</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/44dd747/src/interfaces.ts#L200">interfaces.ts:200</a></em></p>
 <p>If this type applies to a Resource, an Access Control List that applies to it exists and is accessible to the currently authenticated user.</p>
 <p>Please note that the Web Access Control specification is not yet finalised, and hence, this
 function is still experimental and can change in a non-major release.</p>
@@ -680,7 +680,7 @@ function is still experimental and can change in a non-major release.</p>
 <div class="section" id="withresourceinfo">
 <h3>WithResourceInfo<a class="headerlink" href="#withresourceinfo" title="Permalink to this headline">¶</a></h3>
 <p>Ƭ  <strong>WithResourceInfo</strong>: {  }</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/5247f4d/src/interfaces.ts#L120">interfaces.ts:120</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/44dd747/src/interfaces.ts#L120">interfaces.ts:120</a></em></p>
 <p>Data that was sent to a Pod includes this metadata describing its relation to the Pod Resource it was sent to.</p>
 <p><strong>Do not read these properties directly</strong>; their internal representation may change at any time.
 Instead, use functions such as <a class="reference external" href="_resource_resource_.html#getsourceurl">getSourceUrl</a>, <a class="reference external" href="_resource_resource_.html#israwdata">isRawData</a> and <a class="reference external" href="_resource_resource_.html#getcontenttype">getContentType</a>.</p>
@@ -689,7 +689,7 @@ Instead, use functions such as <a class="reference external" href="_resource_res
 <div class="section" id="withserverresourceinfo">
 <h3>WithServerResourceInfo<a class="headerlink" href="#withserverresourceinfo" title="Permalink to this headline">¶</a></h3>
 <p>Ƭ  <strong>WithServerResourceInfo</strong>: <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a> &amp; {  }</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/5247f4d/src/interfaces.ts#L135">interfaces.ts:135</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/44dd747/src/interfaces.ts#L135">interfaces.ts:135</a></em></p>
 <p>Data that was fetched from a Pod includes this metadata describing its relation to the Pod Resource it was fetched from.</p>
 <p><strong>Do not read these properties directly</strong>; their internal representation may change at any time.
 Instead, use functions such as <a class="reference external" href="_resource_resource_.html#getsourceurl">getSourceUrl</a>, <a class="reference external" href="_resource_resource_.html#israwdata">isRawData</a> and <a class="reference external" href="_resource_resource_.html#getcontenttype">getContentType</a>.</p>
@@ -700,7 +700,7 @@ Instead, use functions such as <a class="reference external" href="_resource_res
 <div class="section" id="hasaccessibleacl">
 <h3>hasAccessibleAcl<a class="headerlink" href="#hasaccessibleacl" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>hasAccessibleAcl</strong>&lt;ResourceExt&gt;(<code class="docutils literal notranslate"><span class="pre">dataset</span></code>: ResourceExt): dataset is WithAccessibleAcl&lt;ResourceExt&gt;</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/5247f4d/src/interfaces.ts#L304">interfaces.ts:304</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/44dd747/src/interfaces.ts#L304">interfaces.ts:304</a></em></p>
 <p>Given a <a class="reference external" href="_interfaces_.html#soliddataset">SolidDataset</a>, verify whether its Access Control List is accessible to the current user.</p>
 <p>This should generally only be true for SolidDatasets fetched by
 <a class="reference external" href="_resource_soliddataset_.html#getsoliddatasetwithacl">getSolidDatasetWithAcl</a>.</p>
@@ -745,7 +745,7 @@ function is still experimental and can change in a non-major release.</p>
 <div class="section" id="hasresourceinfo">
 <h3>hasResourceInfo<a class="headerlink" href="#hasresourceinfo" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>hasResourceInfo</strong>&lt;T&gt;(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: T): resource is T &amp; WithResourceInfo</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/5247f4d/src/interfaces.ts#L234">interfaces.ts:234</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/44dd747/src/interfaces.ts#L234">interfaces.ts:234</a></em></p>
 <p>Verify whether a given SolidDataset includes metadata about where it was sent to.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">since</span></code></strong> 0.2.0</p>
 <div class="section" id="id6">
@@ -783,7 +783,7 @@ function is still experimental and can change in a non-major release.</p>
 <div class="section" id="hasserverresourceinfo">
 <h3>hasServerResourceInfo<a class="headerlink" href="#hasserverresourceinfo" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>hasServerResourceInfo</strong>&lt;T&gt;(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: T): resource is T &amp; WithServerResourceInfo</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/5247f4d/src/interfaces.ts#L251">interfaces.ts:251</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/44dd747/src/interfaces.ts#L251">interfaces.ts:251</a></em></p>
 <p>Verify whether a given SolidDataset includes metadata about where it was retrieved from.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">since</span></code></strong> 0.6.0</p>
 <div class="section" id="id8">
