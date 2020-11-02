@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Module: “resource/nonRdfData” &#8212; Inrupt solid-client Documentation</title>
+    <title>Module: “resource/nonRdfData” &#8212; Inrupt solid-client API Documentation</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -73,7 +73,7 @@
 <div class="container-xl">
 
     <a class="navbar-brand" href="https://inrupt.com/">
-      <img src="https://inrupt.com/sites/default/files/inrupt_email%20sign%20logo.jpg" class="logo" alt="logo">
+      <img src="https://docs.inrupt.com/inrupt-logo-small.svg" class="logo" alt="logo">
     </a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -91,9 +91,12 @@
                         <a href="https://docs.inrupt.com/developer-tools/javascript/client-libraries/">JavaScript Client Libraries</a>
                      </li>
                      <li class="nav-item nav-childitem">
-                        <a href="https://docs.inrupt.com/developer-tools/javascript/react-sdk">JavaScript React SDK</a>
+                        <a href="https://docs.inrupt.com/developer-tools/javascript/react-sdk">Solid React SDK</a>
                      </li>
                </ul>
+          </li>
+          <li class="nav-item">
+               <a class="nav-link" href="https://docs.inrupt.com/user-interface/podbrowser/">PodBrowser</a>
           </li>
           
       </ul>
@@ -378,7 +381,7 @@
 <div class="section" id="deletefile">
 <h3>deleteFile<a class="headerlink" href="#deletefile" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>deleteFile</strong>(<code class="docutils literal notranslate"><span class="pre">file</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a> | <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: Partial&lt;GetFileOptions&gt;): Promise&lt;void&gt;</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/d012824/src/resource/nonRdfData.ts#L139">resource/nonRdfData.ts:139</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/986c412/src/resource/nonRdfData.ts#L139">resource/nonRdfData.ts:139</a></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -414,7 +417,7 @@
 <div class="section" id="getfile">
 <h3>getFile<a class="headerlink" href="#getfile" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getFile</strong>(<code class="docutils literal notranslate"><span class="pre">input</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: Partial&lt;GetFileOptions&gt;): Promise&lt;<a class="reference external" href="_interfaces_.html#file">File</a> &amp; <a class="reference external" href="_interfaces_.html#withserverresourceinfo">WithServerResourceInfo</a>&gt;</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/d012824/src/resource/nonRdfData.ts#L72">resource/nonRdfData.ts:72</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/986c412/src/resource/nonRdfData.ts#L72">resource/nonRdfData.ts:72</a></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -451,7 +454,7 @@
 <div class="section" id="getfilewithacl">
 <h3>getFileWithAcl<a class="headerlink" href="#getfilewithacl" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getFileWithAcl</strong>(<code class="docutils literal notranslate"><span class="pre">input</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: Partial&lt;GetFileOptions&gt;): Promise&lt;<a class="reference external" href="_interfaces_.html#file">File</a> &amp; <a class="reference external" href="_interfaces_.html#withserverresourceinfo">WithServerResourceInfo</a> &amp; WithAcl&gt;</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/d012824/src/resource/nonRdfData.ts#L123">resource/nonRdfData.ts:123</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/986c412/src/resource/nonRdfData.ts#L123">resource/nonRdfData.ts:123</a></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -501,7 +504,7 @@ request as mandated by the Solid spec. As such, prefer <a class="reference exter
 <div class="section" id="overwritefile">
 <h3>overwriteFile<a class="headerlink" href="#overwritefile" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>overwriteFile</strong>(<code class="docutils literal notranslate"><span class="pre">fileUrl</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">file</span></code>: <a class="reference external" href="_interfaces_.html#file">File</a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: Partial&lt;GetFileOptions&gt;): Promise&lt;<a class="reference external" href="_interfaces_.html#file">File</a> &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>&gt;</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/d012824/src/resource/nonRdfData.ts#L224">resource/nonRdfData.ts:224</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/986c412/src/resource/nonRdfData.ts#L224">resource/nonRdfData.ts:224</a></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -542,7 +545,7 @@ request as mandated by the Solid spec. As such, prefer <a class="reference exter
 <div class="section" id="savefileincontainer">
 <h3>saveFileInContainer<a class="headerlink" href="#savefileincontainer" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>saveFileInContainer</strong>&lt;FileExt&gt;(<code class="docutils literal notranslate"><span class="pre">folderUrl</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">file</span></code>: FileExt, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: Partial&lt;SaveFileOptions&gt;): Promise&lt;FileExt &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>&gt;</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/d012824/src/resource/nonRdfData.ts#L178">resource/nonRdfData.ts:178</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/986c412/src/resource/nonRdfData.ts#L178">resource/nonRdfData.ts:178</a></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
