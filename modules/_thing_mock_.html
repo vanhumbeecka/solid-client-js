@@ -49,16 +49,19 @@
 
   <!-- Matomo -->
   <script type="text/javascript">
-    var _paq = window._paq || [];
+    var _paq = window._paq = window._paq || [];
     /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
     _paq.push(['trackPageView']);
     _paq.push(['enableLinkTracking']);
     (function() {
-      var u="https://mat.inrupt.com/";
-      _paq.push(['setTrackerUrl', u+'piwik.php']);
-      _paq.push(['setSiteId', '12']);
+      if (navigator.doNotTrack && navigator.doNotTrack === "1") {
+        return;
+      }
+      var u="https://inrupt.matomo.cloud/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '3']);
       var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+      g.type='text/javascript'; g.async=true; g.src='//cdn.matomo.cloud/inrupt.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
     })();
   </script>
   <!-- End Matomo Code -->
@@ -333,7 +336,7 @@
 <div class="section" id="mockthingfrom">
 <h3>mockThingFrom<a class="headerlink" href="#mockthingfrom" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>mockThingFrom</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>): <a class="reference external" href="_interfaces_.html#thingpersisted">ThingPersisted</a></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2cb79b3/src/thing/mock.ts#L42">thing/mock.ts:42</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/3bae0cb/src/thing/mock.ts#L42">thing/mock.ts:42</a></em></p>
 <p>Function for use in unit tests to mock a <a class="reference external" href="_interfaces_.html#thing">Thing</a> with a given URL.</p>
 <p>Warning: do not use this function in actual production code.
 This function initialises a new empty Thing and sets its URL to a given URL.
