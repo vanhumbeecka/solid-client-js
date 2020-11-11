@@ -297,7 +297,7 @@
         </li>
     
         <li class="nav-item toc-entry toc-h3">
-            <a href="#mockfilefrom" class="nav-link">mockFileFrom</a><ul class="nav section-nav flex-column">
+            <a href="#mockfetcherror" class="nav-link">mockFetchError</a><ul class="nav section-nav flex-column">
                 
         <li class="nav-item toc-entry toc-h4">
             <a href="#id2" class="nav-link">Parameters:</a>
@@ -307,10 +307,20 @@
         </li>
     
         <li class="nav-item toc-entry toc-h3">
-            <a href="#mocksoliddatasetfrom" class="nav-link">mockSolidDatasetFrom</a><ul class="nav section-nav flex-column">
+            <a href="#mockfilefrom" class="nav-link">mockFileFrom</a><ul class="nav section-nav flex-column">
                 
         <li class="nav-item toc-entry toc-h4">
             <a href="#id3" class="nav-link">Parameters:</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#mocksoliddatasetfrom" class="nav-link">mockSolidDatasetFrom</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#id4" class="nav-link">Parameters:</a>
         </li>
     
             </ul>
@@ -345,6 +355,7 @@
 <h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="_resource_mock_.html#mockcontainerfrom">mockContainerFrom</a></p></li>
+<li><p><a class="reference external" href="_resource_mock_.html#mockfetcherror">mockFetchError</a></p></li>
 <li><p><a class="reference external" href="_resource_mock_.html#mockfilefrom">mockFileFrom</a></p></li>
 <li><p><a class="reference external" href="_resource_mock_.html#mocksoliddatasetfrom">mockSolidDatasetFrom</a></p></li>
 </ul>
@@ -355,7 +366,7 @@
 <div class="section" id="mockcontainerfrom">
 <h3>mockContainerFrom<a class="headerlink" href="#mockcontainerfrom" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>mockContainerFrom</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>): Unpromisify&lt;ReturnType&lt;<em>typeof</em> getSolidDataset&gt;&gt;</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/88771c5/src/resource/mock.ts#L78">resource/mock.ts:78</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7340ba2/src/resource/mock.ts#L80">src/resource/mock.ts:80</a></em></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Do not use this function in production code. For use in <strong>unit tests</strong>.</p>
@@ -385,10 +396,51 @@ unit tests that require persisted Containers; e.g., unit tests that call <a clas
 </div>
 </div>
 <hr class="docutils" />
+<div class="section" id="mockfetcherror">
+<h3>mockFetchError<a class="headerlink" href="#mockfetcherror" title="Permalink to this headline">¶</a></h3>
+<p>▸ <strong>mockFetchError</strong>(<code class="docutils literal notranslate"><span class="pre">fetchedUrl</span></code>: <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">statusCode?</span></code>: number): <span class="xref myst">FetchError</span></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7340ba2/src/resource/mock.ts#L143">src/resource/mock.ts:143</a></em></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not use this function in production code. For use in <strong>unit tests</strong>.</p>
+</div>
+<p>This function initialises a new Error object with metadata as though the
+it was the result of getting a 404 when trying to fetch the Resource at the
+given URL. The mock Error can be used in unit tests that require functions
+that fetch Resources (like <a class="reference external" href="_resource_soliddataset_.html#getsoliddataset">getSolidDataset</a>) to fail.</p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">since</span></code></strong> Not released yet.</p>
+<div class="section" id="id2">
+<h4>Parameters:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Default value</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">fetchedUrl</span></code></p></td>
+<td><p><a class="reference external" href="_interfaces_.html#urlstring">UrlString</a></p></td>
+<td><p>-</p></td>
+<td><p>-</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code></p></td>
+<td><p>number</p></td>
+<td><p>404</p></td>
+<td><p>Optional status code (defaults to 404) that caused the error.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <span class="xref myst">FetchError</span></p>
+<p>A mock Error that represents not having been able to fetch the Resource at <code class="docutils literal notranslate"><span class="pre">url</span></code> due to a 404 Response.</p>
+</div>
+</div>
+<hr class="docutils" />
 <div class="section" id="mockfilefrom">
 <h3>mockFileFrom<a class="headerlink" href="#mockfilefrom" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>mockFileFrom</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: Partial&lt;{ contentType: WithServerResourceInfo[“internal_resourceInfo”][“contentType”]  }&gt;): Unpromisify&lt;ReturnType&lt;<em>typeof</em> getFile&gt;&gt;</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/88771c5/src/resource/mock.ts#L104">resource/mock.ts:104</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7340ba2/src/resource/mock.ts#L106">src/resource/mock.ts:106</a></em></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Do not use this function in production code. For use in <strong>unit tests</strong>.</p>
@@ -397,8 +449,8 @@ unit tests that require persisted Containers; e.g., unit tests that call <a clas
 File has been retrieved from the given URL. The mock File can be used in
 unit tests that require persisted Files; e.g. unit tests that call <a class="reference external" href="_resource_resource_.html#getsourceurl">getSourceUrl</a>.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">since</span></code></strong> 0.2.0</p>
-<div class="section" id="id2">
-<h4>Parameters:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id3">
+<h4>Parameters:<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -425,7 +477,7 @@ unit tests that require persisted Files; e.g. unit tests that call <a class="ref
 <div class="section" id="mocksoliddatasetfrom">
 <h3>mockSolidDatasetFrom<a class="headerlink" href="#mocksoliddatasetfrom" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>mockSolidDatasetFrom</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>): Unpromisify&lt;ReturnType&lt;<em>typeof</em> getSolidDataset&gt;&gt;</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/88771c5/src/resource/mock.ts#L48">resource/mock.ts:48</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7340ba2/src/resource/mock.ts#L50">src/resource/mock.ts:50</a></em></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Do not use this function in production code. For use in <strong>unit tests</strong>.</p>
@@ -434,8 +486,8 @@ unit tests that require persisted Files; e.g. unit tests that call <a class="ref
 SolidDataset has been retrieved from the given URL. The mock SolidDataset can be used in
 unit tests that require persisted SolidDatasets; e.g., unit tests that call <a class="reference external" href="_resource_resource_.html#getsourceurl">getSourceUrl</a>.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">since</span></code></strong> 0.2.0</p>
-<div class="section" id="id3">
-<h4>Parameters:<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id4">
+<h4>Parameters:<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
