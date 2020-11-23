@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Class: FetchError &#8212; Inrupt solid-client API Documentation</title>
+    <title>Class: ThingExpectedError &#8212; Inrupt solid-client API Documentation</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -38,8 +38,7 @@
     <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class: ThingExpectedError" href="_thing_thing_.thingexpectederror.html" />
-    <link rel="prev" title="Class: SolidClientError" href="_interfaces_.solidclienterror.html" />
+    <link rel="prev" title="Class: FetchError" href="_resource_resource_.fetcherror.html" />
   
     <meta name="robots" content="index" />
   
@@ -263,17 +262,17 @@
            
       
          
-             <li class="nav-item active toctree-l1"> <a class="nav-link" href="">Class: FetchError</a>
+             <li class="nav-item  toctree-l1"> <a class="nav-link" href="_resource_resource_.fetcherror.html">Class: FetchError</a>
              
-             
-               
              
              </li> 
            
       
          
-             <li class="nav-item  toctree-l1"> <a class="nav-link" href="_thing_thing_.thingexpectederror.html">Class: ThingExpectedError</a>
+             <li class="nav-item active toctree-l1"> <a class="nav-link" href="">Class: ThingExpectedError</a>
              
+             
+               
              
              </li> 
            
@@ -340,15 +339,11 @@
         </li>
     
         <li class="nav-item toc-entry toc-h3">
+            <a href="#receivedvalue" class="nav-link">receivedValue</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
             <a href="#stack" class="nav-link">stack</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#statuscode" class="nav-link">statusCode</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h3">
-            <a href="#statustext" class="nav-link">statusText</a>
         </li>
     
             </ul>
@@ -370,16 +365,16 @@
                 
   <p><strong><a class="reference internal" href="../README.html"><span class="doc std std-doc">&#64;inrupt/solid-client</span></a></strong></p>
 <blockquote>
-<div><p><a class="reference internal" href="../README.html"><span class="doc std std-doc">Globals</span></a> / <a class="reference internal" href="../modules/_resource_resource_.html"><span class="doc std std-doc">“resource/resource”</span></a> / FetchError</p>
+<div><p><a class="reference internal" href="../README.html"><span class="doc std std-doc">Globals</span></a> / <a class="reference internal" href="../modules/_thing_thing_.html"><span class="doc std std-doc">“thing/thing”</span></a> / ThingExpectedError</p>
 </div></blockquote>
-<div class="section" id="class-fetcherror">
-<h1>Class: FetchError<a class="headerlink" href="#class-fetcherror" title="Permalink to this headline">¶</a></h1>
-<p>Extends the regular JavaScript error object with access to the status code and status message.</p>
+<div class="section" id="class-thingexpectederror">
+<h1>Class: ThingExpectedError<a class="headerlink" href="#class-thingexpectederror" title="Permalink to this headline">¶</a></h1>
+<p>This error is thrown when a function expected to receive a <a class="reference external" href="../modules/_interfaces_.html#thing">Thing</a> but received something else.</p>
 <div class="section" id="hierarchy">
 <h2>Hierarchy<a class="headerlink" href="#hierarchy" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p><a class="reference internal" href="_interfaces_.solidclienterror.html"><span class="doc std std-doc">SolidClientError</span></a></p>
-<p>↳ <strong>FetchError</strong></p>
+<p>↳ <strong>ThingExpectedError</strong></p>
 </li>
 </ul>
 </div>
@@ -388,17 +383,16 @@
 <div class="section" id="constructors">
 <h3>Constructors<a class="headerlink" href="#constructors" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p><a class="reference external" href="_resource_resource_.fetcherror.html#constructor">constructor</a></p></li>
+<li><p><a class="reference external" href="_thing_thing_.thingexpectederror.html#constructor">constructor</a></p></li>
 </ul>
 </div>
 <div class="section" id="properties">
 <h3>Properties<a class="headerlink" href="#properties" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p><a class="reference external" href="_resource_resource_.fetcherror.html#message">message</a></p></li>
-<li><p><a class="reference external" href="_resource_resource_.fetcherror.html#name">name</a></p></li>
-<li><p><a class="reference external" href="_resource_resource_.fetcherror.html#stack">stack</a></p></li>
-<li><p><a class="reference external" href="_resource_resource_.fetcherror.html#statuscode">statusCode</a></p></li>
-<li><p><a class="reference external" href="_resource_resource_.fetcherror.html#statustext">statusText</a></p></li>
+<li><p><a class="reference external" href="_thing_thing_.thingexpectederror.html#message">message</a></p></li>
+<li><p><a class="reference external" href="_thing_thing_.thingexpectederror.html#name">name</a></p></li>
+<li><p><a class="reference external" href="_thing_thing_.thingexpectederror.html#receivedvalue">receivedValue</a></p></li>
+<li><p><a class="reference external" href="_thing_thing_.thingexpectederror.html#stack">stack</a></p></li>
 </ul>
 </div>
 </div>
@@ -406,8 +400,8 @@
 <h2>Constructors<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="constructor">
 <h3>constructor<a class="headerlink" href="#constructor" title="Permalink to this headline">¶</a></h3>
-<p>+ <strong>new FetchError</strong>(<code class="docutils literal notranslate"><span class="pre">message</span></code>: string, <code class="docutils literal notranslate"><span class="pre">errorResponse</span></code>: Response &amp; { ok: false  }): <a class="reference internal" href="#"><span class="doc std std-doc">FetchError</span></a></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/942155a/src/resource/resource.ts#L214">src/resource/resource.ts:214</a></em></p>
+<p>+ <strong>new ThingExpectedError</strong>(<code class="docutils literal notranslate"><span class="pre">receivedValue</span></code>: unknown): <a class="reference internal" href="#"><span class="doc std std-doc">ThingExpectedError</span></a></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/942155a/src/thing/thing.ts#L386">src/thing/thing.ts:386</a></em></p>
 <div class="section" id="parameters">
 <h4>Parameters:<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -417,15 +411,12 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">message</span></code></p></td>
-<td><p>string</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">errorResponse</span></code></p></td>
-<td><p>Response &amp; { ok: false  }</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">receivedValue</span></code></p></td>
+<td><p>unknown</p></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <a class="reference internal" href="#"><span class="doc std std-doc">FetchError</span></a></p>
+<p><strong>Returns:</strong> <a class="reference internal" href="#"><span class="doc std std-doc">ThingExpectedError</span></a></p>
 </div>
 </div>
 </div>
@@ -445,23 +436,17 @@
 <p><em>Defined in node_modules/typescript/lib/lib.es5.d.ts:973</em></p>
 </div>
 <hr class="docutils" />
+<div class="section" id="receivedvalue">
+<h3>receivedValue<a class="headerlink" href="#receivedvalue" title="Permalink to this headline">¶</a></h3>
+<p>• <code class="docutils literal notranslate"><span class="pre">Readonly</span></code> <strong>receivedValue</strong>: unknown</p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/942155a/src/thing/thing.ts#L386">src/thing/thing.ts:386</a></em></p>
+</div>
+<hr class="docutils" />
 <div class="section" id="stack">
 <h3>stack<a class="headerlink" href="#stack" title="Permalink to this headline">¶</a></h3>
 <p>• <code class="docutils literal notranslate"><span class="pre">Optional</span></code> <strong>stack</strong>: undefined | string</p>
 <p><em>Inherited from <a class="reference internal" href="_interfaces_.solidclienterror.html"><span class="doc std std-doc">SolidClientError</span></a>.<a class="reference external" href="_interfaces_.solidclienterror.html#stack">stack</a></em></p>
 <p><em>Defined in node_modules/typescript/lib/lib.es5.d.ts:975</em></p>
-</div>
-<hr class="docutils" />
-<div class="section" id="statuscode">
-<h3>statusCode<a class="headerlink" href="#statuscode" title="Permalink to this headline">¶</a></h3>
-<p>• <code class="docutils literal notranslate"><span class="pre">Readonly</span></code> <strong>statusCode</strong>: number</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/942155a/src/resource/resource.ts#L213">src/resource/resource.ts:213</a></em></p>
-</div>
-<hr class="docutils" />
-<div class="section" id="statustext">
-<h3>statusText<a class="headerlink" href="#statustext" title="Permalink to this headline">¶</a></h3>
-<p>• <code class="docutils literal notranslate"><span class="pre">Optional</span></code> <code class="docutils literal notranslate"><span class="pre">Readonly</span></code> <strong>statusText</strong>: undefined | string</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/942155a/src/resource/resource.ts#L214">src/resource/resource.ts:214</a></em></p>
 </div>
 </div>
 </div>
@@ -473,8 +458,7 @@
               
               <div class='prev-next-bottom'>
                 
-    <a class='left-prev' id="prev-link" href="_interfaces_.solidclienterror.html" title="previous page">Class: SolidClientError</a>
-    <a class='right-next' id="next-link" href="_thing_thing_.thingexpectederror.html" title="next page">Class: ThingExpectedError</a>
+    <a class='left-prev' id="prev-link" href="_resource_resource_.fetcherror.html" title="previous page">Class: FetchError</a>
 
               </div>
               
