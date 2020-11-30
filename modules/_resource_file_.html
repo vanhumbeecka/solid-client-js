@@ -47,6 +47,14 @@
   <link rel="shortcut icon" href="https://docs.inrupt.com/inrupt_stickers_v2-03.png" type="image/png" />
   <script type="text/javascript" src="https://inrupt.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/-egccmf/b/24/a44af77267a987a660377e5c46e0fb64/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=41592d74"></script>
 
+  <script type="text/javascript">
+      window.ATL_JQ_PAGE_PROPS = $.extend(window.ATL_JQ_PAGE_PROPS, {
+         fieldValues: {
+            description : 'On page: https://docs.inrupt.com/developer-tools/api/javascript/solid-client/modules/_resource_file_/ \n' 
+         }
+      });
+   </script>
+
   <!-- Matomo -->
   <script type="text/javascript">
     var _paq = window._paq = window._paq || [];
@@ -101,7 +109,9 @@
           <li class="nav-item">
                <a class="nav-link" href="https://docs.inrupt.com/user-interface/podbrowser/">PodBrowser</a>
           </li>
-          
+          <li class="nav-item">
+             <a  class="nav-link" href="https://docs.inrupt.com/pod-spaces/">Pod Spaces</a>
+          </li>
       </ul>
 
 
@@ -412,7 +422,7 @@
 <div class="section" id="deletefile">
 <h3>deleteFile<a class="headerlink" href="#deletefile" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>deleteFile</strong>(<code class="docutils literal notranslate"><span class="pre">file</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a> | <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: Partial&lt;GetFileOptions&gt;): Promise&lt;void&gt;</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/587fe69/src/resource/file.ts#L103">src/resource/file.ts:103</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7fe978b/src/resource/file.ts#L103">src/resource/file.ts:103</a></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -448,7 +458,7 @@
 <div class="section" id="getfile">
 <h3>getFile<a class="headerlink" href="#getfile" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getFile</strong>(<code class="docutils literal notranslate"><span class="pre">input</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: Partial&lt;GetFileOptions&gt;): Promise&lt;<a class="reference external" href="_interfaces_.html#file">File</a> &amp; <a class="reference external" href="_interfaces_.html#withserverresourceinfo">WithServerResourceInfo</a>&gt;</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/587fe69/src/resource/file.ts#L68">src/resource/file.ts:68</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7fe978b/src/resource/file.ts#L68">src/resource/file.ts:68</a></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -485,7 +495,7 @@
 <div class="section" id="overwritefile">
 <h3>overwriteFile<a class="headerlink" href="#overwritefile" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>overwriteFile</strong>(<code class="docutils literal notranslate"><span class="pre">fileUrl</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">file</span></code>: <a class="reference external" href="_interfaces_.html#file">File</a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: Partial&lt;GetFileOptions&gt;): Promise&lt;<a class="reference external" href="_interfaces_.html#file">File</a> &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>&gt;</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/587fe69/src/resource/file.ts#L199">src/resource/file.ts:199</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7fe978b/src/resource/file.ts#L199">src/resource/file.ts:199</a></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -530,7 +540,7 @@ it will exist after this function resolves successfully.</p>
 <div class="section" id="savefileincontainer">
 <h3>saveFileInContainer<a class="headerlink" href="#savefileincontainer" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>saveFileInContainer</strong>&lt;FileExt&gt;(<code class="docutils literal notranslate"><span class="pre">folderUrl</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">file</span></code>: FileExt, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: Partial&lt;SaveFileOptions&gt;): Promise&lt;FileExt &amp; <a class="reference external" href="_interfaces_.html#withresourceinfo">WithResourceInfo</a>&gt;</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/587fe69/src/resource/file.ts#L147">src/resource/file.ts:147</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7fe978b/src/resource/file.ts#L147">src/resource/file.ts:147</a></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>

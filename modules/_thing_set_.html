@@ -47,6 +47,14 @@
   <link rel="shortcut icon" href="https://docs.inrupt.com/inrupt_stickers_v2-03.png" type="image/png" />
   <script type="text/javascript" src="https://inrupt.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/-egccmf/b/24/a44af77267a987a660377e5c46e0fb64/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=41592d74"></script>
 
+  <script type="text/javascript">
+      window.ATL_JQ_PAGE_PROPS = $.extend(window.ATL_JQ_PAGE_PROPS, {
+         fieldValues: {
+            description : 'On page: https://docs.inrupt.com/developer-tools/api/javascript/solid-client/modules/_thing_set_/ \n' 
+         }
+      });
+   </script>
+
   <!-- Matomo -->
   <script type="text/javascript">
     var _paq = window._paq = window._paq || [];
@@ -101,7 +109,9 @@
           <li class="nav-item">
                <a class="nav-link" href="https://docs.inrupt.com/user-interface/podbrowser/">PodBrowser</a>
           </li>
-          
+          <li class="nav-item">
+             <a  class="nav-link" href="https://docs.inrupt.com/pod-spaces/">Pod Spaces</a>
+          </li>
       </ul>
 
 
@@ -445,7 +455,7 @@
 <div class="section" id="setboolean">
 <h3>setBoolean<a class="headerlink" href="#setboolean" title="Permalink to this headline">¶</a></h3>
 <p>▸ <code class="docutils literal notranslate"><span class="pre">Const</span></code><strong>setBoolean</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: string | <a class="reference external" href="_interfaces_.html#url">Url</a>, <code class="docutils literal notranslate"><span class="pre">value</span></code>: boolean): T</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/587fe69/src/thing/set.ts#L97">src/thing/set.ts:97</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7fe978b/src/thing/set.ts#L97">src/thing/set.ts:97</a></em></p>
 <p>Create a new Thing with existing values replaced by the given boolean for the given Property.</p>
 <p>To preserve existing values, see <a class="reference external" href="_thing_add_.html#addboolean">addBoolean</a>.</p>
 <p>The original <code class="docutils literal notranslate"><span class="pre">thing</span></code> is not modified; this function returns a cloned Thing with updated values.</p>
@@ -481,7 +491,7 @@
 <div class="section" id="setdatetime">
 <h3>setDatetime<a class="headerlink" href="#setdatetime" title="Permalink to this headline">¶</a></h3>
 <p>▸ <code class="docutils literal notranslate"><span class="pre">Const</span></code><strong>setDatetime</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: string | <a class="reference external" href="_interfaces_.html#url">Url</a>, <code class="docutils literal notranslate"><span class="pre">value</span></code>: Date): T</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/587fe69/src/thing/set.ts#L119">src/thing/set.ts:119</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7fe978b/src/thing/set.ts#L119">src/thing/set.ts:119</a></em></p>
 <p>Create a new Thing with existing values replaced by the given datetime for the given Property.</p>
 <p>To preserve existing values, see <a class="reference external" href="_thing_add_.html#adddatetime">addDatetime</a>.</p>
 <p>The original <code class="docutils literal notranslate"><span class="pre">thing</span></code> is not modified; this function returns a cloned Thing with updated values.</p>
@@ -517,7 +527,7 @@
 <div class="section" id="setdecimal">
 <h3>setDecimal<a class="headerlink" href="#setdecimal" title="Permalink to this headline">¶</a></h3>
 <p>▸ <code class="docutils literal notranslate"><span class="pre">Const</span></code><strong>setDecimal</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: string | <a class="reference external" href="_interfaces_.html#url">Url</a>, <code class="docutils literal notranslate"><span class="pre">value</span></code>: number): T</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/587fe69/src/thing/set.ts#L141">src/thing/set.ts:141</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7fe978b/src/thing/set.ts#L141">src/thing/set.ts:141</a></em></p>
 <p>Create a new Thing with existing values replaced by the given decimal for the given Property.</p>
 <p>To preserve existing values, see <a class="reference external" href="_thing_add_.html#adddecimal">addDecimal</a>.</p>
 <p>The original <code class="docutils literal notranslate"><span class="pre">thing</span></code> is not modified; this function returns a cloned Thing with updated values.</p>
@@ -553,7 +563,7 @@
 <div class="section" id="setinteger">
 <h3>setInteger<a class="headerlink" href="#setinteger" title="Permalink to this headline">¶</a></h3>
 <p>▸ <code class="docutils literal notranslate"><span class="pre">Const</span></code><strong>setInteger</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: string | <a class="reference external" href="_interfaces_.html#url">Url</a>, <code class="docutils literal notranslate"><span class="pre">value</span></code>: number): T</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/587fe69/src/thing/set.ts#L163">src/thing/set.ts:163</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7fe978b/src/thing/set.ts#L163">src/thing/set.ts:163</a></em></p>
 <p>Create a new Thing with existing values replaced by the given integer for the given Property.</p>
 <p>To preserve existing values, see <a class="reference external" href="_thing_add_.html#addinteger">addInteger</a>.</p>
 <p>The original <code class="docutils literal notranslate"><span class="pre">thing</span></code> is not modified; this function returns a cloned Thing with updated values.</p>
@@ -589,7 +599,7 @@
 <div class="section" id="setstringnolocale">
 <h3>setStringNoLocale<a class="headerlink" href="#setstringnolocale" title="Permalink to this headline">¶</a></h3>
 <p>▸ <code class="docutils literal notranslate"><span class="pre">Const</span></code><strong>setStringNoLocale</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: string | <a class="reference external" href="_interfaces_.html#url">Url</a>, <code class="docutils literal notranslate"><span class="pre">value</span></code>: string): T</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/587fe69/src/thing/set.ts#L209">src/thing/set.ts:209</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7fe978b/src/thing/set.ts#L209">src/thing/set.ts:209</a></em></p>
 <p>Create a new Thing with existing values replaced by the given unlocalised string for the given Property.</p>
 <p>To preserve existing values, see <a class="reference external" href="_thing_add_.html#addstringnolocale">addStringNoLocale</a>.</p>
 <p>The original <code class="docutils literal notranslate"><span class="pre">thing</span></code> is not modified; this function returns a cloned Thing with updated values.</p>
@@ -625,7 +635,7 @@
 <div class="section" id="setstringwithlocale">
 <h3>setStringWithLocale<a class="headerlink" href="#setstringwithlocale" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>setStringWithLocale</strong>&lt;T&gt;(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="_interfaces_.html#url">Url</a> | <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <code class="docutils literal notranslate"><span class="pre">value</span></code>: string, <code class="docutils literal notranslate"><span class="pre">locale</span></code>: string): T</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/587fe69/src/thing/set.ts#L186">src/thing/set.ts:186</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7fe978b/src/thing/set.ts#L186">src/thing/set.ts:186</a></em></p>
 <p>Create a new Thing with existing values replaced by the given localised string for the given Property.</p>
 <p>To preserve existing values, see <a class="reference external" href="_thing_add_.html#addstringwithlocale">addStringWithLocale</a>.</p>
 <p>The original <code class="docutils literal notranslate"><span class="pre">thing</span></code> is not modified; this function returns a cloned Thing with updated values.</p>
@@ -680,7 +690,7 @@
 <div class="section" id="seturl">
 <h3>setUrl<a class="headerlink" href="#seturl" title="Permalink to this headline">¶</a></h3>
 <p>▸ <code class="docutils literal notranslate"><span class="pre">Const</span></code><strong>setUrl</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: string | <a class="reference external" href="_interfaces_.html#url">Url</a>, <code class="docutils literal notranslate"><span class="pre">url</span></code>: string | <a class="reference external" href="_interfaces_.html#url">Url</a> | DatasetCore&lt;Quad, Quad&gt; &amp; { internal_url: <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>  } | DatasetCore&lt;Quad, Quad&gt; &amp; { internal_localSubject: LocalNode  }): T</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/587fe69/src/thing/set.ts#L56">src/thing/set.ts:56</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7fe978b/src/thing/set.ts#L56">src/thing/set.ts:56</a></em></p>
 <p>Create a new Thing with existing values replaced by the given URL for the given Property.</p>
 <p>To preserve existing values, see <a class="reference external" href="_thing_add_.html#addurl">addUrl</a>.</p>
 <p>The original <code class="docutils literal notranslate"><span class="pre">thing</span></code> is not modified; this function returns a cloned Thing with updated values.</p>

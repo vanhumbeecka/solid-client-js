@@ -47,6 +47,14 @@
   <link rel="shortcut icon" href="https://docs.inrupt.com/inrupt_stickers_v2-03.png" type="image/png" />
   <script type="text/javascript" src="https://inrupt.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/-egccmf/b/24/a44af77267a987a660377e5c46e0fb64/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=41592d74"></script>
 
+  <script type="text/javascript">
+      window.ATL_JQ_PAGE_PROPS = $.extend(window.ATL_JQ_PAGE_PROPS, {
+         fieldValues: {
+            description : 'On page: https://docs.inrupt.com/developer-tools/api/javascript/solid-client/modules/_acl_group_/ \n' 
+         }
+      });
+   </script>
+
   <!-- Matomo -->
   <script type="text/javascript">
     var _paq = window._paq = window._paq || [];
@@ -101,7 +109,9 @@
           <li class="nav-item">
                <a class="nav-link" href="https://docs.inrupt.com/user-interface/podbrowser/">PodBrowser</a>
           </li>
-          
+          <li class="nav-item">
+             <a  class="nav-link" href="https://docs.inrupt.com/pod-spaces/">Pod Spaces</a>
+          </li>
       </ul>
 
 
@@ -430,7 +440,7 @@
 <div class="section" id="getgroupaccess">
 <h3>getGroupAccess<a class="headerlink" href="#getgroupaccess" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getGroupAccess</strong>(<code class="docutils literal notranslate"><span class="pre">resourceInfo</span></code>: WithAcl &amp; <a class="reference external" href="_interfaces_.html#withserverresourceinfo">WithServerResourceInfo</a>, <code class="docutils literal notranslate"><span class="pre">group</span></code>: <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>): <a class="reference external" href="_acl_acl_.html#access">Access</a> | null</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/587fe69/src/acl/group.ts#L57">src/acl/group.ts:57</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7fe978b/src/acl/group.ts#L57">src/acl/group.ts:57</a></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -466,7 +476,7 @@ ACL rules, e.g., public permissions.</p>
 <div class="section" id="getgroupaccessall">
 <h3>getGroupAccessAll<a class="headerlink" href="#getgroupaccessall" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getGroupAccessAll</strong>(<code class="docutils literal notranslate"><span class="pre">resourceInfo</span></code>: WithAcl &amp; <a class="reference external" href="_interfaces_.html#withserverresourceinfo">WithServerResourceInfo</a>): Record&lt;IriString, <a class="reference external" href="_acl_acl_.html#access">Access</a>&gt; | null</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/587fe69/src/acl/group.ts#L82">src/acl/group.ts:82</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7fe978b/src/acl/group.ts#L82">src/acl/group.ts:82</a></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -498,7 +508,7 @@ ACL rules, e.g., public permissions.</p>
 <div class="section" id="getgroupdefaultaccess">
 <h3>getGroupDefaultAccess<a class="headerlink" href="#getgroupdefaultaccess" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getGroupDefaultAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_acl_acl_.html#acldataset">AclDataset</a>, <code class="docutils literal notranslate"><span class="pre">group</span></code>: <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>): <a class="reference external" href="_acl_acl_.html#access">Access</a></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/587fe69/src/acl/group.ts#L166">src/acl/group.ts:166</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7fe978b/src/acl/group.ts#L166">src/acl/group.ts:166</a></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -538,7 +548,7 @@ Container associated with an ACL (Access ControlList).</p>
 <div class="section" id="getgroupdefaultaccessall">
 <h3>getGroupDefaultAccessAll<a class="headerlink" href="#getgroupdefaultaccessall" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getGroupDefaultAccessAll</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_acl_acl_.html#acldataset">AclDataset</a>): Record&lt;<a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <a class="reference external" href="_acl_acl_.html#access">Access</a>&gt;</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/587fe69/src/acl/group.ts#L194">src/acl/group.ts:194</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7fe978b/src/acl/group.ts#L194">src/acl/group.ts:194</a></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -574,7 +584,7 @@ of the Container associated with the given ACL (Access Control List).</p>
 <div class="section" id="getgroupresourceaccess">
 <h3>getGroupResourceAccess<a class="headerlink" href="#getgroupresourceaccess" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getGroupResourceAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_acl_acl_.html#acldataset">AclDataset</a>, <code class="docutils literal notranslate"><span class="pre">group</span></code>: <a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>): <a class="reference external" href="_acl_acl_.html#access">Access</a></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/587fe69/src/acl/group.ts#L112">src/acl/group.ts:112</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7fe978b/src/acl/group.ts#L112">src/acl/group.ts:112</a></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -615,7 +625,7 @@ associated with an ACL (Access Control List).</p>
 <div class="section" id="getgroupresourceaccessall">
 <h3>getGroupResourceAccessAll<a class="headerlink" href="#getgroupresourceaccessall" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getGroupResourceAccessAll</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_acl_acl_.html#acldataset">AclDataset</a>): Record&lt;<a class="reference external" href="_interfaces_.html#urlstring">UrlString</a>, <a class="reference external" href="_acl_acl_.html#access">Access</a>&gt;</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/587fe69/src/acl/group.ts#L140">src/acl/group.ts:140</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7fe978b/src/acl/group.ts#L140">src/acl/group.ts:140</a></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>

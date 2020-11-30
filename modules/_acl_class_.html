@@ -47,6 +47,14 @@
   <link rel="shortcut icon" href="https://docs.inrupt.com/inrupt_stickers_v2-03.png" type="image/png" />
   <script type="text/javascript" src="https://inrupt.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/-egccmf/b/24/a44af77267a987a660377e5c46e0fb64/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=41592d74"></script>
 
+  <script type="text/javascript">
+      window.ATL_JQ_PAGE_PROPS = $.extend(window.ATL_JQ_PAGE_PROPS, {
+         fieldValues: {
+            description : 'On page: https://docs.inrupt.com/developer-tools/api/javascript/solid-client/modules/_acl_class_/ \n' 
+         }
+      });
+   </script>
+
   <!-- Matomo -->
   <script type="text/javascript">
     var _paq = window._paq = window._paq || [];
@@ -101,7 +109,9 @@
           <li class="nav-item">
                <a class="nav-link" href="https://docs.inrupt.com/user-interface/podbrowser/">PodBrowser</a>
           </li>
-          
+          <li class="nav-item">
+             <a  class="nav-link" href="https://docs.inrupt.com/pod-spaces/">Pod Spaces</a>
+          </li>
       </ul>
 
 
@@ -419,7 +429,7 @@
 <div class="section" id="getpublicaccess">
 <h3>getPublicAccess<a class="headerlink" href="#getpublicaccess" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getPublicAccess</strong>(<code class="docutils literal notranslate"><span class="pre">resourceInfo</span></code>: WithAcl &amp; <a class="reference external" href="_interfaces_.html#withserverresourceinfo">WithServerResourceInfo</a>): <a class="reference external" href="_acl_acl_.html#access">Access</a> | null</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/587fe69/src/acl/class.ts#L64">src/acl/class.ts:64</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7fe978b/src/acl/class.ts#L64">src/acl/class.ts:64</a></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -451,7 +461,7 @@ through other ACL (Access Control List) rules, e.g., agent- or group-specific pe
 <div class="section" id="getpublicdefaultaccess">
 <h3>getPublicDefaultAccess<a class="headerlink" href="#getpublicdefaultaccess" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getPublicDefaultAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_acl_acl_.html#acldataset">AclDataset</a>): <a class="reference external" href="_acl_acl_.html#access">Access</a></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/587fe69/src/acl/class.ts#L120">src/acl/class.ts:120</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7fe978b/src/acl/class.ts#L120">src/acl/class.ts:120</a></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -487,7 +497,7 @@ of the Container associated with an ACL (Access Control List).</p>
 <div class="section" id="getpublicresourceaccess">
 <h3>getPublicResourceAccess<a class="headerlink" href="#getpublicresourceaccess" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getPublicResourceAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_acl_acl_.html#acldataset">AclDataset</a>): <a class="reference external" href="_acl_acl_.html#access">Access</a></p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/587fe69/src/acl/class.ts#L91">src/acl/class.ts:91</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7fe978b/src/acl/class.ts#L91">src/acl/class.ts:91</a></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -523,7 +533,7 @@ associated with an ACL (Access Control List).</p>
 <div class="section" id="setpublicdefaultaccess">
 <h3>setPublicDefaultAccess<a class="headerlink" href="#setpublicdefaultaccess" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>setPublicDefaultAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_acl_acl_.html#acldataset">AclDataset</a>, <code class="docutils literal notranslate"><span class="pre">access</span></code>: <a class="reference external" href="_acl_acl_.html#access">Access</a>): <a class="reference external" href="_acl_acl_.html#acldataset">AclDataset</a> &amp; WithChangeLog</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/587fe69/src/acl/class.ts#L208">src/acl/class.ts:208</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7fe978b/src/acl/class.ts#L208">src/acl/class.ts:208</a></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -567,7 +577,7 @@ they are replaced by the new rules.</p>
 <div class="section" id="setpublicresourceaccess">
 <h3>setPublicResourceAccess<a class="headerlink" href="#setpublicresourceaccess" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>setPublicResourceAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="_acl_acl_.html#acldataset">AclDataset</a>, <code class="docutils literal notranslate"><span class="pre">access</span></code>: <a class="reference external" href="_acl_acl_.html#access">Access</a>): <a class="reference external" href="_acl_acl_.html#acldataset">AclDataset</a> &amp; WithChangeLog</p>
-<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/587fe69/src/acl/class.ts#L155">src/acl/class.ts:155</a></em></p>
+<p><em>Defined in <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7fe978b/src/acl/class.ts#L155">src/acl/class.ts:155</a></em></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
