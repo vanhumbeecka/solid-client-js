@@ -460,7 +460,7 @@ through other ACL (Access Control List) rules, e.g., agent- or group-specific pe
 </table>
 <p><strong>Returns:</strong> <em>null</em> | <a class="reference external" href="acl_acl.html#access"><em>Access</em></a></p>
 <p>Access Modes granted to the public in general for the Resource, or <code class="docutils literal notranslate"><span class="pre">null</span></code> if it could not be determined (e.g. because the current user does not have Control Access to a given Resource or its Container).</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/c67e42b/src/acl/class.ts#L64">src/acl/class.ts:64</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2c72bcc/src/acl/class.ts#L64">src/acl/class.ts:64</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -496,7 +496,7 @@ of the Container associated with an ACL (Access Control List).</p>
 </table>
 <p><strong>Returns:</strong> <a class="reference external" href="acl_acl.html#access"><em>Access</em></a></p>
 <p>Access Modes granted to the public in general for the children of the Container associated with the given <code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/c67e42b/src/acl/class.ts#L120">src/acl/class.ts:120</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2c72bcc/src/acl/class.ts#L120">src/acl/class.ts:120</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -532,13 +532,13 @@ associated with an ACL (Access Control List).</p>
 </table>
 <p><strong>Returns:</strong> <a class="reference external" href="acl_acl.html#access"><em>Access</em></a></p>
 <p>Access Modes granted to the public in general for the Resource associated with the <code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/c67e42b/src/acl/class.ts#L91">src/acl/class.ts:91</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2c72bcc/src/acl/class.ts#L91">src/acl/class.ts:91</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="setpublicdefaultaccess">
 <h3>setPublicDefaultAccess<a class="headerlink" href="#setpublicdefaultaccess" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>setPublicDefaultAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a>, <code class="docutils literal notranslate"><span class="pre">access</span></code>: <a class="reference external" href="acl_acl.html#access"><em>Access</em></a>): <a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; { <code class="docutils literal notranslate"><span class="pre">internal_accessTo</span></code>: <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>  } &amp; { <code class="docutils literal notranslate"><span class="pre">internal_changeLog</span></code>: { <code class="docutils literal notranslate"><span class="pre">additions</span></code>: Quad[] ; <code class="docutils literal notranslate"><span class="pre">deletions</span></code>: Quad[]  }  }</p>
+<p>▸ <strong>setPublicDefaultAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a>, <code class="docutils literal notranslate"><span class="pre">access</span></code>: <a class="reference external" href="acl_acl.html#access"><em>Access</em></a>): <a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; { <code class="docutils literal notranslate"><span class="pre">internal_accessTo</span></code>: <em>string</em>  } &amp; { <code class="docutils literal notranslate"><span class="pre">internal_changeLog</span></code>: { <code class="docutils literal notranslate"><span class="pre">additions</span></code>: Quad[] ; <code class="docutils literal notranslate"><span class="pre">deletions</span></code>: Quad[]  }  }</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -574,15 +574,15 @@ they are replaced by the new rules.</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; { <code class="docutils literal notranslate"><span class="pre">internal_accessTo</span></code>: <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>  } &amp; { <code class="docutils literal notranslate"><span class="pre">internal_changeLog</span></code>: { <code class="docutils literal notranslate"><span class="pre">additions</span></code>: Quad[] ; <code class="docutils literal notranslate"><span class="pre">deletions</span></code>: Quad[]  }  }</p>
+<p><strong>Returns:</strong> <a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; { <code class="docutils literal notranslate"><span class="pre">internal_accessTo</span></code>: <em>string</em>  } &amp; { <code class="docutils literal notranslate"><span class="pre">internal_changeLog</span></code>: { <code class="docutils literal notranslate"><span class="pre">additions</span></code>: Quad[] ; <code class="docutils literal notranslate"><span class="pre">deletions</span></code>: Quad[]  }  }</p>
 <p>A new default ACL initialised with the given <code class="docutils literal notranslate"><span class="pre">aclDataset</span></code> and public <code class="docutils literal notranslate"><span class="pre">access</span></code>.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/c67e42b/src/acl/class.ts#L208">src/acl/class.ts:208</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2c72bcc/src/acl/class.ts#L208">src/acl/class.ts:208</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="setpublicresourceaccess">
 <h3>setPublicResourceAccess<a class="headerlink" href="#setpublicresourceaccess" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>setPublicResourceAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a>, <code class="docutils literal notranslate"><span class="pre">access</span></code>: <a class="reference external" href="acl_acl.html#access"><em>Access</em></a>): <a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; { <code class="docutils literal notranslate"><span class="pre">internal_accessTo</span></code>: <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>  } &amp; { <code class="docutils literal notranslate"><span class="pre">internal_changeLog</span></code>: { <code class="docutils literal notranslate"><span class="pre">additions</span></code>: Quad[] ; <code class="docutils literal notranslate"><span class="pre">deletions</span></code>: Quad[]  }  }</p>
+<p>▸ <strong>setPublicResourceAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a>, <code class="docutils literal notranslate"><span class="pre">access</span></code>: <a class="reference external" href="acl_acl.html#access"><em>Access</em></a>): <a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; { <code class="docutils literal notranslate"><span class="pre">internal_accessTo</span></code>: <em>string</em>  } &amp; { <code class="docutils literal notranslate"><span class="pre">internal_changeLog</span></code>: { <code class="docutils literal notranslate"><span class="pre">additions</span></code>: Quad[] ; <code class="docutils literal notranslate"><span class="pre">deletions</span></code>: Quad[]  }  }</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -618,9 +618,9 @@ they are replaced by the new rules.</p>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; { <code class="docutils literal notranslate"><span class="pre">internal_accessTo</span></code>: <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>  } &amp; { <code class="docutils literal notranslate"><span class="pre">internal_changeLog</span></code>: { <code class="docutils literal notranslate"><span class="pre">additions</span></code>: Quad[] ; <code class="docutils literal notranslate"><span class="pre">deletions</span></code>: Quad[]  }  }</p>
+<p><strong>Returns:</strong> <a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; { <code class="docutils literal notranslate"><span class="pre">internal_accessTo</span></code>: <em>string</em>  } &amp; { <code class="docutils literal notranslate"><span class="pre">internal_changeLog</span></code>: { <code class="docutils literal notranslate"><span class="pre">additions</span></code>: Quad[] ; <code class="docutils literal notranslate"><span class="pre">deletions</span></code>: Quad[]  }  }</p>
 <p>A new resource ACL initialised with the given <code class="docutils literal notranslate"><span class="pre">aclDataset</span></code> and public <code class="docutils literal notranslate"><span class="pre">access</span></code>.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/c67e42b/src/acl/class.ts#L155">src/acl/class.ts:155</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2c72bcc/src/acl/class.ts#L155">src/acl/class.ts:155</a></p>
 </div>
 </div>
 </div>
