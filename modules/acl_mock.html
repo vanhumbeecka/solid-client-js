@@ -409,7 +409,7 @@
 <h2>Functions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="addmockfallbackaclto">
 <h3>addMockFallbackAclTo<a class="headerlink" href="#addmockfallbackaclto" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>addMockFallbackAclTo</strong>&lt;T&gt;(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: T): T &amp; WithAcl &amp; { <code class="docutils literal notranslate"><span class="pre">internal_acl</span></code>: { <code class="docutils literal notranslate"><span class="pre">fallbackAcl</span></code>: <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a>  }  }</p>
+<p>▸ <strong>addMockFallbackAclTo</strong>&lt;T&gt;(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: T): T &amp; <a class="reference external" href="acl_acl.html#withfallbackacl"><em>WithFallbackAcl</em></a></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Do not use this function in production code.  For use in <strong>unit tests</strong> that require a
@@ -449,15 +449,15 @@ in <strong>unit tests</strong>; e.g., unit tests that call <a class="reference e
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> T &amp; WithAcl &amp; { <code class="docutils literal notranslate"><span class="pre">internal_acl</span></code>: { <code class="docutils literal notranslate"><span class="pre">fallbackAcl</span></code>: <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a>  }  }</p>
+<p><strong>Returns:</strong> T &amp; <a class="reference external" href="acl_acl.html#withfallbackacl"><em>WithFallbackAcl</em></a></p>
 <p>The input Resource with an empty fallback ACL attached.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/acl/mock.ts#L88">src/acl/mock.ts:88</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/acl/mock.ts#L88">src/acl/mock.ts:88</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="addmockresourceaclto">
 <h3>addMockResourceAclTo<a class="headerlink" href="#addmockresourceaclto" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>addMockResourceAclTo</strong>&lt;T&gt;(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: T): T &amp; WithAcl &amp; { <code class="docutils literal notranslate"><span class="pre">internal_acl</span></code>: { <code class="docutils literal notranslate"><span class="pre">resourceAcl</span></code>: <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a>  }  }</p>
+<p>▸ <strong>addMockResourceAclTo</strong>&lt;T&gt;(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: T): T &amp; <a class="reference external" href="acl_acl.html#withresourceacl"><em>WithResourceAcl</em></a></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Do not use this function in production code. For use in <strong>unit tests</strong> that
@@ -497,9 +497,9 @@ in <strong>unit tests</strong>; e.g., unit tests that call <a class="reference e
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> T &amp; WithAcl &amp; { <code class="docutils literal notranslate"><span class="pre">internal_acl</span></code>: { <code class="docutils literal notranslate"><span class="pre">resourceAcl</span></code>: <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a>  }  }</p>
+<p><strong>Returns:</strong> T &amp; <a class="reference external" href="acl_acl.html#withresourceacl"><em>WithResourceAcl</em></a></p>
 <p>The input Resource with an empty resource ACL attached.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/acl/mock.ts#L47">src/acl/mock.ts:47</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/acl/mock.ts#L47">src/acl/mock.ts:47</a></p>
 </div>
 </div>
 </div>

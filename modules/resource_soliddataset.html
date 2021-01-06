@@ -498,7 +498,7 @@
 <h2>Functions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="changelogasmarkdown">
 <h3>changeLogAsMarkdown<a class="headerlink" href="#changelogasmarkdown" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>changeLogAsMarkdown</strong>(<code class="docutils literal notranslate"><span class="pre">solidDataset</span></code>: WithChangeLog): <em>string</em></p>
+<p>▸ <strong>changeLogAsMarkdown</strong>(<code class="docutils literal notranslate"><span class="pre">solidDataset</span></code>: <a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; WithChangeLog): <em>string</em></p>
 <p>Gets a human-readable representation of the local changes to a Resource to aid debugging.</p>
 <p>Note that changes to the exact format of the return value are not considered a breaking change;
 it is intended to aid in debugging, not as a serialisation method that can be reliably parsed.</p>
@@ -514,19 +514,19 @@ it is intended to aid in debugging, not as a serialisation method that can be re
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">solidDataset</span></code></p></td>
-<td><p>WithChangeLog</p></td>
+<td><p><a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; WithChangeLog</p></td>
 <td><p>The Resource of which to get a human-readable representation of the changes applied to it locally.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>string</em></p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/resource/solidDataset.ts#L712">src/resource/solidDataset.ts:712</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/resource/solidDataset.ts#L712">src/resource/solidDataset.ts:712</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="createcontainerat">
 <h3>createContainerAt<a class="headerlink" href="#createcontainerat" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>createContainerAt</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">fetch</span></code>: (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt; &amp; (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt;  }&gt;): <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; {  }&gt;</p>
+<p>▸ <strong>createContainerAt</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;<em>typeof</em> internal_defaultFetchOptions&gt;): <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a>&gt;</p>
 <p>Create an empty Container at the given URL.</p>
 <p>Throws an error if creating the Container failed, e.g. because the current user does not have
 permissions to, or because the Container already exists.</p>
@@ -546,25 +546,25 @@ Resource; i.e. there is no need to call this function if it is immediately follo
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">url</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
 <td><p>-</p></td>
 <td><p>URL of the empty Container that is to be created.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
-<td><p><em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">fetch</span></code>: (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt; &amp; (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt;  }&gt;</p></td>
+<td><p><em>Partial</em>&lt;<em>typeof</em> internal_defaultFetchOptions&gt;</p></td>
 <td><p>…</p></td>
 <td><p>Optional parameter <code class="docutils literal notranslate"><span class="pre">options.fetch</span></code>: An alternative <code class="docutils literal notranslate"><span class="pre">fetch</span></code> function to make the HTTP request, compatible with the browser-native <a class="reference external" href="https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/fetch#parameters">fetch API</a>.</p></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; {  }&gt;</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/resource/solidDataset.ts#L304">src/resource/solidDataset.ts:304</a></p>
+<p><strong>Returns:</strong> <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a>&gt;</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/resource/solidDataset.ts#L304">src/resource/solidDataset.ts:304</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="createcontainerincontainer">
 <h3>createContainerInContainer<a class="headerlink" href="#createcontainerincontainer" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>createContainerInContainer</strong>(<code class="docutils literal notranslate"><span class="pre">containerUrl</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">fetch</span></code>: (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt; &amp; (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt;  } &amp; { <code class="docutils literal notranslate"><span class="pre">slugSuggestion</span></code>: <em>string</em>  }&gt;): <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a>&gt;</p>
+<p>▸ <strong>createContainerInContainer</strong>(<code class="docutils literal notranslate"><span class="pre">containerUrl</span></code>: <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: SaveInContainerOptions): <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a>&gt;</p>
 <p>Create an empty Container inside the Container at the given URL.</p>
 <p>Throws an error if creating the Container failed, e.g. because the current user does not have
 permissions to.</p>
@@ -591,19 +591,19 @@ will do the job just fine, and does not require the parent Container to exist in
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">containerUrl</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
 <td><p>-</p></td>
 <td><p>URL of the Container in which the empty Container is to be created.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
-<td><p><em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">fetch</span></code>: (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt; &amp; (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt;  } &amp; { <code class="docutils literal notranslate"><span class="pre">slugSuggestion</span></code>: <em>string</em>  }&gt;</p></td>
+<td><p>SaveInContainerOptions</p></td>
 <td><p>…</p></td>
 <td><p>Optional parameter <code class="docutils literal notranslate"><span class="pre">options.fetch</span></code>: An alternative <code class="docutils literal notranslate"><span class="pre">fetch</span></code> function to make the HTTP request, compatible with the browser-native <a class="reference external" href="https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/fetch#parameters">fetch API</a>.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a>&gt;</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/resource/solidDataset.ts#L563">src/resource/solidDataset.ts:563</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/resource/solidDataset.ts#L563">src/resource/solidDataset.ts:563</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -613,12 +613,12 @@ will do the job just fine, and does not require the parent Container to exist in
 <p>Initialise a new <a class="reference external" href="interfaces.html#soliddataset">SolidDataset</a> in memory.</p>
 <p><strong>Returns:</strong> <a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a></p>
 <p>An empty <a class="reference external" href="interfaces.html#soliddataset">SolidDataset</a>.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/resource/solidDataset.ts#L70">src/resource/solidDataset.ts:70</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/resource/solidDataset.ts#L70">src/resource/solidDataset.ts:70</a></p>
 </div>
 <hr class="docutils" />
 <div class="section" id="deletecontainer">
 <h3>deleteContainer<a class="headerlink" href="#deletecontainer" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>deleteContainer</strong>(<code class="docutils literal notranslate"><span class="pre">container</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">fetch</span></code>: (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt; &amp; (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt;  }&gt;): <em>Promise</em>&lt;<em>void</em>&gt;</p>
+<p>▸ <strong>deleteContainer</strong>(<code class="docutils literal notranslate"><span class="pre">container</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;<em>typeof</em> internal_defaultFetchOptions&gt;): <em>Promise</em>&lt;<em>void</em>&gt;</p>
 <p>Deletes the Container at a given URL.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">since</span></code></strong> 0.6.0</p>
 <div class="section" id="id4">
@@ -632,23 +632,23 @@ will do the job just fine, and does not require the parent Container to exist in
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">container</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a></p></td>
 <td><p>-</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
-<td><p><em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">fetch</span></code>: (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt; &amp; (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt;  }&gt;</p></td>
+<td><p><em>Partial</em>&lt;<em>typeof</em> internal_defaultFetchOptions&gt;</p></td>
 <td><p>…</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Promise</em>&lt;<em>void</em>&gt;</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/resource/solidDataset.ts#L620">src/resource/solidDataset.ts:620</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/resource/solidDataset.ts#L620">src/resource/solidDataset.ts:620</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="deletesoliddataset">
 <h3>deleteSolidDataset<a class="headerlink" href="#deletesoliddataset" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>deleteSolidDataset</strong>(<code class="docutils literal notranslate"><span class="pre">solidDataset</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">fetch</span></code>: (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt; &amp; (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt;  }&gt;): <em>Promise</em>&lt;<em>void</em>&gt;</p>
+<p>▸ <strong>deleteSolidDataset</strong>(<code class="docutils literal notranslate"><span class="pre">solidDataset</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;<em>typeof</em> internal_defaultFetchOptions&gt;): <em>Promise</em>&lt;<em>void</em>&gt;</p>
 <p>Deletes the SolidDataset at a given URL.</p>
 <p><strong><code class="docutils literal notranslate"><span class="pre">since</span></code></strong> 0.6.0</p>
 <div class="section" id="id5">
@@ -662,23 +662,23 @@ will do the job just fine, and does not require the parent Container to exist in
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">solidDataset</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a></p></td>
 <td><p>-</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
-<td><p><em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">fetch</span></code>: (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt; &amp; (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt;  }&gt;</p></td>
+<td><p><em>Partial</em>&lt;<em>typeof</em> internal_defaultFetchOptions&gt;</p></td>
 <td><p>…</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Promise</em>&lt;<em>void</em>&gt;</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/resource/solidDataset.ts#L267">src/resource/solidDataset.ts:267</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/resource/solidDataset.ts#L267">src/resource/solidDataset.ts:267</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getcontainedresourceurlall">
 <h3>getContainedResourceUrlAll<a class="headerlink" href="#getcontainedresourceurlall" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getContainedResourceUrlAll</strong>(<code class="docutils literal notranslate"><span class="pre">solidDataset</span></code>: <a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a>): <em>string</em>[]</p>
+<p>▸ <strong>getContainedResourceUrlAll</strong>(<code class="docutils literal notranslate"><span class="pre">solidDataset</span></code>: <a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a>): <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>[]</p>
 <p>Given a <a class="reference external" href="interfaces.html#soliddataset">SolidDataset</a> representing a Container (see <a class="reference external" href="resource_resource.html#iscontainer">isContainer</a>), fetch the URLs of all
 contained resources.
 If the solidDataset given is not a container, or is missing resourceInfo, throw an error.</p>
@@ -699,15 +699,15 @@ If the solidDataset given is not a container, or is missing resourceInfo, throw 
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>string</em>[]</p>
+<p><strong>Returns:</strong> <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>[]</p>
 <p>A list of URLs, each of which points to a contained Resource of the given SolidDataset.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/resource/solidDataset.ts#L659">src/resource/solidDataset.ts:659</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/resource/solidDataset.ts#L659">src/resource/solidDataset.ts:659</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getsoliddataset">
 <h3>getSolidDataset<a class="headerlink" href="#getsoliddataset" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getSolidDataset</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">fetch</span></code>: (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt; &amp; (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt;  }&gt;): <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; {  }&gt;</p>
+<p>▸ <strong>getSolidDataset</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;<em>typeof</em> internal_defaultFetchOptions&gt;): <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a>&gt;</p>
 <p>Fetch a SolidDataset from the given URL. Currently requires the SolidDataset to be available as <a class="reference external" href="https://www.w3.org/TR/turtle/">Turtle</a>.</p>
 <div class="section" id="id7">
 <h4>Parameters:<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
@@ -721,26 +721,26 @@ If the solidDataset given is not a container, or is missing resourceInfo, throw 
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">url</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
 <td><p>-</p></td>
 <td><p>URL to fetch a <a class="reference external" href="interfaces.html#soliddataset">SolidDataset</a> from.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
-<td><p><em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">fetch</span></code>: (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt; &amp; (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt;  }&gt;</p></td>
+<td><p><em>Partial</em>&lt;<em>typeof</em> internal_defaultFetchOptions&gt;</p></td>
 <td><p>…</p></td>
 <td><p>Optional parameter <code class="docutils literal notranslate"><span class="pre">options.fetch</span></code>: An alternative <code class="docutils literal notranslate"><span class="pre">fetch</span></code> function to make the HTTP request, compatible with the browser-native <a class="reference external" href="https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/fetch#parameters">fetch API</a>.</p></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; {  }&gt;</p>
+<p><strong>Returns:</strong> <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a>&gt;</p>
 <p>Promise resolving to a <a class="reference external" href="interfaces.html#soliddataset">SolidDataset</a> containing the data at the given Resource, or rejecting if fetching it failed.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/resource/solidDataset.ts#L81">src/resource/solidDataset.ts:81</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/resource/solidDataset.ts#L81">src/resource/solidDataset.ts:81</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="savesoliddatasetat">
 <h3>saveSolidDatasetAt<a class="headerlink" href="#savesoliddatasetat" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>saveSolidDatasetAt</strong>&lt;Dataset&gt;(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">solidDataset</span></code>: Dataset, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">fetch</span></code>: (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt; &amp; (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt;  }&gt;): <em>Promise</em>&lt;Dataset &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; {  } &amp; <a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; { <code class="docutils literal notranslate"><span class="pre">internal_changeLog</span></code>: { <code class="docutils literal notranslate"><span class="pre">additions</span></code>: Quad[] ; <code class="docutils literal notranslate"><span class="pre">deletions</span></code>: Quad[]  }  }&gt;</p>
+<p>▸ <strong>saveSolidDatasetAt</strong>&lt;Dataset&gt;(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">solidDataset</span></code>: Dataset, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;<em>typeof</em> internal_defaultFetchOptions&gt;): <em>Promise</em>&lt;Dataset &amp; <a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a> &amp; WithChangeLog&gt;</p>
 <p>Given a SolidDataset, store it in a Solid Pod (overwriting the existing data at the given URL).</p>
 <p>A SolidDataset keeps track of the data changes compared to the data in the Pod; i.e.,
 the changelog tracks both the old value and new values of the property being modified. This
@@ -782,7 +782,7 @@ it will exist after this function resolves successfully.</p>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">url</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
 <td><p>-</p></td>
 <td><p>URL to save <code class="docutils literal notranslate"><span class="pre">solidDataset</span></code> to.</p></td>
 </tr>
@@ -792,21 +792,21 @@ it will exist after this function resolves successfully.</p>
 <td><p>The <a class="reference external" href="interfaces.html#soliddataset">SolidDataset</a> to save.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
-<td><p><em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">fetch</span></code>: (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt; &amp; (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt;  }&gt;</p></td>
+<td><p><em>Partial</em>&lt;<em>typeof</em> internal_defaultFetchOptions&gt;</p></td>
 <td><p>…</p></td>
 <td><p>Optional parameter <code class="docutils literal notranslate"><span class="pre">options.fetch</span></code>: An alternative <code class="docutils literal notranslate"><span class="pre">fetch</span></code> function to make the HTTP request, compatible with the browser-native <a class="reference external" href="https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/fetch#parameters">fetch API</a>.</p></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>Promise</em>&lt;Dataset &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; {  } &amp; <a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; { <code class="docutils literal notranslate"><span class="pre">internal_changeLog</span></code>: { <code class="docutils literal notranslate"><span class="pre">additions</span></code>: Quad[] ; <code class="docutils literal notranslate"><span class="pre">deletions</span></code>: Quad[]  }  }&gt;</p>
+<p><strong>Returns:</strong> <em>Promise</em>&lt;Dataset &amp; <a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a> &amp; WithChangeLog&gt;</p>
 <p>A Promise resolving to a <a class="reference external" href="interfaces.html#soliddataset">SolidDataset</a> containing the stored data, or rejecting if saving it failed.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/resource/solidDataset.ts#L207">src/resource/solidDataset.ts:207</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/resource/solidDataset.ts#L207">src/resource/solidDataset.ts:207</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="savesoliddatasetincontainer">
 <h3>saveSolidDatasetInContainer<a class="headerlink" href="#savesoliddatasetincontainer" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>saveSolidDatasetInContainer</strong>(<code class="docutils literal notranslate"><span class="pre">containerUrl</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">solidDataset</span></code>: <a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">fetch</span></code>: (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt; &amp; (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt;  } &amp; { <code class="docutils literal notranslate"><span class="pre">slugSuggestion</span></code>: <em>string</em>  }&gt;): <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a>&gt;</p>
+<p>▸ <strong>saveSolidDatasetInContainer</strong>(<code class="docutils literal notranslate"><span class="pre">containerUrl</span></code>: <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">solidDataset</span></code>: <a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: SaveInContainerOptions): <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a>&gt;</p>
 <p>Given a SolidDataset, store it in a Solid Pod in a new Resource inside a Container.</p>
 <p>The Container at the given URL should already exist; if it does not, you can initialise it first
 using <a class="reference external" href="resource_soliddataset.html#createcontainerat">createContainerAt</a>, or directly save the SolidDataset at the desired location using
@@ -832,7 +832,7 @@ will do the job just fine, and does not require the parent Container to exist in
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">containerUrl</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
 <td><p>-</p></td>
 <td><p>URL of the Container in which to create a new Resource.</p></td>
 </tr>
@@ -842,7 +842,7 @@ will do the job just fine, and does not require the parent Container to exist in
 <td><p>The <a class="reference external" href="interfaces.html#soliddataset">SolidDataset</a> to save to a new Resource in the given Container.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
-<td><p><em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">fetch</span></code>: (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt; &amp; (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt;  } &amp; { <code class="docutils literal notranslate"><span class="pre">slugSuggestion</span></code>: <em>string</em>  }&gt;</p></td>
+<td><p>SaveInContainerOptions</p></td>
 <td><p>…</p></td>
 <td><p>Optional parameter <code class="docutils literal notranslate"><span class="pre">options.fetch</span></code>: An alternative <code class="docutils literal notranslate"><span class="pre">fetch</span></code> function to make the HTTP request, compatible with the browser-native <a class="reference external" href="https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/fetch#parameters">fetch API</a>.</p></td>
 </tr>
@@ -850,7 +850,7 @@ will do the job just fine, and does not require the parent Container to exist in
 </table>
 <p><strong>Returns:</strong> <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a>&gt;</p>
 <p>A Promise resolving to a <a class="reference external" href="interfaces.html#soliddataset">SolidDataset</a> containing the saved data. The Promise rejects if the save failed.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/resource/solidDataset.ts#L475">src/resource/solidDataset.ts:475</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/resource/solidDataset.ts#L475">src/resource/solidDataset.ts:475</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -878,7 +878,7 @@ it is intended to aid in debugging, not as a serialisation method that can be re
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>string</em></p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/resource/solidDataset.ts#L678">src/resource/solidDataset.ts:678</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/resource/solidDataset.ts#L678">src/resource/solidDataset.ts:678</a></p>
 </div>
 </div>
 </div>

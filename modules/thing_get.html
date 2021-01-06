@@ -544,7 +544,7 @@
 <h2>Functions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="getboolean">
 <h3>getBoolean<a class="headerlink" href="#getboolean" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getBoolean</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>): <em>null</em> | <em>boolean</em></p>
+<p>▸ <strong>getBoolean</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <em>boolean</em> | <em>null</em></p>
 <div class="section" id="parameters">
 <h4>Parameters:<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -560,20 +560,20 @@
 <td><p>The <a class="reference external" href="interfaces.html#thing">Thing</a> to read a boolean value from.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
 <td><p>The given Property for which you want the boolean value.</p></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>null</em> | <em>boolean</em></p>
+<p><strong>Returns:</strong> <em>boolean</em> | <em>null</em></p>
 <p>A boolean value for the given Property, if present, or null otherwise.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/thing/get.ts#L87">src/thing/get.ts:87</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/thing/get.ts#L87">src/thing/get.ts:87</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getbooleanall">
 <h3>getBooleanAll<a class="headerlink" href="#getbooleanall" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getBooleanAll</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>): <em>boolean</em>[]</p>
+<p>▸ <strong>getBooleanAll</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <em>boolean</em>[]</p>
 <div class="section" id="id2">
 <h4>Parameters:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -589,20 +589,20 @@
 <td><p>The <a class="reference external" href="interfaces.html#thing">Thing</a> to read the boolean values from.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
 <td><p>The given Property for which you want the boolean values.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>boolean</em>[]</p>
 <p>The boolean values for the given Property.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/thing/get.ts#L110">src/thing/get.ts:110</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/thing/get.ts#L110">src/thing/get.ts:110</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getdatetime">
 <h3>getDatetime<a class="headerlink" href="#getdatetime" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getDatetime</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>): <em>null</em> | Date</p>
+<p>▸ <strong>getDatetime</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): Date | <em>null</em></p>
 <div class="section" id="id3">
 <h4>Parameters:<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -618,20 +618,20 @@
 <td><p>The <a class="reference external" href="interfaces.html#thing">Thing</a> to read a datetime value from.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
 <td><p>The given Property for which you want the datetime value.</p></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>null</em> | Date</p>
+<p><strong>Returns:</strong> Date | <em>null</em></p>
 <p>A datetime value for the given Property, if present, or null otherwise.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/thing/get.ts#L131">src/thing/get.ts:131</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/thing/get.ts#L131">src/thing/get.ts:131</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getdatetimeall">
 <h3>getDatetimeAll<a class="headerlink" href="#getdatetimeall" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getDatetimeAll</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>): Date[]</p>
+<p>▸ <strong>getDatetimeAll</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): Date[]</p>
 <div class="section" id="id4">
 <h4>Parameters:<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -647,20 +647,20 @@
 <td><p>The <a class="reference external" href="interfaces.html#thing">Thing</a> to read the datetime values from.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
 <td><p>The given Property for which you want the datetime values.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> Date[]</p>
 <p>The datetime values for the given Property.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/thing/get.ts#L154">src/thing/get.ts:154</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/thing/get.ts#L154">src/thing/get.ts:154</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getdecimal">
 <h3>getDecimal<a class="headerlink" href="#getdecimal" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getDecimal</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>): <em>null</em> | <em>number</em></p>
+<p>▸ <strong>getDecimal</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <em>number</em> | <em>null</em></p>
 <div class="section" id="id5">
 <h4>Parameters:<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -676,20 +676,20 @@
 <td><p>The <a class="reference external" href="interfaces.html#thing">Thing</a> to read a decimal value from.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
 <td><p>The given Property for which you want the decimal value.</p></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>null</em> | <em>number</em></p>
+<p><strong>Returns:</strong> <em>number</em> | <em>null</em></p>
 <p>A decimal value for the given Property, if present, or null otherwise.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/thing/get.ts#L175">src/thing/get.ts:175</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/thing/get.ts#L175">src/thing/get.ts:175</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getdecimalall">
 <h3>getDecimalAll<a class="headerlink" href="#getdecimalall" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getDecimalAll</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>): <em>number</em>[]</p>
+<p>▸ <strong>getDecimalAll</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <em>number</em>[]</p>
 <div class="section" id="id6">
 <h4>Parameters:<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -705,20 +705,20 @@
 <td><p>The <a class="reference external" href="interfaces.html#thing">Thing</a> to read the decimal values from.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
 <td><p>The given Property for which you want the decimal values.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>number</em>[]</p>
 <p>The decimal values for the given Property.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/thing/get.ts#L198">src/thing/get.ts:198</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/thing/get.ts#L198">src/thing/get.ts:198</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getinteger">
 <h3>getInteger<a class="headerlink" href="#getinteger" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getInteger</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>): <em>null</em> | <em>number</em></p>
+<p>▸ <strong>getInteger</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <em>number</em> | <em>null</em></p>
 <div class="section" id="id7">
 <h4>Parameters:<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -734,20 +734,20 @@
 <td><p>The <a class="reference external" href="interfaces.html#thing">Thing</a> to read an integer value from.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
 <td><p>The given Property for which you want the integer value.</p></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>null</em> | <em>number</em></p>
+<p><strong>Returns:</strong> <em>number</em> | <em>null</em></p>
 <p>An integer value for the given Property, if present, or null otherwise.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/thing/get.ts#L219">src/thing/get.ts:219</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/thing/get.ts#L219">src/thing/get.ts:219</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getintegerall">
 <h3>getIntegerAll<a class="headerlink" href="#getintegerall" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getIntegerAll</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>): <em>number</em>[]</p>
+<p>▸ <strong>getIntegerAll</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <em>number</em>[]</p>
 <div class="section" id="id8">
 <h4>Parameters:<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -763,20 +763,20 @@
 <td><p>The <a class="reference external" href="interfaces.html#thing">Thing</a> to read the integer values from.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
 <td><p>The given Property for which you want the integer values.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>number</em>[]</p>
 <p>The integer values for the given Property.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/thing/get.ts#L242">src/thing/get.ts:242</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/thing/get.ts#L242">src/thing/get.ts:242</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getstringbylocaleall">
 <h3>getStringByLocaleAll<a class="headerlink" href="#getstringbylocaleall" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getStringByLocaleAll</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>): <em>Map</em>&lt;<em>string</em>, <em>string</em>[]&gt;</p>
+<p>▸ <strong>getStringByLocaleAll</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <em>Map</em>&lt;<em>string</em>, <em>string</em>[]&gt;</p>
 <p>Retrieves all language string literals for the specified property from the
 specified <a class="reference external" href="interfaces.html#thing">Thing</a> (explicitly filters out non-language string literals).</p>
 <div class="section" id="id9">
@@ -794,20 +794,20 @@ specified <a class="reference external" href="interfaces.html#thing">Thing</a> (
 <td><p>The <a class="reference external" href="interfaces.html#thing">Thing</a> to read the localised string values from.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
 <td><p>The given Property for which you want the localised string values.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Map</em>&lt;<em>string</em>, <em>string</em>[]&gt;</p>
 <p>A Map of objects, keyed on locale with the value an array of string values (for that locale).</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/thing/get.ts#L308">src/thing/get.ts:308</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/thing/get.ts#L308">src/thing/get.ts:308</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getstringnolocale">
 <h3>getStringNoLocale<a class="headerlink" href="#getstringnolocale" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getStringNoLocale</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>): <em>null</em> | <em>string</em></p>
+<p>▸ <strong>getStringNoLocale</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <em>string</em> | <em>null</em></p>
 <div class="section" id="id10">
 <h4>Parameters:<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -823,20 +823,20 @@ specified <a class="reference external" href="interfaces.html#thing">Thing</a> (
 <td><p>The <a class="reference external" href="interfaces.html#thing">Thing</a> to read a string value from.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
 <td><p>The given Property for which you want the string value.</p></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>null</em> | <em>string</em></p>
+<p><strong>Returns:</strong> <em>string</em> | <em>null</em></p>
 <p>A string value for the given Property, if present, or null otherwise.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/thing/get.ts#L336">src/thing/get.ts:336</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/thing/get.ts#L336">src/thing/get.ts:336</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getstringnolocaleall">
 <h3>getStringNoLocaleAll<a class="headerlink" href="#getstringnolocaleall" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getStringNoLocaleAll</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>): <em>string</em>[]</p>
+<p>▸ <strong>getStringNoLocaleAll</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <em>string</em>[]</p>
 <div class="section" id="id11">
 <h4>Parameters:<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -852,20 +852,20 @@ specified <a class="reference external" href="interfaces.html#thing">Thing</a> (
 <td><p>The <a class="reference external" href="interfaces.html#thing">Thing</a> to read the string values from.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
 <td><p>The given Property for which you want the string values.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>string</em>[]</p>
 <p>The string values for the given Property.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/thing/get.ts#L355">src/thing/get.ts:355</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/thing/get.ts#L355">src/thing/get.ts:355</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getstringwithlocale">
 <h3>getStringWithLocale<a class="headerlink" href="#getstringwithlocale" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getStringWithLocale</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">locale</span></code>: <em>string</em>): <em>null</em> | <em>string</em></p>
+<p>▸ <strong>getStringWithLocale</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>, <code class="docutils literal notranslate"><span class="pre">locale</span></code>: <em>string</em>): <em>string</em> | <em>null</em></p>
 <div class="section" id="id12">
 <h4>Parameters:<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -881,7 +881,7 @@ specified <a class="reference external" href="interfaces.html#thing">Thing</a> (
 <td><p>The <a class="reference external" href="interfaces.html#thing">Thing</a> to read a localised string value from.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
 <td><p>The given Property for which you want the localised string value.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">locale</span></code></p></td>
@@ -890,15 +890,15 @@ specified <a class="reference external" href="interfaces.html#thing">Thing</a> (
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>null</em> | <em>string</em></p>
+<p><strong>Returns:</strong> <em>string</em> | <em>null</em></p>
 <p>A localised string value for the given Property, if present in <code class="docutils literal notranslate"><span class="pre">locale</span></code>, or null otherwise.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/thing/get.ts#L264">src/thing/get.ts:264</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/thing/get.ts#L264">src/thing/get.ts:264</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getstringwithlocaleall">
 <h3>getStringWithLocaleAll<a class="headerlink" href="#getstringwithlocaleall" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getStringWithLocaleAll</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">locale</span></code>: <em>string</em>): <em>string</em>[]</p>
+<p>▸ <strong>getStringWithLocaleAll</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>, <code class="docutils literal notranslate"><span class="pre">locale</span></code>: <em>string</em>): <em>string</em>[]</p>
 <div class="section" id="id13">
 <h4>Parameters:<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -914,7 +914,7 @@ specified <a class="reference external" href="interfaces.html#thing">Thing</a> (
 <td><p>The <a class="reference external" href="interfaces.html#thing">Thing</a> to read the localised string values from.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
 <td><p>The given Property for which you want the localised string values.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">locale</span></code></p></td>
@@ -925,13 +925,13 @@ specified <a class="reference external" href="interfaces.html#thing">Thing</a> (
 </table>
 <p><strong>Returns:</strong> <em>string</em>[]</p>
 <p>The localised string values for the given Property.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/thing/get.ts#L287">src/thing/get.ts:287</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/thing/get.ts#L287">src/thing/get.ts:287</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="geturl">
 <h3>getUrl<a class="headerlink" href="#geturl" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getUrl</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>): <em>null</em> | <em>string</em></p>
+<p>▸ <strong>getUrl</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <em>null</em></p>
 <div class="section" id="id14">
 <h4>Parameters:<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -947,20 +947,20 @@ specified <a class="reference external" href="interfaces.html#thing">Thing</a> (
 <td><p>The <a class="reference external" href="interfaces.html#thing">Thing</a> to read a URL value from.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
 <td><p>The given Property for which you want the URL value.</p></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>null</em> | <em>string</em></p>
+<p><strong>Returns:</strong> <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <em>null</em></p>
 <p>A URL value for the given Property, if present, or null otherwise.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/thing/get.ts#L45">src/thing/get.ts:45</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/thing/get.ts#L45">src/thing/get.ts:45</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="geturlall">
 <h3>getUrlAll<a class="headerlink" href="#geturlall" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getUrlAll</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>): <em>string</em>[]</p>
+<p>▸ <strong>getUrlAll</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>[]</p>
 <div class="section" id="id15">
 <h4>Parameters:<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -976,14 +976,14 @@ specified <a class="reference external" href="interfaces.html#thing">Thing</a> (
 <td><p>The <a class="reference external" href="interfaces.html#thing">Thing</a> to read the URL values from.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
 <td><p>The given Property for which you want the URL values.</p></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>string</em>[]</p>
+<p><strong>Returns:</strong> <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>[]</p>
 <p>The URL values for the given Property.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/thing/get.ts#L68">src/thing/get.ts:68</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/thing/get.ts#L68">src/thing/get.ts:68</a></p>
 </div>
 </div>
 </div>

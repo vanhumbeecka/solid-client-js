@@ -641,7 +641,7 @@ respective Access Modes defined by the Web Access Control specification.</p>
 </tr>
 </tbody>
 </table>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/acl/acl.ts#L440">src/acl/acl.ts:440</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/acl/acl.ts#L440">src/acl/acl.ts:440</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -651,7 +651,7 @@ respective Access Modes defined by the Web Access Control specification.</p>
 <p>A <a class="reference external" href="interfaces.html#soliddataset">SolidDataset</a> containing Access Control rules for another SolidDataset.</p>
 <p>Please note that the Web Access Control specification is not yet finalised, and hence, this
 function is still experimental and can change in a non-major release.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/acl/acl.ts#L426">src/acl/acl.ts:426</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/acl/acl.ts#L426">src/acl/acl.ts:426</a></p>
 </div>
 <hr class="docutils" />
 <div class="section" id="withaccessibleacl">
@@ -676,7 +676,7 @@ function is still experimental and can change in a non-major release.</p>
 </tr>
 </tbody>
 </table>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/acl/acl.ts#L501">src/acl/acl.ts:501</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/acl/acl.ts#L501">src/acl/acl.ts:501</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -702,7 +702,7 @@ function is still experimental and can change in a non-major release.</p>
 </tr>
 </tbody>
 </table>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/acl/acl.ts#L487">src/acl/acl.ts:487</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/acl/acl.ts#L487">src/acl/acl.ts:487</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -728,7 +728,7 @@ function is still experimental and can change in a non-major release.</p>
 </tr>
 </tbody>
 </table>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/acl/acl.ts#L473">src/acl/acl.ts:473</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/acl/acl.ts#L473">src/acl/acl.ts:473</a></p>
 </div>
 </div>
 </div>
@@ -736,7 +736,7 @@ function is still experimental and can change in a non-major release.</p>
 <h2>Functions<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="createacl">
 <h3>createAcl<a class="headerlink" href="#createacl" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>createAcl</strong>(<code class="docutils literal notranslate"><span class="pre">targetResource</span></code>: <a class="reference external" href="acl_acl.html#withaccessibleacl"><em>WithAccessibleAcl</em></a>&lt;<a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a>&gt;): <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p>
+<p>▸ <strong>createAcl</strong>(<code class="docutils literal notranslate"><span class="pre">targetResource</span></code>: <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; <a class="reference external" href="acl_acl.html#withaccessibleacl"><em>WithAccessibleAcl</em></a>): <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The Web Access Control specification is not yet finalised. As such, this
@@ -754,20 +754,20 @@ function is still experimental and subject to change, even in a non-major releas
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">targetResource</span></code></p></td>
-<td><p><a class="reference external" href="acl_acl.html#withaccessibleacl"><em>WithAccessibleAcl</em></a>&lt;<a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a>&gt;</p></td>
+<td><p><a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; <a class="reference external" href="acl_acl.html#withaccessibleacl"><em>WithAccessibleAcl</em></a></p></td>
 <td><p>A Resource that does not have its own ACL yet (see <a class="reference external" href="acl_acl.html#hasresourceacl">hasResourceAcl</a>).</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p>
 <p>An empty resource ACL for the given Resource.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/acl/acl.ts#L279">src/acl/acl.ts:279</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/acl/acl.ts#L279">src/acl/acl.ts:279</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="createaclfromfallbackacl">
 <h3>createAclFromFallbackAcl<a class="headerlink" href="#createaclfromfallbackacl" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>createAclFromFallbackAcl</strong>(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: WithAcl &amp; { <code class="docutils literal notranslate"><span class="pre">internal_acl</span></code>: { <code class="docutils literal notranslate"><span class="pre">fallbackAcl</span></code>: <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a>  }  } &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; {  } &amp; { <code class="docutils literal notranslate"><span class="pre">internal_resourceInfo</span></code>: { <code class="docutils literal notranslate"><span class="pre">aclUrl</span></code>: <em>string</em>  }  }): <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p>
+<p>▸ <strong>createAclFromFallbackAcl</strong>(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: <a class="reference external" href="acl_acl.html#withfallbackacl"><em>WithFallbackAcl</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; <a class="reference external" href="acl_acl.html#withaccessibleacl"><em>WithAccessibleAcl</em></a>): <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The Web Access Control specification is not yet finalised. As such, this
@@ -788,20 +788,20 @@ applies to the Resource.</p>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">resource</span></code></p></td>
-<td><p>WithAcl &amp; { <code class="docutils literal notranslate"><span class="pre">internal_acl</span></code>: { <code class="docutils literal notranslate"><span class="pre">fallbackAcl</span></code>: <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a>  }  } &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; {  } &amp; { <code class="docutils literal notranslate"><span class="pre">internal_resourceInfo</span></code>: { <code class="docutils literal notranslate"><span class="pre">aclUrl</span></code>: <em>string</em>  }  }</p></td>
+<td><p><a class="reference external" href="acl_acl.html#withfallbackacl"><em>WithFallbackAcl</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; <a class="reference external" href="acl_acl.html#withaccessibleacl"><em>WithAccessibleAcl</em></a></p></td>
 <td><p>A Resource without its own resource ACL (see <a class="reference external" href="acl_acl.html#hasresourceacl">hasResourceAcl</a>) but with an accessible fallback ACL (see <a class="reference external" href="acl_acl.html#hasfallbackacl">hasFallbackAcl</a>).</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p>
 <p>A resource ACL initialised with the rules/entries from the Resource’s fallback ACL.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/acl/acl.ts#L307">src/acl/acl.ts:307</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/acl/acl.ts#L307">src/acl/acl.ts:307</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="deleteaclfor">
 <h3>deleteAclFor<a class="headerlink" href="#deleteaclfor" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>deleteAclFor</strong>&lt;Resource&gt;(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: Resource, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">fetch</span></code>: (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt; &amp; (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt;  }&gt;): <em>Promise</em>&lt;Resource &amp; { <code class="docutils literal notranslate"><span class="pre">acl</span></code>: { <code class="docutils literal notranslate"><span class="pre">resourceAcl</span></code>: <em>null</em>  }  }&gt;</p>
+<p>▸ <strong>deleteAclFor</strong>&lt;Resource&gt;(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: Resource, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;<em>typeof</em> internal_defaultFetchOptions&gt;): <em>Promise</em>&lt;Resource &amp; { <code class="docutils literal notranslate"><span class="pre">acl</span></code>: { <code class="docutils literal notranslate"><span class="pre">resourceAcl</span></code>: <em>null</em>  }  }&gt;</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The Web Access Control specification is not yet finalised. As such, this
@@ -842,20 +842,20 @@ fallback ACL inherited from the Resource’s parent Container (or another of its
 <td><p>The Resource for which you want to delete the ACL.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
-<td><p><em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">fetch</span></code>: (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt; &amp; (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt;  }&gt;</p></td>
+<td><p><em>Partial</em>&lt;<em>typeof</em> internal_defaultFetchOptions&gt;</p></td>
 <td><p>…</p></td>
 <td><p>Optional parameter <code class="docutils literal notranslate"><span class="pre">options.fetch</span></code>: An alternative <code class="docutils literal notranslate"><span class="pre">fetch</span></code> function to make the HTTP request, compatible with the browser-native <a class="reference external" href="https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/fetch#parameters">fetch API</a>.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Promise</em>&lt;Resource &amp; { <code class="docutils literal notranslate"><span class="pre">acl</span></code>: { <code class="docutils literal notranslate"><span class="pre">resourceAcl</span></code>: <em>null</em>  }  }&gt;</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/acl/acl.ts#L386">src/acl/acl.ts:386</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/acl/acl.ts#L386">src/acl/acl.ts:386</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getfallbackacl">
 <h3>getFallbackAcl<a class="headerlink" href="#getfallbackacl" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getFallbackAcl</strong>(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: <a class="reference external" href="acl_acl.html#withfallbackacl"><em>WithFallbackAcl</em></a>&lt;WithAcl&gt;): <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p>
+<p>▸ <strong>getFallbackAcl</strong>(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: <a class="reference external" href="acl_acl.html#withfallbackacl"><em>WithFallbackAcl</em></a>): <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The Web Access Control specification is not yet finalised. As such, this
@@ -877,15 +877,15 @@ the function returns <code class="docutils literal notranslate"><span class="pre
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">resource</span></code></p></td>
-<td><p><a class="reference external" href="acl_acl.html#withfallbackacl"><em>WithFallbackAcl</em></a>&lt;WithAcl&gt;</p></td>
+<td><p><a class="reference external" href="acl_acl.html#withfallbackacl"><em>WithFallbackAcl</em></a></p></td>
 <td><p>A Resource with potentially a fallback ACL attached.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p>
 <p>The fallback ACL if available or <code class="docutils literal notranslate"><span class="pre">null</span></code> if not.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/acl/acl.ts#L260">src/acl/acl.ts:260</a></p>
-<p>▸ <strong>getFallbackAcl</strong>(<code class="docutils literal notranslate"><span class="pre">dataset</span></code>: WithAcl): <em>null</em> | <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/acl/acl.ts#L260">src/acl/acl.ts:260</a></p>
+<p>▸ <strong>getFallbackAcl</strong>(<code class="docutils literal notranslate"><span class="pre">dataset</span></code>: WithAcl): <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a> | <em>null</em></p>
 </div>
 <div class="section" id="id9">
 <h4>Parameters:<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
@@ -901,14 +901,14 @@ the function returns <code class="docutils literal notranslate"><span class="pre
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>null</em> | <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/acl/acl.ts#L261">src/acl/acl.ts:261</a></p>
+<p><strong>Returns:</strong> <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a> | <em>null</em></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/acl/acl.ts#L261">src/acl/acl.ts:261</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getfilewithacl">
 <h3>getFileWithAcl<a class="headerlink" href="#getfilewithacl" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getFileWithAcl</strong>(<code class="docutils literal notranslate"><span class="pre">input</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">fetch</span></code>: (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt; &amp; (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt;  }&gt;): <em>Promise</em>&lt;Blob &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; {  } &amp; WithAcl&gt;</p>
+<p>▸ <strong>getFileWithAcl</strong>(<code class="docutils literal notranslate"><span class="pre">input</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;<em>typeof</em> internal_defaultFetchOptions&gt;): <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#file"><em>File</em></a> &amp; <a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a> &amp; WithAcl&gt;</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -939,26 +939,26 @@ request as mandated by the Solid spec. As such, prefer <a class="reference exter
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">input</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
 <td><p>-</p></td>
 <td><p>-</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
-<td><p><em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">fetch</span></code>: (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt; &amp; (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt;  }&gt;</p></td>
+<td><p><em>Partial</em>&lt;<em>typeof</em> internal_defaultFetchOptions&gt;</p></td>
 <td><p>…</p></td>
 <td><p>Fetching options: a custom fetcher and/or headers.</p></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>Promise</em>&lt;Blob &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; {  } &amp; WithAcl&gt;</p>
+<p><strong>Returns:</strong> <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#file"><em>File</em></a> &amp; <a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a> &amp; WithAcl&gt;</p>
 <p>A file and its ACLs, if available to the authenticated user, as a blob.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/acl/acl.ts#L149">src/acl/acl.ts:149</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/acl/acl.ts#L149">src/acl/acl.ts:149</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getresourceacl">
 <h3>getResourceAcl<a class="headerlink" href="#getresourceacl" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getResourceAcl</strong>(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: WithAcl &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; {  } &amp; { <code class="docutils literal notranslate"><span class="pre">internal_acl</span></code>: { <code class="docutils literal notranslate"><span class="pre">resourceAcl</span></code>: <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a>  }  }): <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p>
+<p>▸ <strong>getResourceAcl</strong>(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: WithAcl &amp; <a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a> &amp; <a class="reference external" href="acl_acl.html#withresourceacl"><em>WithResourceAcl</em></a>): <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The Web Access Control specification is not yet finalised. As such, this
@@ -980,15 +980,15 @@ the function returns <code class="docutils literal notranslate"><span class="pre
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">resource</span></code></p></td>
-<td><p>WithAcl &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; {  } &amp; { <code class="docutils literal notranslate"><span class="pre">internal_acl</span></code>: { <code class="docutils literal notranslate"><span class="pre">resourceAcl</span></code>: <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a>  }  }</p></td>
+<td><p>WithAcl &amp; <a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a> &amp; <a class="reference external" href="acl_acl.html#withresourceacl"><em>WithResourceAcl</em></a></p></td>
 <td><p>A Resource with potentially an ACL attached.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p>
 <p>The resource ACL if available and <code class="docutils literal notranslate"><span class="pre">null</span></code> if not.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/acl/acl.ts#L202">src/acl/acl.ts:202</a></p>
-<p>▸ <strong>getResourceAcl</strong>(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: WithAcl &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; {  }): <em>null</em> | <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/acl/acl.ts#L202">src/acl/acl.ts:202</a></p>
+<p>▸ <strong>getResourceAcl</strong>(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: WithAcl &amp; <a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a>): <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a> | <em>null</em></p>
 </div>
 <div class="section" id="id12">
 <h4>Parameters:<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
@@ -1000,18 +1000,18 @@ the function returns <code class="docutils literal notranslate"><span class="pre
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">resource</span></code></p></td>
-<td><p>WithAcl &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; {  }</p></td>
+<td><p>WithAcl &amp; <a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a></p></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>null</em> | <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/acl/acl.ts#L205">src/acl/acl.ts:205</a></p>
+<p><strong>Returns:</strong> <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a> | <em>null</em></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/acl/acl.ts#L205">src/acl/acl.ts:205</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getresourceinfowithacl">
 <h3>getResourceInfoWithAcl<a class="headerlink" href="#getresourceinfowithacl" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getResourceInfoWithAcl</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <em>string</em>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">fetch</span></code>: (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt; &amp; (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt;  }&gt;): <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; {  } &amp; WithAcl&gt;</p>
+<p>▸ <strong>getResourceInfoWithAcl</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;<em>typeof</em> internal_defaultFetchOptions&gt;): <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a> &amp; WithAcl&gt;</p>
 <p>Experimental: fetch a Resource’s metadata and its associated Access Control List.</p>
 <p>This is an experimental function that fetches both a Resource’s metadata, the linked ACL Resource (if
 available), and the ACL that applies to it if the linked ACL Resource is not available (if accessible). This can
@@ -1033,26 +1033,26 @@ applicable Container’s ACL is not accessible to the authenticated user, <code 
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">url</span></code></p></td>
-<td><p><em>string</em></p></td>
+<td><p><a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
 <td><p>-</p></td>
 <td><p>URL of the SolidDataset to fetch.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
-<td><p><em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">fetch</span></code>: (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt; &amp; (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt;  }&gt;</p></td>
+<td><p><em>Partial</em>&lt;<em>typeof</em> internal_defaultFetchOptions&gt;</p></td>
 <td><p>…</p></td>
 <td><p>Optional parameter <code class="docutils literal notranslate"><span class="pre">options.fetch</span></code>: An alternative <code class="docutils literal notranslate"><span class="pre">fetch</span></code> function to make the HTTP request, compatible with the browser-native <a class="reference external" href="https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/fetch#parameters">fetch API</a>.</p></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; {  } &amp; WithAcl&gt;</p>
+<p><strong>Returns:</strong> <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a> &amp; WithAcl&gt;</p>
 <p>A Resource’s metadata and the ACLs that apply to the Resource, if available to the authenticated user.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/acl/acl.ts#L177">src/acl/acl.ts:177</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/acl/acl.ts#L177">src/acl/acl.ts:177</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getsoliddatasetwithacl">
 <h3>getSolidDatasetWithAcl<a class="headerlink" href="#getsoliddatasetwithacl" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getSolidDatasetWithAcl</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">fetch</span></code>: (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt; &amp; (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt;  }&gt;): <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; {  } &amp; WithAcl&gt;</p>
+<p>▸ <strong>getSolidDatasetWithAcl</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;<em>typeof</em> internal_defaultFetchOptions&gt;): <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a> &amp; WithAcl&gt;</p>
 <p>Experimental: fetch a SolidDataset and its associated Access Control List.</p>
 <p>This is an experimental function that fetches both a Resource, the linked ACL Resource (if
 available), and the ACL that applies to it if the linked ACL Resource is not available. This can
@@ -1076,20 +1076,20 @@ authenticated user.</p>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">url</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
 <td><p>-</p></td>
 <td><p>URL of the SolidDataset to fetch.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
-<td><p><em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">fetch</span></code>: (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt; &amp; (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt;  }&gt;</p></td>
+<td><p><em>Partial</em>&lt;<em>typeof</em> internal_defaultFetchOptions&gt;</p></td>
 <td><p>…</p></td>
 <td><p>Optional parameter <code class="docutils literal notranslate"><span class="pre">options.fetch</span></code>: An alternative <code class="docutils literal notranslate"><span class="pre">fetch</span></code> function to make the HTTP request, compatible with the browser-native <a class="reference external" href="https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/fetch#parameters">fetch API</a>.</p></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; {  } &amp; WithAcl&gt;</p>
+<p><strong>Returns:</strong> <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#soliddataset"><em>SolidDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a> &amp; WithAcl&gt;</p>
 <p>A SolidDataset and the ACLs that apply to it, if available to the authenticated user.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/acl/acl.ts#L114">src/acl/acl.ts:114</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/acl/acl.ts#L114">src/acl/acl.ts:114</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -1134,7 +1134,7 @@ function is still experimental and can change in a non-major release.</p>
 </table>
 <p><strong>Returns:</strong> dataset is WithAccessibleAcl&lt;ResourceExt&gt;</p>
 <p>Whether the given <code class="docutils literal notranslate"><span class="pre">dataset</span></code> has a an ACL that is accessible to the current user.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/acl/acl.ts#L524">src/acl/acl.ts:524</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/acl/acl.ts#L524">src/acl/acl.ts:524</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -1180,7 +1180,7 @@ function is still experimental and subject to change, even in a non-major releas
 </table>
 <p><strong>Returns:</strong> dataset is T &amp; WithAcl</p>
 <p>True if <code class="docutils literal notranslate"><span class="pre">dataset</span></code> was fetched together with its ACLs.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/acl/acl.ts#L60">src/acl/acl.ts:60</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/acl/acl.ts#L60">src/acl/acl.ts:60</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -1236,7 +1236,7 @@ from which the Resource inherits its ACL.</p></li>
 </table>
 <p><strong>Returns:</strong> resource is Resource &amp; WithAcl &amp; object</p>
 <p><code class="docutils literal notranslate"><span class="pre">true</span></code> if the Resource has a fallback ACL attached that is accessible to the user.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/acl/acl.ts#L239">src/acl/acl.ts:239</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/acl/acl.ts#L239">src/acl/acl.ts:239</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -1288,13 +1288,13 @@ function is still experimental and subject to change, even in a non-major releas
 </table>
 <p><strong>Returns:</strong> resource is Resource &amp; WithAcl &amp; object &amp; WithResourceInfo &amp; object &amp; object</p>
 <p><code class="docutils literal notranslate"><span class="pre">true</span></code> if the Resource has a resource ACL attached that is accessible by the user.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/acl/acl.ts#L81">src/acl/acl.ts:81</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/acl/acl.ts#L81">src/acl/acl.ts:81</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="saveaclfor">
 <h3>saveAclFor<a class="headerlink" href="#saveaclfor" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>saveAclFor</strong>(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: <a class="reference external" href="acl_acl.html#withaccessibleacl"><em>WithAccessibleAcl</em></a>&lt;<a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a>&gt;, <code class="docutils literal notranslate"><span class="pre">resourceAcl</span></code>: <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">fetch</span></code>: (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt; &amp; (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt;  }&gt;): <em>Promise</em>&lt;<a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a>&gt;</p>
+<p>▸ <strong>saveAclFor</strong>(<code class="docutils literal notranslate"><span class="pre">resource</span></code>: <a class="reference external" href="acl_acl.html#withaccessibleacl"><em>WithAccessibleAcl</em></a>, <code class="docutils literal notranslate"><span class="pre">resourceAcl</span></code>: <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;<em>typeof</em> internal_defaultFetchOptions&gt;): <em>Promise</em>&lt;<a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a>&gt;</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The Web Access Control specification is not yet finalised. As such, this
@@ -1313,7 +1313,7 @@ function is still experimental and subject to change, even in a non-major releas
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">resource</span></code></p></td>
-<td><p><a class="reference external" href="acl_acl.html#withaccessibleacl"><em>WithAccessibleAcl</em></a>&lt;<a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a>&gt;</p></td>
+<td><p><a class="reference external" href="acl_acl.html#withaccessibleacl"><em>WithAccessibleAcl</em></a></p></td>
 <td><p>-</p></td>
 <td><p>The Resource to which the given resource ACL applies.</p></td>
 </tr>
@@ -1323,14 +1323,14 @@ function is still experimental and subject to change, even in a non-major releas
 <td><p>An <a class="reference external" href="acl_acl.html#acldataset">AclDataset</a> whose ACL Rules will apply to <code class="docutils literal notranslate"><span class="pre">resource</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
-<td><p><em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">fetch</span></code>: (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt; &amp; (<code class="docutils literal notranslate"><span class="pre">input</span></code>: RequestInfo, <code class="docutils literal notranslate"><span class="pre">init?</span></code>: RequestInit) =&gt; <em>Promise</em>&lt;Response&gt;  }&gt;</p></td>
+<td><p><em>Partial</em>&lt;<em>typeof</em> internal_defaultFetchOptions&gt;</p></td>
 <td><p>…</p></td>
 <td><p>Optional parameter <code class="docutils literal notranslate"><span class="pre">options.fetch</span></code>: An alternative <code class="docutils literal notranslate"><span class="pre">fetch</span></code> function to make the HTTP request, compatible with the browser-native <a class="reference external" href="https://developer.mozilla.org/docs/Web/API/WindowOrWorkerGlobalScope/fetch#parameters">fetch API</a>.</p></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>Promise</em>&lt;<a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a>&gt;</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/acl/acl.ts#L344">src/acl/acl.ts:344</a></p>
+<p><strong>Returns:</strong> <em>Promise</em>&lt;<a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a> &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a>&gt;</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/acl/acl.ts#L344">src/acl/acl.ts:344</a></p>
 </div>
 </div>
 </div>

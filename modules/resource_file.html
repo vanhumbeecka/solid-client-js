@@ -452,14 +452,14 @@
 <div class="section" id="writefileoptions">
 <h3>WriteFileOptions<a class="headerlink" href="#writefileoptions" title="Permalink to this headline">¶</a></h3>
 <p>Ƭ <strong>WriteFileOptions</strong>: GetFileOptions &amp; { <code class="docutils literal notranslate"><span class="pre">contentType</span></code>: <em>string</em>  }</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/resource/file.ts#L194">src/resource/file.ts:194</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/resource/file.ts#L194">src/resource/file.ts:194</a></p>
 </div>
 </div>
 <div class="section" id="id2">
 <h2>Functions<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="deletefile">
 <h3>deleteFile<a class="headerlink" href="#deletefile" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>deleteFile</strong>(<code class="docutils literal notranslate"><span class="pre">file</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;GetFileOptions&gt;): <em>Promise</em>&lt;<em>void</em>&gt;</p>
+<p>▸ <strong>deleteFile</strong>(<code class="docutils literal notranslate"><span class="pre">file</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;GetFileOptions&gt;): <em>Promise</em>&lt;<em>void</em>&gt;</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -477,7 +477,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">file</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a></p></td>
 <td><p>-</p></td>
 <td><p>The URL of the file to delete</p></td>
 </tr>
@@ -489,13 +489,13 @@
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Promise</em>&lt;<em>void</em>&gt;</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/resource/file.ts#L103">src/resource/file.ts:103</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/resource/file.ts#L103">src/resource/file.ts:103</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getfile">
 <h3>getFile<a class="headerlink" href="#getfile" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>getFile</strong>(<code class="docutils literal notranslate"><span class="pre">input</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;GetFileOptions&gt;): <em>Promise</em>&lt;Blob &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; {  }&gt;</p>
+<p>▸ <strong>getFile</strong>(<code class="docutils literal notranslate"><span class="pre">input</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;GetFileOptions&gt;): <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#file"><em>File</em></a> &amp; <a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a>&gt;</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -513,7 +513,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">input</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
 <td><p>-</p></td>
 <td><p>-</p></td>
 </tr>
@@ -524,15 +524,15 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>Promise</em>&lt;Blob &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a> &amp; {  }&gt;</p>
+<p><strong>Returns:</strong> <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#file"><em>File</em></a> &amp; <a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a>&gt;</p>
 <p>The file as a blob.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/resource/file.ts#L68">src/resource/file.ts:68</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/resource/file.ts#L68">src/resource/file.ts:68</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="overwritefile">
 <h3>overwriteFile<a class="headerlink" href="#overwritefile" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>overwriteFile</strong>&lt;FileExt&gt;(<code class="docutils literal notranslate"><span class="pre">fileUrl</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">file</span></code>: FileExt, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;<a class="reference external" href="resource_file.html#writefileoptions"><em>WriteFileOptions</em></a>&gt;): <em>Promise</em>&lt;FileExt &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a>&gt;</p>
+<p>▸ <strong>overwriteFile</strong>&lt;FileExt&gt;(<code class="docutils literal notranslate"><span class="pre">fileUrl</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>, <code class="docutils literal notranslate"><span class="pre">file</span></code>: FileExt, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;<a class="reference external" href="resource_file.html#writefileoptions"><em>WriteFileOptions</em></a>&gt;): <em>Promise</em>&lt;FileExt &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a>&gt;</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -569,7 +569,7 @@ it will exist after this function resolves successfully.</p>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">fileUrl</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
 <td><p>-</p></td>
 <td><p>The URL where the file is saved.</p></td>
 </tr>
@@ -586,13 +586,13 @@ it will exist after this function resolves successfully.</p>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Promise</em>&lt;FileExt &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a>&gt;</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/resource/file.ts#L213">src/resource/file.ts:213</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/resource/file.ts#L213">src/resource/file.ts:213</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="savefileincontainer">
 <h3>saveFileInContainer<a class="headerlink" href="#savefileincontainer" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>saveFileInContainer</strong>&lt;FileExt&gt;(<code class="docutils literal notranslate"><span class="pre">folderUrl</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">file</span></code>: FileExt, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;SaveFileOptions&gt;): <em>Promise</em>&lt;FileExt &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a>&gt;</p>
+<p>▸ <strong>saveFileInContainer</strong>&lt;FileExt&gt;(<code class="docutils literal notranslate"><span class="pre">folderUrl</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>, <code class="docutils literal notranslate"><span class="pre">file</span></code>: FileExt, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;SaveFileOptions&gt;): <em>Promise</em>&lt;FileExt &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a>&gt;</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -638,7 +638,7 @@ will do the job just fine, and does not require the parent Container to exist in
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">folderUrl</span></code></p></td>
-<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
 <td><p>-</p></td>
 <td><p>The URL of the folder where the new file is saved.</p></td>
 </tr>
@@ -656,7 +656,7 @@ will do the job just fine, and does not require the parent Container to exist in
 </table>
 <p><strong>Returns:</strong> <em>Promise</em>&lt;FileExt &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a>&gt;</p>
 <p>A Promise that resolves to the saved file, if available, or <code class="docutils literal notranslate"><span class="pre">null</span></code> if the current user does not have Read access to the newly-saved file. It rejects if saving fails.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/8cec13a/src/resource/file.ts#L157">src/resource/file.ts:157</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/4aa61d6/src/resource/file.ts#L157">src/resource/file.ts:157</a></p>
 </div>
 </div>
 </div>
