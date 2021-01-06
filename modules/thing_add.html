@@ -1,0 +1,871 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module: thing/add &#8212; Inrupt solid-client API Documentation</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/inrupt.css" type="text/css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Module: thing/get" href="thing_get.html" />
+    <link rel="prev" title="Module: resource/solidDataset" href="resource_soliddataset.html" />
+  
+    <meta name="robots" content="index" />
+  
+
+  <link rel="shortcut icon" href="https://docs.inrupt.com/inrupt_stickers_v2-03.png" type="image/png" />
+  <script type="text/javascript" src="https://inrupt.atlassian.net/s/d41d8cd98f00b204e9800998ecf8427e-T/-egccmf/b/24/a44af77267a987a660377e5c46e0fb64/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=41592d74"></script>
+
+  <script type="text/javascript">
+      window.ATL_JQ_PAGE_PROPS = $.extend(window.ATL_JQ_PAGE_PROPS, {
+         fieldValues: {
+            description : 'On page: https://docs.inrupt.com/developer-tools/api/javascript/solid-client/modules/thing_add/ \n' 
+         }
+      });
+   </script>
+
+  <!-- Matomo -->
+  <script type="text/javascript">
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      if (navigator.doNotTrack && navigator.doNotTrack === "1") {
+        return;
+      }
+      var u="https://inrupt.matomo.cloud/";
+      _paq.push(['setTrackerUrl', u+'matomo.php']);
+      _paq.push(['setSiteId', '3']);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.src='//cdn.matomo.cloud/inrupt.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    <a class="navbar-brand" href="https://inrupt.com/">
+      <img src="https://docs.inrupt.com/inrupt-logo-small.svg" class="logo" alt="logo">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="https://docs.inrupt.com/">Docs Home</a>
+          </li>
+         
+          <li class="nav-item">
+             <a class="nav-link" href="https://docs.inrupt.com/ess/">Enterprise Solid Server</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Developer Tools</a>
+               <ul class="nav-children">
+                     <li class="nav-item nav-childitem">
+                        <a href="https://docs.inrupt.com/developer-tools/javascript/client-libraries/">JavaScript Client Libraries</a>
+                     </li>
+                     <li class="nav-item nav-childitem">
+                        <a href="https://docs.inrupt.com/developer-tools/javascript/react-sdk">Solid React SDK</a>
+                     </li>
+               </ul>
+          </li>
+          <li class="nav-item">
+               <a class="nav-link" href="https://docs.inrupt.com/user-interface/podbrowser/">PodBrowser</a>
+          </li>
+          <li class="nav-item">
+             <a  class="nav-link" href="https://docs.inrupt.com/pod-spaces/">Pod Spaces</a>
+          </li>
+      </ul>
+
+
+      
+
+      <div class="social">
+         <a class="social-icon" href="https://twitter.com/inrupt" target="_blank" title="Inrupt on Twitter" aria-label="Inrupt on Twitter"><i class="fab fa-twitter-square" aria-hidden="true"></i></a>
+         <a class="social-icon" href="https://www.linkedin.com/company/inrupt/" target="_blank" title="Inrupt on LinkedIn" aria-label="Inrupt on LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+         <a class="social-icon" href="https://forum.solidproject.org/" target="_blank" title="Solid Forum" aria-label="Solid forum"> <i class="fas fa-users" aria-hidden="true"></i></a>
+      </div>
+      
+      
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+
+
+  
+  
+
+  
+  <ul class="nav bd-sidenav">
+     
+      
+         
+             <li class="nav-item  toctree-l1"> <a class="nav-link" href="acl_acl.html">Module: acl/acl</a>
+             
+             
+             </li> 
+           
+      
+         
+             <li class="nav-item  toctree-l1"> <a class="nav-link" href="acl_agent.html">Module: acl/agent</a>
+             
+             
+             </li> 
+           
+      
+         
+             <li class="nav-item  toctree-l1"> <a class="nav-link" href="acl_class.html">Module: acl/class</a>
+             
+             
+             </li> 
+           
+      
+         
+             <li class="nav-item  toctree-l1"> <a class="nav-link" href="acl_group.html">Module: acl/group</a>
+             
+             
+             </li> 
+           
+      
+         
+             <li class="nav-item  toctree-l1"> <a class="nav-link" href="acl_mock.html">Module: acl/mock</a>
+             
+             
+             </li> 
+           
+      
+         
+             <li class="nav-item  toctree-l1"> <a class="nav-link" href="interfaces.html">Module: interfaces</a>
+             
+             
+             </li> 
+           
+      
+         
+             <li class="nav-item  toctree-l1"> <a class="nav-link" href="resource_file.html">Module: resource/file</a>
+             
+             
+             </li> 
+           
+      
+         
+             <li class="nav-item  toctree-l1"> <a class="nav-link" href="resource_mock.html">Module: resource/mock</a>
+             
+             
+             </li> 
+           
+      
+         
+             <li class="nav-item  toctree-l1"> <a class="nav-link" href="resource_resource.html">Module: resource/resource</a>
+             
+             
+             </li> 
+           
+      
+         
+             <li class="nav-item  toctree-l1"> <a class="nav-link" href="resource_soliddataset.html">Module: resource/solidDataset</a>
+             
+             
+             </li> 
+           
+      
+         
+             <li class="nav-item active toctree-l1"> <a class="nav-link" href="">Module: thing/add</a>
+             
+             
+               
+             
+             </li> 
+           
+      
+         
+             <li class="nav-item  toctree-l1"> <a class="nav-link" href="thing_get.html">Module: thing/get</a>
+             
+             
+             </li> 
+           
+      
+         
+             <li class="nav-item  toctree-l1"> <a class="nav-link" href="thing_mock.html">Module: thing/mock</a>
+             
+             
+             </li> 
+           
+      
+         
+             <li class="nav-item  toctree-l1"> <a class="nav-link" href="thing_remove.html">Module: thing/remove</a>
+             
+             
+             </li> 
+           
+      
+         
+             <li class="nav-item  toctree-l1"> <a class="nav-link" href="thing_set.html">Module: thing/set</a>
+             
+             
+             </li> 
+           
+      
+         
+             <li class="nav-item  toctree-l1"> <a class="nav-link" href="thing_thing.html">Module: thing/thing</a>
+             
+             
+             </li> 
+           
+      
+         
+             <li class="nav-item  toctree-l1"> <a class="nav-link" href="../classes/interfaces.solidclienterror.html">Class: SolidClientError</a>
+             
+             
+             </li> 
+           
+      
+         
+             <li class="nav-item  toctree-l1"> <a class="nav-link" href="../classes/resource/resource.fetcherror.html">Class: FetchError</a>
+             
+             
+             </li> 
+           
+      
+         
+             <li class="nav-item  toctree-l1"> <a class="nav-link" href="../classes/thing/thing.thingexpectederror.html">Class: ThingExpectedError</a>
+             
+             
+             </li> 
+           
+      
+         
+             <li class="nav-item  toctree-l1"> <a class="nav-link" href="../classes/thing/thing.validpropertyurlexpectederror.html">Class: ValidPropertyUrlExpectedError</a>
+             
+             
+             </li> 
+           
+      
+         
+             <li class="nav-item  toctree-l1"> <a class="nav-link" href="../classes/thing/thing.validthingurlexpectederror.html">Class: ValidThingUrlExpectedError</a>
+             
+             
+             </li> 
+           
+      
+         
+             <li class="nav-item  toctree-l1"> <a class="nav-link" href="../classes/thing/thing.validvalueurlexpectederror.html">Class: ValidValueUrlExpectedError</a>
+             
+             
+             </li> 
+           
+      
+  </ul>
+</div>
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#index" class="nav-link">Index</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#functions" class="nav-link">Functions</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#id1" class="nav-link">Functions</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#addboolean" class="nav-link">addBoolean</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#type-parameters" class="nav-link">Type parameters:</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#parameters" class="nav-link">Parameters:</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#adddatetime" class="nav-link">addDatetime</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#id2" class="nav-link">Type parameters:</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#id3" class="nav-link">Parameters:</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#adddecimal" class="nav-link">addDecimal</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#id4" class="nav-link">Type parameters:</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#id5" class="nav-link">Parameters:</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#addinteger" class="nav-link">addInteger</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#id6" class="nav-link">Type parameters:</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#id7" class="nav-link">Parameters:</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#addstringnolocale" class="nav-link">addStringNoLocale</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#id8" class="nav-link">Type parameters:</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#id9" class="nav-link">Parameters:</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#addstringwithlocale" class="nav-link">addStringWithLocale</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#id10" class="nav-link">Type parameters:</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#id11" class="nav-link">Parameters:</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#addurl" class="nav-link">addUrl</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#id12" class="nav-link">Type parameters:</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#id13" class="nav-link">Parameters:</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+  
+              <div>
+                
+  <p><a class="reference internal" href="../index.html"><span class="doc std std-doc">&#64;inrupt/solid-client</span></a> / thing/add</p>
+<div class="section" id="module-thing-add">
+<h1>Module: thing/add<a class="headerlink" href="#module-thing-add" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="index">
+<h2>Index<a class="headerlink" href="#index" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="thing_add.html#addboolean">addBoolean</a></p></li>
+<li><p><a class="reference external" href="thing_add.html#adddatetime">addDatetime</a></p></li>
+<li><p><a class="reference external" href="thing_add.html#adddecimal">addDecimal</a></p></li>
+<li><p><a class="reference external" href="thing_add.html#addinteger">addInteger</a></p></li>
+<li><p><a class="reference external" href="thing_add.html#addstringnolocale">addStringNoLocale</a></p></li>
+<li><p><a class="reference external" href="thing_add.html#addstringwithlocale">addStringWithLocale</a></p></li>
+<li><p><a class="reference external" href="thing_add.html#addurl">addUrl</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Functions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="addboolean">
+<h3>addBoolean<a class="headerlink" href="#addboolean" title="Permalink to this headline">¶</a></h3>
+<p>▸ <code class="docutils literal notranslate"><span class="pre">Const</span></code><strong>addBoolean</strong>&lt;T&gt;(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">value</span></code>: <em>boolean</em>): T</p>
+<p>Create a new Thing with a boolean added for a Property.</p>
+<p>This preserves existing values for the given Property. To replace them, see <a class="reference external" href="thing_set.html#setboolean">setBoolean</a>.</p>
+<p>The original <code class="docutils literal notranslate"><span class="pre">thing</span></code> is not modified; this function returns a cloned Thing with updated values.</p>
+<div class="section" id="type-parameters">
+<h4>Type parameters:<a class="headerlink" href="#type-parameters" title="Permalink to this headline">¶</a></h4>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">T</span></code></p></td>
+<td><p><a class="reference external" href="interfaces.html#thing"><em>Thing</em></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="parameters">
+<h4>Parameters:<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h4>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">thing</span></code></p></td>
+<td><p>T</p></td>
+<td><p>Thing to add a boolean value to.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
+<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p>Property for which to add the given boolean value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">value</span></code></p></td>
+<td><p><em>boolean</em></p></td>
+<td><p>Boolean to add to <code class="docutils literal notranslate"><span class="pre">thing</span></code> for the given <code class="docutils literal notranslate"><span class="pre">property</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> T</p>
+<p>A new Thing equal to the input Thing with the given value added for the given Property.</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/adae69b/src/thing/add.ts#L99">src/thing/add.ts:99</a></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="adddatetime">
+<h3>addDatetime<a class="headerlink" href="#adddatetime" title="Permalink to this headline">¶</a></h3>
+<p>▸ <code class="docutils literal notranslate"><span class="pre">Const</span></code><strong>addDatetime</strong>&lt;T&gt;(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">value</span></code>: Date): T</p>
+<p>Create a new Thing with a datetime added for a Property.</p>
+<p>This preserves existing values for the given Property. To replace them, see <a class="reference external" href="thing_set.html#setdatetime">setDatetime</a>.</p>
+<p>The original <code class="docutils literal notranslate"><span class="pre">thing</span></code> is not modified; this function returns a cloned Thing with updated values.</p>
+<div class="section" id="id2">
+<h4>Type parameters:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">T</span></code></p></td>
+<td><p><a class="reference external" href="interfaces.html#thing"><em>Thing</em></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id3">
+<h4>Parameters:<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">thing</span></code></p></td>
+<td><p>T</p></td>
+<td><p>Thing to add a datetime value to.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
+<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p>Property for which to add the given datetime value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">value</span></code></p></td>
+<td><p>Date</p></td>
+<td><p>Datetime to add to <code class="docutils literal notranslate"><span class="pre">thing</span></code> for the given <code class="docutils literal notranslate"><span class="pre">property</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> T</p>
+<p>A new Thing equal to the input Thing with the given value added for the given Property.</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/adae69b/src/thing/add.ts#L121">src/thing/add.ts:121</a></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="adddecimal">
+<h3>addDecimal<a class="headerlink" href="#adddecimal" title="Permalink to this headline">¶</a></h3>
+<p>▸ <code class="docutils literal notranslate"><span class="pre">Const</span></code><strong>addDecimal</strong>&lt;T&gt;(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">value</span></code>: <em>number</em>): T</p>
+<p>Create a new Thing with a decimal added for a Property.</p>
+<p>This preserves existing values for the given Property. To replace them, see <a class="reference external" href="thing_set.html#setdecimal">setDecimal</a>.</p>
+<p>The original <code class="docutils literal notranslate"><span class="pre">thing</span></code> is not modified; this function returns a cloned Thing with updated values.</p>
+<div class="section" id="id4">
+<h4>Type parameters:<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">T</span></code></p></td>
+<td><p><a class="reference external" href="interfaces.html#thing"><em>Thing</em></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id5">
+<h4>Parameters:<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">thing</span></code></p></td>
+<td><p>T</p></td>
+<td><p>Thing to add a decimal value to.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
+<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p>Property for which to add the given decimal value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">value</span></code></p></td>
+<td><p><em>number</em></p></td>
+<td><p>Decimal to add to <code class="docutils literal notranslate"><span class="pre">thing</span></code> for the given <code class="docutils literal notranslate"><span class="pre">property</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> T</p>
+<p>A new Thing equal to the input Thing with the given value added for the given Property.</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/adae69b/src/thing/add.ts#L143">src/thing/add.ts:143</a></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="addinteger">
+<h3>addInteger<a class="headerlink" href="#addinteger" title="Permalink to this headline">¶</a></h3>
+<p>▸ <code class="docutils literal notranslate"><span class="pre">Const</span></code><strong>addInteger</strong>&lt;T&gt;(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">value</span></code>: <em>number</em>): T</p>
+<p>Create a new Thing with an integer added for a Property.</p>
+<p>This preserves existing values for the given Property. To replace them, see <a class="reference external" href="thing_set.html#setinteger">setInteger</a>.</p>
+<p>The original <code class="docutils literal notranslate"><span class="pre">thing</span></code> is not modified; this function returns a cloned Thing with updated values.</p>
+<div class="section" id="id6">
+<h4>Type parameters:<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">T</span></code></p></td>
+<td><p><a class="reference external" href="interfaces.html#thing"><em>Thing</em></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id7">
+<h4>Parameters:<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">thing</span></code></p></td>
+<td><p>T</p></td>
+<td><p>Thing to add an integer value to.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
+<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p>Property for which to add the given integer value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">value</span></code></p></td>
+<td><p><em>number</em></p></td>
+<td><p>Integer to add to <code class="docutils literal notranslate"><span class="pre">thing</span></code> for the given <code class="docutils literal notranslate"><span class="pre">property</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> T</p>
+<p>A new Thing equal to the input Thing with the given value added for the given Property.</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/adae69b/src/thing/add.ts#L165">src/thing/add.ts:165</a></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="addstringnolocale">
+<h3>addStringNoLocale<a class="headerlink" href="#addstringnolocale" title="Permalink to this headline">¶</a></h3>
+<p>▸ <code class="docutils literal notranslate"><span class="pre">Const</span></code><strong>addStringNoLocale</strong>&lt;T&gt;(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">value</span></code>: <em>string</em>): T</p>
+<p>Create a new Thing with an unlocalised string added for a Property.</p>
+<p>This preserves existing values for the given Property. To replace them, see <a class="reference external" href="thing_set.html#setstringnolocale">setStringNoLocale</a>.</p>
+<p>The original <code class="docutils literal notranslate"><span class="pre">thing</span></code> is not modified; this function returns a cloned Thing with updated values.</p>
+<div class="section" id="id8">
+<h4>Type parameters:<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">T</span></code></p></td>
+<td><p><a class="reference external" href="interfaces.html#thing"><em>Thing</em></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id9">
+<h4>Parameters:<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">thing</span></code></p></td>
+<td><p>T</p></td>
+<td><p>Thing to add an unlocalised string value to.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
+<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p>Property for which to add the given string value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">value</span></code></p></td>
+<td><p><em>string</em></p></td>
+<td><p>String to add to <code class="docutils literal notranslate"><span class="pre">thing</span></code> for the given <code class="docutils literal notranslate"><span class="pre">property</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> T</p>
+<p>A new Thing equal to the input Thing with the given value added for the given Property.</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/adae69b/src/thing/add.ts#L211">src/thing/add.ts:211</a></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="addstringwithlocale">
+<h3>addStringWithLocale<a class="headerlink" href="#addstringwithlocale" title="Permalink to this headline">¶</a></h3>
+<p>▸ <strong>addStringWithLocale</strong>&lt;T&gt;(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>, <code class="docutils literal notranslate"><span class="pre">value</span></code>: <em>string</em>, <code class="docutils literal notranslate"><span class="pre">locale</span></code>: <em>string</em>): T</p>
+<p>Create a new Thing with a localised string added for a Property.</p>
+<p>This preserves existing values for the given Property. To replace them, see <a class="reference external" href="thing_set.html#setstringwithlocale">setStringWithLocale</a>.</p>
+<p>The original <code class="docutils literal notranslate"><span class="pre">thing</span></code> is not modified; this function returns a cloned Thing with updated values.</p>
+<div class="section" id="id10">
+<h4>Type parameters:<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">T</span></code></p></td>
+<td><p><a class="reference external" href="interfaces.html#thing"><em>Thing</em></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id11">
+<h4>Parameters:<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">thing</span></code></p></td>
+<td><p>T</p></td>
+<td><p>Thing to add a localised string value to.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
+<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
+<td><p>Property for which to add the given string value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">value</span></code></p></td>
+<td><p><em>string</em></p></td>
+<td><p>String to add to <code class="docutils literal notranslate"><span class="pre">thing</span></code> for the given <code class="docutils literal notranslate"><span class="pre">property</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">locale</span></code></p></td>
+<td><p><em>string</em></p></td>
+<td><p>Locale of the added string.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> T</p>
+<p>A new Thing equal to the input Thing with the given value added for the given Property.</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/adae69b/src/thing/add.ts#L188">src/thing/add.ts:188</a></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="addurl">
+<h3>addUrl<a class="headerlink" href="#addurl" title="Permalink to this headline">¶</a></h3>
+<p>▸ <code class="docutils literal notranslate"><span class="pre">Const</span></code><strong>addUrl</strong>&lt;T&gt;(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: T, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a>, <code class="docutils literal notranslate"><span class="pre">value</span></code>: <em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <em>DatasetCore</em>&lt;Quad, Quad&gt; &amp; { <code class="docutils literal notranslate"><span class="pre">internal_url</span></code>: <em>string</em>  } | <em>DatasetCore</em>&lt;Quad, Quad&gt; &amp; { <code class="docutils literal notranslate"><span class="pre">internal_localSubject</span></code>: LocalNode  }): T</p>
+<p>Create a new Thing with a URL added for a Property.</p>
+<p>This preserves existing values for the given Property. To replace them, see <a class="reference external" href="thing_set.html#seturl">setUrl</a>.</p>
+<p>The original <code class="docutils literal notranslate"><span class="pre">thing</span></code> is not modified; this function returns a cloned Thing with updated values.</p>
+<div class="section" id="id12">
+<h4>Type parameters:<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">T</span></code></p></td>
+<td><p><a class="reference external" href="interfaces.html#thing"><em>Thing</em></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id13">
+<h4>Parameters:<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">thing</span></code></p></td>
+<td><p>T</p></td>
+<td><p>Thing to add a URL value to.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
+<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a></p></td>
+<td><p>Property for which to add the given URL value.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">value</span></code></p></td>
+<td><p><em>string</em> | <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <em>DatasetCore</em>&lt;Quad, Quad&gt; &amp; { <code class="docutils literal notranslate"><span class="pre">internal_url</span></code>: <em>string</em>  } | <em>DatasetCore</em>&lt;Quad, Quad&gt; &amp; { <code class="docutils literal notranslate"><span class="pre">internal_localSubject</span></code>: LocalNode  }</p></td>
+<td><p>-</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> T</p>
+<p>A new Thing equal to the input Thing with the given value added for the given Property.</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/adae69b/src/thing/add.ts#L59">src/thing/add.ts:59</a></p>
+</div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="resource_soliddataset.html" title="previous page">Module: resource/solidDataset</a>
+    <a class='right-next' id="next-link" href="thing_get.html" title="next page">Module: thing/get</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    <footer class="footer">
+  <div class="container">
+    <p>
+          &copy; Copyright 2020-present, Inrupt Inc.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
