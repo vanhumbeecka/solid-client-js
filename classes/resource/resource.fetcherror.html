@@ -343,6 +343,10 @@
         </li>
     
         <li class="nav-item toc-entry toc-h3">
+            <a href="#accessors" class="nav-link">Accessors</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
             <a href="#methods" class="nav-link">Methods</a>
         </li>
     
@@ -381,6 +385,10 @@
         </li>
     
         <li class="nav-item toc-entry toc-h3">
+            <a href="#response" class="nav-link">response</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
             <a href="#stack" class="nav-link">stack</a>
         </li>
     
@@ -388,6 +396,12 @@
             <a href="#stacktracelimit" class="nav-link">stackTraceLimit</a>
         </li>
     
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#id3" class="nav-link">Accessors</a><ul class="nav section-nav flex-column">
+                
         <li class="nav-item toc-entry toc-h3">
             <a href="#statuscode" class="nav-link">statusCode</a>
         </li>
@@ -400,13 +414,13 @@
         </li>
     
         <li class="nav-item toc-entry toc-h2">
-            <a href="#id3" class="nav-link">Methods</a><ul class="nav section-nav flex-column">
+            <a href="#id4" class="nav-link">Methods</a><ul class="nav section-nav flex-column">
                 
         <li class="nav-item toc-entry toc-h3">
             <a href="#capturestacktrace" class="nav-link">captureStackTrace</a><ul class="nav section-nav flex-column">
                 
         <li class="nav-item toc-entry toc-h4">
-            <a href="#id4" class="nav-link">Parameters:</a>
+            <a href="#id5" class="nav-link">Parameters:</a>
         </li>
     
             </ul>
@@ -457,8 +471,14 @@
 <li><p><a class="reference external" href="resource.fetcherror.html#message">message</a></p></li>
 <li><p><a class="reference external" href="resource.fetcherror.html#name">name</a></p></li>
 <li><p><a class="reference external" href="resource.fetcherror.html#preparestacktrace">prepareStackTrace</a></p></li>
+<li><p><a class="reference external" href="resource.fetcherror.html#response">response</a></p></li>
 <li><p><a class="reference external" href="resource.fetcherror.html#stack">stack</a></p></li>
 <li><p><a class="reference external" href="resource.fetcherror.html#stacktracelimit">stackTraceLimit</a></p></li>
+</ul>
+</div>
+<div class="section" id="accessors">
+<h3>Accessors<a class="headerlink" href="#accessors" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
 <li><p><a class="reference external" href="resource.fetcherror.html#statuscode">statusCode</a></p></li>
 <li><p><a class="reference external" href="resource.fetcherror.html#statustext">statusText</a></p></li>
 </ul>
@@ -494,7 +514,7 @@
 </table>
 <p><strong>Returns:</strong> <a class="reference internal" href="#"><span class="doc std std-doc"><em>FetchError</em></span></a></p>
 <p>Inherited from: <a class="reference internal" href="../interfaces.solidclienterror.html"><span class="doc std std-doc">SolidClientError</span></a></p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/91db174/src/resource/resource.ts#L185">src/resource/resource.ts:185</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/bf242bd/src/resource/resource.ts#L192">src/resource/resource.ts:192</a></p>
 </div>
 </div>
 </div>
@@ -523,6 +543,12 @@
 <p>Defined in: node_modules/&#64;types/node/globals.d.ts:140</p>
 </div>
 <hr class="docutils" />
+<div class="section" id="response">
+<h3>response<a class="headerlink" href="#response" title="Permalink to this headline">¶</a></h3>
+<p>• <code class="docutils literal notranslate"><span class="pre">Readonly</span></code> <strong>response</strong>: Response &amp; { <code class="docutils literal notranslate"><span class="pre">ok</span></code>: <em>false</em>  }</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/bf242bd/src/resource/resource.ts#L184">src/resource/resource.ts:184</a></p>
+</div>
+<hr class="docutils" />
 <div class="section" id="stack">
 <h3>stack<a class="headerlink" href="#stack" title="Permalink to this headline">¶</a></h3>
 <p>• <code class="docutils literal notranslate"><span class="pre">Optional</span></code> <strong>stack</strong>: <em>undefined</em> | <em>string</em></p>
@@ -536,27 +562,31 @@
 <p>Inherited from: <a class="reference internal" href="../interfaces.solidclienterror.html"><span class="doc std std-doc">SolidClientError</span></a>.<a class="reference external" href="../interfaces.solidclienterror.html#stacktracelimit">stackTraceLimit</a></p>
 <p>Defined in: node_modules/&#64;types/node/globals.d.ts:142</p>
 </div>
-<hr class="docutils" />
+</div>
+<div class="section" id="id3">
+<h2>Accessors<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="statuscode">
 <h3>statusCode<a class="headerlink" href="#statuscode" title="Permalink to this headline">¶</a></h3>
-<p>• <code class="docutils literal notranslate"><span class="pre">Readonly</span></code> <strong>statusCode</strong>: <em>number</em></p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/91db174/src/resource/resource.ts#L184">src/resource/resource.ts:184</a></p>
+<p>• <strong>statusCode</strong>(): <em>number</em></p>
+<p><strong>Returns:</strong> <em>number</em></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/bf242bd/src/resource/resource.ts#L186">src/resource/resource.ts:186</a></p>
 </div>
 <hr class="docutils" />
 <div class="section" id="statustext">
 <h3>statusText<a class="headerlink" href="#statustext" title="Permalink to this headline">¶</a></h3>
-<p>• <code class="docutils literal notranslate"><span class="pre">Optional</span></code> <code class="docutils literal notranslate"><span class="pre">Readonly</span></code> <strong>statusText</strong>: <em>undefined</em> | <em>string</em></p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/91db174/src/resource/resource.ts#L185">src/resource/resource.ts:185</a></p>
+<p>• <strong>statusText</strong>(): <em>undefined</em> | <em>string</em></p>
+<p><strong>Returns:</strong> <em>undefined</em> | <em>string</em></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/bf242bd/src/resource/resource.ts#L190">src/resource/resource.ts:190</a></p>
 </div>
 </div>
-<div class="section" id="id3">
-<h2>Methods<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>Methods<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="capturestacktrace">
 <h3>captureStackTrace<a class="headerlink" href="#capturestacktrace" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>captureStackTrace</strong>(<code class="docutils literal notranslate"><span class="pre">targetObject</span></code>: Object, <code class="docutils literal notranslate"><span class="pre">constructorOpt?</span></code>: Function): <em>void</em></p>
 <p>Create .stack property on a target object</p>
-<div class="section" id="id4">
-<h4>Parameters:<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id5">
+<h4>Parameters:<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
