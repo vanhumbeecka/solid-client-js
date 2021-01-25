@@ -377,11 +377,11 @@
         </li>
     
         <li class="nav-item toc-entry toc-h3">
-            <a href="#preparestacktrace" class="nav-link">prepareStackTrace</a>
+            <a href="#stack" class="nav-link">stack</a>
         </li>
     
         <li class="nav-item toc-entry toc-h3">
-            <a href="#stack" class="nav-link">stack</a>
+            <a href="#preparestacktrace" class="nav-link">prepareStackTrace</a>
         </li>
     
         <li class="nav-item toc-entry toc-h3">
@@ -454,8 +454,8 @@ thrown in lower-level libraries.</p>
 <ul class="simple">
 <li><p><a class="reference external" href="interfaces.solidclienterror.html#message">message</a></p></li>
 <li><p><a class="reference external" href="interfaces.solidclienterror.html#name">name</a></p></li>
-<li><p><a class="reference external" href="interfaces.solidclienterror.html#preparestacktrace">prepareStackTrace</a></p></li>
 <li><p><a class="reference external" href="interfaces.solidclienterror.html#stack">stack</a></p></li>
+<li><p><a class="reference external" href="interfaces.solidclienterror.html#preparestacktrace">prepareStackTrace</a></p></li>
 <li><p><a class="reference external" href="interfaces.solidclienterror.html#stacktracelimit">stackTraceLimit</a></p></li>
 </ul>
 </div>
@@ -504,23 +504,23 @@ thrown in lower-level libraries.</p>
 <p>Defined in: node_modules/typescript/lib/lib.es5.d.ts:973</p>
 </div>
 <hr class="docutils" />
-<div class="section" id="preparestacktrace">
-<h3>prepareStackTrace<a class="headerlink" href="#preparestacktrace" title="Permalink to this headline">¶</a></h3>
-<p>• <code class="docutils literal notranslate"><span class="pre">Optional</span></code> <strong>prepareStackTrace</strong>: <em>undefined</em> | (<code class="docutils literal notranslate"><span class="pre">err</span></code>: Error, <code class="docutils literal notranslate"><span class="pre">stackTraces</span></code>: CallSite[]) =&gt; <em>any</em></p>
-<p>Optional override for formatting stack traces</p>
-<p><strong><code class="docutils literal notranslate"><span class="pre">see</span></code></strong> https://github.com/v8/v8/wiki/Stack%20Trace%20API#customizing-stack-traces</p>
-<p>Defined in: node_modules/&#64;types/node/globals.d.ts:140</p>
-</div>
-<hr class="docutils" />
 <div class="section" id="stack">
 <h3>stack<a class="headerlink" href="#stack" title="Permalink to this headline">¶</a></h3>
 <p>• <code class="docutils literal notranslate"><span class="pre">Optional</span></code> <strong>stack</strong>: <em>undefined</em> | <em>string</em></p>
 <p>Defined in: node_modules/typescript/lib/lib.es5.d.ts:975</p>
 </div>
 <hr class="docutils" />
+<div class="section" id="preparestacktrace">
+<h3>prepareStackTrace<a class="headerlink" href="#preparestacktrace" title="Permalink to this headline">¶</a></h3>
+<p>▪ <code class="docutils literal notranslate"><span class="pre">Optional</span></code> <code class="docutils literal notranslate"><span class="pre">Static</span></code> <strong>prepareStackTrace</strong>: <em>undefined</em> | (<code class="docutils literal notranslate"><span class="pre">err</span></code>: Error, <code class="docutils literal notranslate"><span class="pre">stackTraces</span></code>: CallSite[]) =&gt; <em>any</em></p>
+<p>Optional override for formatting stack traces</p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">see</span></code></strong> https://github.com/v8/v8/wiki/Stack%20Trace%20API#customizing-stack-traces</p>
+<p>Defined in: node_modules/&#64;types/node/globals.d.ts:140</p>
+</div>
+<hr class="docutils" />
 <div class="section" id="stacktracelimit">
 <h3>stackTraceLimit<a class="headerlink" href="#stacktracelimit" title="Permalink to this headline">¶</a></h3>
-<p>• <strong>stackTraceLimit</strong>: <em>number</em></p>
+<p>▪ <code class="docutils literal notranslate"><span class="pre">Static</span></code> <strong>stackTraceLimit</strong>: <em>number</em></p>
 <p>Defined in: node_modules/&#64;types/node/globals.d.ts:142</p>
 </div>
 </div>
@@ -528,7 +528,7 @@ thrown in lower-level libraries.</p>
 <h2>Methods<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="capturestacktrace">
 <h3>captureStackTrace<a class="headerlink" href="#capturestacktrace" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>captureStackTrace</strong>(<code class="docutils literal notranslate"><span class="pre">targetObject</span></code>: Object, <code class="docutils literal notranslate"><span class="pre">constructorOpt?</span></code>: Function): <em>void</em></p>
+<p>▸ <code class="docutils literal notranslate"><span class="pre">Static</span></code><strong>captureStackTrace</strong>(<code class="docutils literal notranslate"><span class="pre">targetObject</span></code>: Object, <code class="docutils literal notranslate"><span class="pre">constructorOpt?</span></code>: Function): <em>void</em></p>
 <p>Create .stack property on a target object</p>
 <div class="section" id="id4">
 <h4>Parameters:<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
