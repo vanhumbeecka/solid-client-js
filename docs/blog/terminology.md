@@ -116,7 +116,7 @@ saveSolidDatasetAt("https://example.pod/profile", solidDataset);
 
 Whereas we had to call `JSON.stringify` on the JavaScript object to serialize it to JSON, if we give `saveSolidDatasetAt` a SolidDataset, it will take care of sending the data correctly for us.
 
-Now, let's bring it all together. Compare it to the original plain-JavaScript version above, and you'll see that although it working with solid-client involves a few extra steps, reasoning about the code is actually pretty similar! However, as opposed to the original JavaScript version, you are now saving this data in a place under the user's control, and in a way that can be re-used by other apps:
+Now, let's bring it all together. Compare it to the original plain-JavaScript version above, and you'll see that although working with solid-client involves a few extra steps, reasoning about the code is actually pretty similar! However, as opposed to the original JavaScript version, you are now saving this data in a place under the user's control, and in a way that can be re-used by other apps:
 
 ```js
 import {
