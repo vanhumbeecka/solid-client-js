@@ -6,9 +6,13 @@ Calling [`getInteger`](https://docs.inrupt.com/developer-tools/api/javascript/so
 
 Typically, data sent to and from the back-end of a regular app is formatted as [JSON](https://en.wikipedia.org/wiki/JSON): JavaScript Object Notation. Because JSON is based on a subset of JavaScript, it is [almost trivial](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) to use JSON data in a JavaScript app.
 
+> #JavaScript devs: let's take a moment to appreciate how convenient it is that the main serialisation language of the web is native to JavaScript. That's a lot of mapping between data formats that we can just skip.
+
 Embed: https://twitter.com/VincentTunru/status/1346065726151516160
 
 It is easy to overlook how much of an advantage that is. For example, if you work in a language that distinguishes between integers and floats, it'll take some effort to massage JSON into a format that is usable in your code. But since a number in JSON is the same as a number in JavaScript, we can access those in our code without problems.
+
+> JSON has a single number type. 100.0 and 100 are equivalent. But many languages see them as different types. If your an SDK parsing raw JSON from the wire and you see "100.0" what type do you assign to this value?
 
 Embed: https://twitter.com/southpolesteve/status/1314978512135168005
 
