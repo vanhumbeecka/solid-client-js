@@ -400,6 +400,26 @@
             </ul>
         </li>
     
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#setgroupdefaultaccess" class="nav-link">setGroupDefaultAccess</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#id7" class="nav-link">Parameters:</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#setgroupresourceaccess" class="nav-link">setGroupResourceAccess</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#id8" class="nav-link">Parameters:</a>
+        </li>
+    
+            </ul>
+        </li>
+    
             </ul>
         </li>
     
@@ -431,6 +451,8 @@
 <li><p><a class="reference external" href="acl_group.html#getgroupdefaultaccessall">getGroupDefaultAccessAll</a></p></li>
 <li><p><a class="reference external" href="acl_group.html#getgroupresourceaccess">getGroupResourceAccess</a></p></li>
 <li><p><a class="reference external" href="acl_group.html#getgroupresourceaccessall">getGroupResourceAccessAll</a></p></li>
+<li><p><a class="reference external" href="acl_group.html#setgroupdefaultaccess">setGroupDefaultAccess</a></p></li>
+<li><p><a class="reference external" href="acl_group.html#setgroupresourceaccess">setGroupResourceAccess</a></p></li>
 </ul>
 </div>
 </div>
@@ -468,7 +490,7 @@ ACL rules, e.g., public permissions.</p>
 </table>
 <p><strong>Returns:</strong> <a class="reference external" href="acl_acl.html#access"><em>Access</em></a> | <em>null</em></p>
 <p>Access Modes that have been explicitly granted to the <code class="docutils literal notranslate"><span class="pre">group</span></code> for the given Resource, or <code class="docutils literal notranslate"><span class="pre">null</span></code> if it could not be determined (e.g. because the current user does not have Control Access to a given Resource or its Container).</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/95b6365/src/acl/group.ts#L57">src/acl/group.ts:57</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/f547d27/src/acl/group.ts#L64">src/acl/group.ts:64</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -500,7 +522,7 @@ ACL rules, e.g., public permissions.</p>
 </table>
 <p><strong>Returns:</strong> <em>Record</em>&lt;IriString, <a class="reference external" href="acl_acl.html#access"><em>Access</em></a>&gt; | <em>null</em></p>
 <p>Access Modes per Group that have been explicitly granted for the given Resource, or <code class="docutils literal notranslate"><span class="pre">null</span></code> if it could not be determined (e.g. because the current user does not have Control Access to a given Resource or its Container).</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/95b6365/src/acl/group.ts#L82">src/acl/group.ts:82</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/f547d27/src/acl/group.ts#L89">src/acl/group.ts:89</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -540,7 +562,7 @@ Container associated with an ACL (Access ControlList).</p>
 </table>
 <p><strong>Returns:</strong> <a class="reference external" href="acl_acl.html#access"><em>Access</em></a></p>
 <p>Access Modes that have been explicitly granted to the Group for the children of the Container associated with the given ACL.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/95b6365/src/acl/group.ts#L166">src/acl/group.ts:166</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/f547d27/src/acl/group.ts#L173">src/acl/group.ts:173</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -576,7 +598,7 @@ of the Container associated with the given ACL (Access Control List).</p>
 </table>
 <p><strong>Returns:</strong> <em>Record</em>&lt;<a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>, <a class="reference external" href="acl_acl.html#access"><em>Access</em></a>&gt;</p>
 <p>Access Modes per Group that have been explicitly granted for the children of the Container associated with the given ACL SolidDataset.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/95b6365/src/acl/group.ts#L194">src/acl/group.ts:194</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/f547d27/src/acl/group.ts#L201">src/acl/group.ts:201</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -617,7 +639,7 @@ associated with an ACL (Access Control List).</p>
 </table>
 <p><strong>Returns:</strong> <a class="reference external" href="acl_acl.html#access"><em>Access</em></a></p>
 <p>Access Modes explicitly granted to a Group for the Resource associated with an ACL.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/95b6365/src/acl/group.ts#L112">src/acl/group.ts:112</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/f547d27/src/acl/group.ts#L119">src/acl/group.ts:119</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -653,7 +675,102 @@ with an ACL (Access Control List).</p>
 </table>
 <p><strong>Returns:</strong> <em>Record</em>&lt;<a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>, <a class="reference external" href="acl_acl.html#access"><em>Access</em></a>&gt;</p>
 <p>Access Modes per Group that have been explicitly granted for the Resource associated with an ACL.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/95b6365/src/acl/group.ts#L140">src/acl/group.ts:140</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/f547d27/src/acl/group.ts#L147">src/acl/group.ts:147</a></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="setgroupdefaultaccess">
+<h3>setGroupDefaultAccess<a class="headerlink" href="#setgroupdefaultaccess" title="Permalink to this headline">¶</a></h3>
+<p>▸ <strong>setGroupDefaultAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a>, <code class="docutils literal notranslate"><span class="pre">group</span></code>: <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>, <code class="docutils literal notranslate"><span class="pre">access</span></code>: <a class="reference external" href="acl_acl.html#access"><em>Access</em></a>): <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a> &amp; WithChangeLog</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function is still experimental and subject to change, even in a non-major release.</p>
+</div>
+<p>Modifies the default ACL (Access Control List) to set a Group’s Access Modes for the Container’s children.
+Specifically, the function returns a new default ACL initialised with the given ACL and
+new rules for the Group’s access.</p>
+<p>If rules already exist for the Group in the given ACL, in the returned ACL, they are replaced by the new rules.</p>
+<p>This function does not modify:</p>
+<ul class="simple">
+<li><p>Access Modes granted indirectly to the Group through other ACL rules, e.g., public or Agent-specific permissions.</p></li>
+<li><p>Access Modes granted to the Group for the Container Resource itself.</p></li>
+<li><p>The original ACL.</p></li>
+</ul>
+<div class="section" id="id7">
+<h4>Parameters:<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aclDataset</span></code></p></td>
+<td><p><a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p></td>
+<td><p>The SolidDataset that contains Access-Control List rules.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">group</span></code></p></td>
+<td><p><a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
+<td><p>The Group to grant specific Access Modes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">access</span></code></p></td>
+<td><p><a class="reference external" href="acl_acl.html#access"><em>Access</em></a></p></td>
+<td><p>The Access Modes to grant to the Group.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a> &amp; WithChangeLog</p>
+<p>A new default ACL initialised with the given <code class="docutils literal notranslate"><span class="pre">aclDataset</span></code> and <code class="docutils literal notranslate"><span class="pre">access</span></code> for the <code class="docutils literal notranslate"><span class="pre">group</span></code>.</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/f547d27/src/acl/group.ts#L280">src/acl/group.ts:280</a></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="setgroupresourceaccess">
+<h3>setGroupResourceAccess<a class="headerlink" href="#setgroupresourceaccess" title="Permalink to this headline">¶</a></h3>
+<p>▸ <strong>setGroupResourceAccess</strong>(<code class="docutils literal notranslate"><span class="pre">aclDataset</span></code>: <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a>, <code class="docutils literal notranslate"><span class="pre">group</span></code>: <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>, <code class="docutils literal notranslate"><span class="pre">access</span></code>: <a class="reference external" href="acl_acl.html#access"><em>Access</em></a>): <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a> &amp; WithChangeLog</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function is still experimental and subject to change, even in a non-major release.</p>
+</div>
+<p>Modifies the resource ACL (Access Control List) to set the Access Modes for the given Group.
+Specifically, the function returns a new resource ACL initialised with the given ACL and
+new rules for the Group’s access.</p>
+<p>If rules for Groups’s access already exist in the given ACL, in the returned ACL,
+they are replaced by the new rules.</p>
+<p>This function does not modify:</p>
+<ul class="simple">
+<li><p>Access Modes granted indirectly to Groups through other ACL rules, e.g., public or Agent-specific permissions.</p></li>
+<li><p>Access Modes granted to Groups for the child Resources if the associated Resource is a Container.</p></li>
+<li><p>The original ACL.</p></li>
+</ul>
+<div class="section" id="id8">
+<h4>Parameters:<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aclDataset</span></code></p></td>
+<td><p><a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p></td>
+<td><p>The SolidDataset that contains Access-Control List rules.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">group</span></code></p></td>
+<td><p><a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
+<td><p>The Group to grant specific Access Modes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">access</span></code></p></td>
+<td><p><a class="reference external" href="acl_acl.html#access"><em>Access</em></a></p></td>
+<td><p>The Access Modes to grant to the Group for the Resource.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a> &amp; WithChangeLog</p>
+<p>A new resource ACL initialised with the given <code class="docutils literal notranslate"><span class="pre">aclDataset</span></code> and <code class="docutils literal notranslate"><span class="pre">access</span></code> for the <code class="docutils literal notranslate"><span class="pre">group</span></code>.</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/f547d27/src/acl/group.ts#L245">src/acl/group.ts:245</a></p>
 </div>
 </div>
 </div>
