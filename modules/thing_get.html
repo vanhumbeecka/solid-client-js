@@ -538,6 +538,9 @@
 <div class="section" id="getboolean">
 <h3>getBoolean<a class="headerlink" href="#getboolean" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getBoolean</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <em>boolean</em> | <em>null</em></p>
+<p>Returns the boolean value of the specified Property from a <a class="reference external" href="interfaces.html#thing">Thing</a>.
+If the Property is not present or its value is not of type boolean, returns null.
+If the Property has multiple boolean values, returns one of its values.</p>
 <div class="section" id="parameters">
 <h4>Parameters:<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -554,19 +557,22 @@
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
 <td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
-<td><p>The given Property for which you want the boolean value.</p></td>
+<td><p>The Property whose boolean value to return.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>boolean</em> | <em>null</em></p>
-<p>A boolean value for the given Property, if present, or null otherwise.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1f99b70/src/thing/get.ts#L87">src/thing/get.ts:87</a></p>
+<p>A boolean value for the given Property if present, or null if the Property is not present or the value is not of type boolean.</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2bf6646/src/thing/get.ts#L99">src/thing/get.ts:99</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getbooleanall">
 <h3>getBooleanAll<a class="headerlink" href="#getbooleanall" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getBooleanAll</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <em>boolean</em>[]</p>
+<p>Returns the boolean values of the specified Property from a <a class="reference external" href="interfaces.html#thing">Thing</a>.
+If the Property is not present, returns an empty array.
+If the Property’s value is not of type boolean, omits that value in the array.</p>
 <div class="section" id="id2">
 <h4>Parameters:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -583,19 +589,22 @@
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
 <td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
-<td><p>The given Property for which you want the boolean values.</p></td>
+<td><p>The Property whose boolean values to return.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>boolean</em>[]</p>
-<p>The boolean values for the given Property.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1f99b70/src/thing/get.ts#L110">src/thing/get.ts:110</a></p>
+<p>An array of boolean values for the given Property.</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2bf6646/src/thing/get.ts#L126">src/thing/get.ts:126</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getdatetime">
 <h3>getDatetime<a class="headerlink" href="#getdatetime" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getDatetime</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): Date | <em>null</em></p>
+<p>Returns the datetime value of the specified Property from a <a class="reference external" href="interfaces.html#thing">Thing</a>.
+If the Property is not present or its value is not of type datetime, returns null.
+If the Property has multiple datetime values, returns one of its values.</p>
 <div class="section" id="id3">
 <h4>Parameters:<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -612,19 +621,22 @@
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
 <td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
-<td><p>The given Property for which you want the datetime value.</p></td>
+<td><p>The Property whose datetime value to return.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> Date | <em>null</em></p>
-<p>A datetime value for the given Property, if present, or null otherwise.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1f99b70/src/thing/get.ts#L131">src/thing/get.ts:131</a></p>
+<p>A datetime value for the given Property if present, or null if the Property is not present or the value is not of type datetime.</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2bf6646/src/thing/get.ts#L151">src/thing/get.ts:151</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getdatetimeall">
 <h3>getDatetimeAll<a class="headerlink" href="#getdatetimeall" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getDatetimeAll</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): Date[]</p>
+<p>Returns the datetime values of the specified Property from a <a class="reference external" href="interfaces.html#thing">Thing</a>.
+If the Property is not present, returns an empty array.
+If the Property’s value is not of type datetime, omits that value in the array.</p>
 <div class="section" id="id4">
 <h4>Parameters:<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -641,19 +653,22 @@
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
 <td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
-<td><p>The given Property for which you want the datetime values.</p></td>
+<td><p>The Property whose datetime values to return.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> Date[]</p>
-<p>The datetime values for the given Property.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1f99b70/src/thing/get.ts#L154">src/thing/get.ts:154</a></p>
+<p>An array of datetime values for the given Property.</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2bf6646/src/thing/get.ts#L178">src/thing/get.ts:178</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getdecimal">
 <h3>getDecimal<a class="headerlink" href="#getdecimal" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getDecimal</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <em>number</em> | <em>null</em></p>
+<p>Returns the decimal value of the specified Property from a <a class="reference external" href="interfaces.html#thing">Thing</a>.
+If the Property is not present or its value is not of type decimal, returns null.
+If the Property has multiple decimal values, returns one of its values.</p>
 <div class="section" id="id5">
 <h4>Parameters:<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -670,19 +685,22 @@
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
 <td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
-<td><p>The given Property for which you want the decimal value.</p></td>
+<td><p>The Property whose decimal value to return.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>number</em> | <em>null</em></p>
-<p>A decimal value for the given Property, if present, or null otherwise.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1f99b70/src/thing/get.ts#L175">src/thing/get.ts:175</a></p>
+<p>A decimal value for the given Property if present, or null if the Property is not present or the value is not of type decimal.</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2bf6646/src/thing/get.ts#L203">src/thing/get.ts:203</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getdecimalall">
 <h3>getDecimalAll<a class="headerlink" href="#getdecimalall" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getDecimalAll</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <em>number</em>[]</p>
+<p>Returns the decimal values of the specified Property from a <a class="reference external" href="interfaces.html#thing">Thing</a>.
+If the Property is not present, returns an empty array.
+If the Property’s value is not of type decimal, omits that value in the array.</p>
 <div class="section" id="id6">
 <h4>Parameters:<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -699,19 +717,22 @@
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
 <td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
-<td><p>The given Property for which you want the decimal values.</p></td>
+<td><p>The Property whose decimal values to return.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>number</em>[]</p>
-<p>The decimal values for the given Property.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1f99b70/src/thing/get.ts#L198">src/thing/get.ts:198</a></p>
+<p>An array of decimal values for the given Property.</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2bf6646/src/thing/get.ts#L230">src/thing/get.ts:230</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getinteger">
 <h3>getInteger<a class="headerlink" href="#getinteger" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getInteger</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <em>number</em> | <em>null</em></p>
+<p>Returns the integer value of the specified Property from a <a class="reference external" href="interfaces.html#thing">Thing</a>.
+If the Property is not present or its value is not of type integer, returns null.
+If the Property has multiple integer values, returns one of its values.</p>
 <div class="section" id="id7">
 <h4>Parameters:<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -728,19 +749,22 @@
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
 <td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
-<td><p>The given Property for which you want the integer value.</p></td>
+<td><p>The Property whose integer value to return.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>number</em> | <em>null</em></p>
-<p>An integer value for the given Property, if present, or null otherwise.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1f99b70/src/thing/get.ts#L219">src/thing/get.ts:219</a></p>
+<p>A integer value for the given Property if present, or null if the Property is not present or the value is not of type datetime.</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2bf6646/src/thing/get.ts#L255">src/thing/get.ts:255</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getintegerall">
 <h3>getIntegerAll<a class="headerlink" href="#getintegerall" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getIntegerAll</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <em>number</em>[]</p>
+<p>Returns the integer values of the specified Property from a <a class="reference external" href="interfaces.html#thing">Thing</a>.
+If the Property is not present, returns an empty array.
+If the Property’s value is not of type integer, omits that value in the array.</p>
 <div class="section" id="id8">
 <h4>Parameters:<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -757,20 +781,20 @@
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
 <td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
-<td><p>The given Property for which you want the integer values.</p></td>
+<td><p>The Property whose integer values to return.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>number</em>[]</p>
-<p>The integer values for the given Property.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1f99b70/src/thing/get.ts#L242">src/thing/get.ts:242</a></p>
+<p>An array of integer values for the given Property.</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2bf6646/src/thing/get.ts#L282">src/thing/get.ts:282</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getstringbylocaleall">
 <h3>getStringByLocaleAll<a class="headerlink" href="#getstringbylocaleall" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getStringByLocaleAll</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <em>Map</em>&lt;<em>string</em>, <em>string</em>[]&gt;</p>
-<p>Retrieves all language string literals for the specified property from the
+<p>Returns all localized string values mapped by the locales for the specified property from the
 specified <a class="reference external" href="interfaces.html#thing">Thing</a> (explicitly filters out non-language string literals).</p>
 <div class="section" id="id9">
 <h4>Parameters:<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
@@ -788,19 +812,22 @@ specified <a class="reference external" href="interfaces.html#thing">Thing</a> (
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
 <td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
-<td><p>The given Property for which you want the localised string values.</p></td>
+<td><p>The Property whose localised string values to return.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Map</em>&lt;<em>string</em>, <em>string</em>[]&gt;</p>
 <p>A Map of objects, keyed on locale with the value an array of string values (for that locale).</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1f99b70/src/thing/get.ts#L308">src/thing/get.ts:308</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2bf6646/src/thing/get.ts#L356">src/thing/get.ts:356</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getstringnolocale">
 <h3>getStringNoLocale<a class="headerlink" href="#getstringnolocale" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getStringNoLocale</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <em>string</em> | <em>null</em></p>
+<p>Returns the string value of the specified Property from a <a class="reference external" href="interfaces.html#thing">Thing</a>.
+If the Property is not present or its value is not of type string, returns null.
+If the Property has multiple string values, returns one of its values.</p>
 <div class="section" id="id10">
 <h4>Parameters:<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -817,19 +844,22 @@ specified <a class="reference external" href="interfaces.html#thing">Thing</a> (
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
 <td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
-<td><p>The given Property for which you want the string value.</p></td>
+<td><p>The Property whose string value to return.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>string</em> | <em>null</em></p>
-<p>A string value for the given Property, if present, or null otherwise.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1f99b70/src/thing/get.ts#L336">src/thing/get.ts:336</a></p>
+<p>A string value for the given Property if present, or null if the Property is not present or the value is not of type string.</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2bf6646/src/thing/get.ts#L388">src/thing/get.ts:388</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getstringnolocaleall">
 <h3>getStringNoLocaleAll<a class="headerlink" href="#getstringnolocaleall" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getStringNoLocaleAll</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <em>string</em>[]</p>
+<p>Returns the string values of the specified Property from a <a class="reference external" href="interfaces.html#thing">Thing</a>.
+If the Property is not present, returns an empty array.
+If the Property’s value is not of type string, omits that value in the array.</p>
 <div class="section" id="id11">
 <h4>Parameters:<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -846,19 +876,22 @@ specified <a class="reference external" href="interfaces.html#thing">Thing</a> (
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
 <td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
-<td><p>The given Property for which you want the string values.</p></td>
+<td><p>The Property whose string values to return.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>string</em>[]</p>
-<p>The string values for the given Property.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1f99b70/src/thing/get.ts#L355">src/thing/get.ts:355</a></p>
+<p>An array of string values for the given Property.</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2bf6646/src/thing/get.ts#L411">src/thing/get.ts:411</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getstringwithlocale">
 <h3>getStringWithLocale<a class="headerlink" href="#getstringwithlocale" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getStringWithLocale</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>, <code class="docutils literal notranslate"><span class="pre">locale</span></code>: <em>string</em>): <em>string</em> | <em>null</em></p>
+<p>Returns the localized string value of the specified Property from a <a class="reference external" href="interfaces.html#thing">Thing</a>.
+If the Property is not present as a string in the specified locale, returns null.
+If the Property has multiple string values for the specified locale, returns one of its values.</p>
 <div class="section" id="id12">
 <h4>Parameters:<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -875,7 +908,7 @@ specified <a class="reference external" href="interfaces.html#thing">Thing</a> (
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
 <td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
-<td><p>The given Property for which you want the localised string value.</p></td>
+<td><p>The Property whose localised string value to return.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">locale</span></code></p></td>
 <td><p><em>string</em></p></td>
@@ -884,14 +917,17 @@ specified <a class="reference external" href="interfaces.html#thing">Thing</a> (
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>string</em> | <em>null</em></p>
-<p>A localised string value for the given Property, if present in <code class="docutils literal notranslate"><span class="pre">locale</span></code>, or null otherwise.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1f99b70/src/thing/get.ts#L264">src/thing/get.ts:264</a></p>
+<p>A localised string value for the given Property if present in the specified <code class="docutils literal notranslate"><span class="pre">locale</span></code>, or null otherwise.</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2bf6646/src/thing/get.ts#L308">src/thing/get.ts:308</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="getstringwithlocaleall">
 <h3>getStringWithLocaleAll<a class="headerlink" href="#getstringwithlocaleall" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getStringWithLocaleAll</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>, <code class="docutils literal notranslate"><span class="pre">locale</span></code>: <em>string</em>): <em>string</em>[]</p>
+<p>Returns the localized string values of the specified Property from a <a class="reference external" href="interfaces.html#thing">Thing</a>.
+If the Property is not present, returns an empty array.
+If the Property’s value is not a string of the specified locale, omits that value in the array.</p>
 <div class="section" id="id13">
 <h4>Parameters:<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -908,7 +944,7 @@ specified <a class="reference external" href="interfaces.html#thing">Thing</a> (
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
 <td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
-<td><p>The given Property for which you want the localised string values.</p></td>
+<td><p>The Property whose localised string values to return.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">locale</span></code></p></td>
 <td><p><em>string</em></p></td>
@@ -917,14 +953,17 @@ specified <a class="reference external" href="interfaces.html#thing">Thing</a> (
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>string</em>[]</p>
-<p>The localised string values for the given Property.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1f99b70/src/thing/get.ts#L287">src/thing/get.ts:287</a></p>
+<p>An array of localised string values for the given Property.</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2bf6646/src/thing/get.ts#L335">src/thing/get.ts:335</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="geturl">
 <h3>getUrl<a class="headerlink" href="#geturl" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getUrl</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <em>null</em></p>
+<p>Returns the URL value of the specified Property from a <a class="reference external" href="interfaces.html#thing">Thing</a>.
+If the Property is not present or its value is not of type URL, returns null.
+If the Property has multiple URL values, returns one of its URL values.</p>
 <div class="section" id="id14">
 <h4>Parameters:<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -941,19 +980,22 @@ specified <a class="reference external" href="interfaces.html#thing">Thing</a> (
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
 <td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
-<td><p>The given Property for which you want the URL value.</p></td>
+<td><p>The Property whose URL value to return.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <em>null</em></p>
-<p>A URL value for the given Property, if present, or null otherwise.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1f99b70/src/thing/get.ts#L45">src/thing/get.ts:45</a></p>
+<p>A URL value for the given Property if present, or null if the Property is not present or the value is not of type URL.</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2bf6646/src/thing/get.ts#L49">src/thing/get.ts:49</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="geturlall">
 <h3>getUrlAll<a class="headerlink" href="#geturlall" title="Permalink to this headline">¶</a></h3>
 <p>▸ <strong>getUrlAll</strong>(<code class="docutils literal notranslate"><span class="pre">thing</span></code>: <a class="reference external" href="interfaces.html#thing"><em>Thing</em></a>, <code class="docutils literal notranslate"><span class="pre">property</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>[]</p>
+<p>Returns the URL values of the specified Property from a <a class="reference external" href="interfaces.html#thing">Thing</a>.
+If the Property is not present, returns an empty array.
+If the Property’s value is not of type URL, omits that value in the array.</p>
 <div class="section" id="id15">
 <h4>Parameters:<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
@@ -970,13 +1012,13 @@ specified <a class="reference external" href="interfaces.html#thing">Thing</a> (
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property</span></code></p></td>
 <td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
-<td><p>The given Property for which you want the URL values.</p></td>
+<td><p>The Property whose URL values to return.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>[]</p>
-<p>The URL values for the given Property.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/1f99b70/src/thing/get.ts#L68">src/thing/get.ts:68</a></p>
+<p>An array of URL values for the given Property.</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/2bf6646/src/thing/get.ts#L76">src/thing/get.ts:76</a></p>
 </div>
 </div>
 </div>
