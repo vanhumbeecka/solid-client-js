@@ -416,7 +416,7 @@
 <h2>Functions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="mockcontainerfrom">
 <h3>mockContainerFrom<a class="headerlink" href="#mockcontainerfrom" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>mockContainerFrom</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <em>Unpromisify</em>&lt;<em>ReturnType</em>&lt;<em>typeof</em> <a class="reference external" href="resource_soliddataset.html#getsoliddataset"><em>getSolidDataset</em></a>&gt;&gt;</p>
+<p>▸ <strong>mockContainerFrom</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <em>Unpromisify</em>&lt;ReturnType&lt;<em>typeof</em> <a class="reference external" href="resource_soliddataset.html#getsoliddataset"><em>getSolidDataset</em></a>&gt;&gt;</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Do not use this function in production code. For use in <strong>unit tests</strong>.</p>
@@ -429,21 +429,21 @@ unit tests that require persisted Containers; e.g., unit tests that call <a clas
 <h4>Parameters:<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>Description</p></th>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Type</p></th>
+<th class="text-align:left head"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">url</span></code></p></td>
-<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
-<td><p>The URL from which the returned Container appears to be retrieved. The <code class="docutils literal notranslate"><span class="pre">url</span></code> must end in a slash.</p></td>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">url</span></code></p></td>
+<td class="text-align:left"><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
+<td class="text-align:left"><p>The URL from which the returned Container appears to be retrieved. The <code class="docutils literal notranslate"><span class="pre">url</span></code> must end in a slash.</p></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>Unpromisify</em>&lt;<em>ReturnType</em>&lt;<em>typeof</em> <a class="reference external" href="resource_soliddataset.html#getsoliddataset"><em>getSolidDataset</em></a>&gt;&gt;</p>
+<p><strong>Returns:</strong> <em>Unpromisify</em>&lt;ReturnType&lt;<em>typeof</em> <a class="reference external" href="resource_soliddataset.html#getsoliddataset"><em>getSolidDataset</em></a>&gt;&gt;</p>
 <p>A mock SolidDataset that appears to be retrieved from the <code class="docutils literal notranslate"><span class="pre">url</span></code>.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/c99d5df/src/resource/mock.ts#L81">src/resource/mock.ts:81</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c397c9/src/resource/mock.ts#L81">src/resource/mock.ts:81</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -463,34 +463,34 @@ that fetch Resources (like <a class="reference external" href="resource_soliddat
 <h4>Parameters:<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>Default value</p></th>
-<th class="head"><p>Description</p></th>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Type</p></th>
+<th class="text-align:left head"><p>Default value</p></th>
+<th class="text-align:left head"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">fetchedUrl</span></code></p></td>
-<td><p><a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
-<td><p>-</p></td>
-<td><p>-</p></td>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">fetchedUrl</span></code></p></td>
+<td class="text-align:left"><p><a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
+<td class="text-align:left"><p>-</p></td>
+<td class="text-align:left"><p>-</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code></p></td>
-<td><p><em>number</em></p></td>
-<td><p>404</p></td>
-<td><p>Optional status code (defaults to 404) that caused the error.</p></td>
+<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">statusCode</span></code></p></td>
+<td class="text-align:left"><p><em>number</em></p></td>
+<td class="text-align:left"><p>404</p></td>
+<td class="text-align:left"><p>Optional status code (defaults to 404) that caused the error.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <a class="reference internal" href="../classes/resource_resource.fetcherror.html"><span class="doc std std-doc"><em>FetchError</em></span></a></p>
 <p>A mock Error that represents not having been able to fetch the Resource at <code class="docutils literal notranslate"><span class="pre">url</span></code> due to a 404 Response.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/c99d5df/src/resource/mock.ts#L144">src/resource/mock.ts:144</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c397c9/src/resource/mock.ts#L144">src/resource/mock.ts:144</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="mockfilefrom">
 <h3>mockFileFrom<a class="headerlink" href="#mockfilefrom" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>mockFileFrom</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">contentType</span></code>: <a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a>[<em>internal_resourceInfo</em>][<em>contentType</em>]  }&gt;): <em>Unpromisify</em>&lt;<em>ReturnType</em>&lt;<em>typeof</em> <a class="reference external" href="resource_file.html#getfile"><em>getFile</em></a>&gt;&gt;</p>
+<p>▸ <strong>mockFileFrom</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">contentType</span></code>: <a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a>[<em>internal_resourceInfo</em>][<em>contentType</em>]  }&gt;): <em>Unpromisify</em>&lt;ReturnType&lt;<em>typeof</em> <a class="reference external" href="resource_file.html#getfile"><em>getFile</em></a>&gt;&gt;</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Do not use this function in production code. For use in <strong>unit tests</strong>.</p>
@@ -503,31 +503,31 @@ unit tests that require persisted Files; e.g. unit tests that call <a class="ref
 <h4>Parameters:<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>Description</p></th>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Type</p></th>
+<th class="text-align:left head"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">url</span></code></p></td>
-<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
-<td><p>The URL from which the returned File appears to be retrieved.</p></td>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">url</span></code></p></td>
+<td class="text-align:left"><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
+<td class="text-align:left"><p>The URL from which the returned File appears to be retrieved.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">options?</span></code></p></td>
-<td><p><em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">contentType</span></code>: <a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a>[<em>internal_resourceInfo</em>][<em>contentType</em>]  }&gt;</p></td>
-<td><p>-</p></td>
+<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">options?</span></code></p></td>
+<td class="text-align:left"><p><em>Partial</em>&lt;{ <code class="docutils literal notranslate"><span class="pre">contentType</span></code>: <a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a>[<em>internal_resourceInfo</em>][<em>contentType</em>]  }&gt;</p></td>
+<td class="text-align:left"><p>-</p></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>Unpromisify</em>&lt;<em>ReturnType</em>&lt;<em>typeof</em> <a class="reference external" href="resource_file.html#getfile"><em>getFile</em></a>&gt;&gt;</p>
+<p><strong>Returns:</strong> <em>Unpromisify</em>&lt;ReturnType&lt;<em>typeof</em> <a class="reference external" href="resource_file.html#getfile"><em>getFile</em></a>&gt;&gt;</p>
 <p>A mock File that appears to be retrieved from the <code class="docutils literal notranslate"><span class="pre">url</span></code>.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/c99d5df/src/resource/mock.ts#L107">src/resource/mock.ts:107</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c397c9/src/resource/mock.ts#L107">src/resource/mock.ts:107</a></p>
 </div>
 </div>
 <hr class="docutils" />
 <div class="section" id="mocksoliddatasetfrom">
 <h3>mockSolidDatasetFrom<a class="headerlink" href="#mocksoliddatasetfrom" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>mockSolidDatasetFrom</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <em>Unpromisify</em>&lt;<em>ReturnType</em>&lt;<em>typeof</em> <a class="reference external" href="resource_soliddataset.html#getsoliddataset"><em>getSolidDataset</em></a>&gt;&gt;</p>
+<p>▸ <strong>mockSolidDatasetFrom</strong>(<code class="docutils literal notranslate"><span class="pre">url</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a>): <em>Unpromisify</em>&lt;ReturnType&lt;<em>typeof</em> <a class="reference external" href="resource_soliddataset.html#getsoliddataset"><em>getSolidDataset</em></a>&gt;&gt;</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Do not use this function in production code. For use in <strong>unit tests</strong>.</p>
@@ -540,21 +540,21 @@ unit tests that require persisted SolidDatasets; e.g., unit tests that call <a c
 <h4>Parameters:<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>Description</p></th>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Type</p></th>
+<th class="text-align:left head"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">url</span></code></p></td>
-<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
-<td><p>The URL from which the returned SolidDataset appears to be retrieved.</p></td>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">url</span></code></p></td>
+<td class="text-align:left"><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
+<td class="text-align:left"><p>The URL from which the returned SolidDataset appears to be retrieved.</p></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>Unpromisify</em>&lt;<em>ReturnType</em>&lt;<em>typeof</em> <a class="reference external" href="resource_soliddataset.html#getsoliddataset"><em>getSolidDataset</em></a>&gt;&gt;</p>
+<p><strong>Returns:</strong> <em>Unpromisify</em>&lt;ReturnType&lt;<em>typeof</em> <a class="reference external" href="resource_soliddataset.html#getsoliddataset"><em>getSolidDataset</em></a>&gt;&gt;</p>
 <p>A mock SolidDataset that appears to be retrieved from the <code class="docutils literal notranslate"><span class="pre">url</span></code>.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/c99d5df/src/resource/mock.ts#L51">src/resource/mock.ts:51</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c397c9/src/resource/mock.ts#L51">src/resource/mock.ts:51</a></p>
 </div>
 </div>
 </div>

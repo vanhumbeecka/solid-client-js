@@ -455,7 +455,7 @@
 <h2>Type aliases<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="getfileoptions">
 <h3>GetFileOptions<a class="headerlink" href="#getfileoptions" title="Permalink to this headline">¶</a></h3>
-<p>Ƭ <strong>GetFileOptions</strong>: { <code class="docutils literal notranslate"><span class="pre">fetch</span></code>: <em>typeof</em> window.fetch  }</p>
+<p>Ƭ <strong>GetFileOptions</strong>: <em>object</em></p>
 <p>Options when fetching a file from a Pod.</p>
 <p>Available options:</p>
 <ul class="simple">
@@ -468,17 +468,17 @@ attach credentials to requests that need authentication.</p></li>
 <h4>Type declaration:<a class="headerlink" href="#type-declaration" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Type</p></th>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Type</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">fetch</span></code></p></td>
-<td><p><em>typeof</em> window.fetch</p></td>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">fetch</span></code></p></td>
+<td class="text-align:left"><p><em>typeof</em> window.fetch</p></td>
 </tr>
 </tbody>
 </table>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/c99d5df/src/resource/file.ts#L49">src/resource/file.ts:49</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c397c9/src/resource/file.ts#L49">src/resource/file.ts:49</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -490,14 +490,14 @@ attach credentials to requests that need authentication.</p></li>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
 </div>
 <p>Options available when writing a file.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/c99d5df/src/resource/file.ts#L231">src/resource/file.ts:231</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c397c9/src/resource/file.ts#L231">src/resource/file.ts:231</a></p>
 </div>
 </div>
 <div class="section" id="id2">
 <h2>Functions<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="deletefile">
 <h3>deleteFile<a class="headerlink" href="#deletefile" title="Permalink to this headline">¶</a></h3>
-<p>▸ <strong>deleteFile</strong>(<code class="docutils literal notranslate"><span class="pre">file</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;<a class="reference external" href="resource_file.html#getfileoptions"><em>GetFileOptions</em></a>&gt;): <em>Promise</em>&lt;<em>void</em>&gt;</p>
+<p>▸ <strong>deleteFile</strong>(<code class="docutils literal notranslate"><span class="pre">file</span></code>: <a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a>, <code class="docutils literal notranslate"><span class="pre">options?</span></code>: <em>Partial</em>&lt;<a class="reference external" href="resource_file.html#getfileoptions"><em>GetFileOptions</em></a>&gt;): <em>Promise</em>&lt;void&gt;</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This function is still experimental and subject to change, even in a non-major release.</p>
@@ -507,27 +507,24 @@ attach credentials to requests that need authentication.</p></li>
 <h4>Parameters:<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>Default value</p></th>
-<th class="head"><p>Description</p></th>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Type</p></th>
+<th class="text-align:left head"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">file</span></code></p></td>
-<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a></p></td>
-<td><p>-</p></td>
-<td><p>The URL of the file to delete</p></td>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">file</span></code></p></td>
+<td class="text-align:left"><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a> | <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a></p></td>
+<td class="text-align:left"><p>The URL of the file to delete</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
-<td><p><em>Partial</em>&lt;<a class="reference external" href="resource_file.html#getfileoptions"><em>GetFileOptions</em></a>&gt;</p></td>
-<td><p>…</p></td>
-<td><p>-</p></td>
+<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
+<td class="text-align:left"><p><em>Partial</em>&lt;<a class="reference external" href="resource_file.html#getfileoptions"><em>GetFileOptions</em></a>&gt;</p></td>
+<td class="text-align:left"><p>-</p></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Returns:</strong> <em>Promise</em>&lt;<em>void</em>&gt;</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/c99d5df/src/resource/file.ts#L113">src/resource/file.ts:113</a></p>
+<p><strong>Returns:</strong> <em>Promise</em>&lt;void&gt;</p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c397c9/src/resource/file.ts#L113">src/resource/file.ts:113</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -543,28 +540,25 @@ attach credentials to requests that need authentication.</p></li>
 <h4>Parameters:<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>Default value</p></th>
-<th class="head"><p>Description</p></th>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Type</p></th>
+<th class="text-align:left head"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">input</span></code></p></td>
-<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
-<td><p>-</p></td>
-<td><p>-</p></td>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">input</span></code></p></td>
+<td class="text-align:left"><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
+<td class="text-align:left"><p>-</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
-<td><p><em>Partial</em>&lt;<a class="reference external" href="resource_file.html#getfileoptions"><em>GetFileOptions</em></a>&gt;</p></td>
-<td><p>…</p></td>
-<td><p>Fetching options: a custom fetcher and/or headers.</p></td>
+<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
+<td class="text-align:left"><p><em>Partial</em>&lt;<a class="reference external" href="resource_file.html#getfileoptions"><em>GetFileOptions</em></a>&gt;</p></td>
+<td class="text-align:left"><p>Fetching options: a custom fetcher and/or headers.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Promise</em>&lt;<a class="reference external" href="interfaces.html#file"><em>File</em></a> &amp; <a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a>&gt;</p>
 <p>The file as a blob.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/c99d5df/src/resource/file.ts#L78">src/resource/file.ts:78</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c397c9/src/resource/file.ts#L78">src/resource/file.ts:78</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -591,13 +585,13 @@ data).</p>
 <h4>Type parameters:<a class="headerlink" href="#type-parameters" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Type</p></th>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Type</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">FileExt</span></code></p></td>
-<td><p>Blob | <em>Buffer</em></p></td>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">FileExt</span></code></p></td>
+<td class="text-align:left"><p>Blob | <em>Buffer</em></p></td>
 </tr>
 </tbody>
 </table>
@@ -606,32 +600,28 @@ data).</p>
 <h4>Parameters:<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>Default value</p></th>
-<th class="head"><p>Description</p></th>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Type</p></th>
+<th class="text-align:left head"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">fileUrl</span></code></p></td>
-<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
-<td><p>-</p></td>
-<td><p>The URL where the file is saved.</p></td>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">fileUrl</span></code></p></td>
+<td class="text-align:left"><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
+<td class="text-align:left"><p>The URL where the file is saved.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">file</span></code></p></td>
-<td><p>FileExt</p></td>
-<td><p>-</p></td>
-<td><p>The file to be written.</p></td>
+<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">file</span></code></p></td>
+<td class="text-align:left"><p>FileExt</p></td>
+<td class="text-align:left"><p>The file to be written.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
-<td><p><em>Partial</em>&lt;<a class="reference external" href="resource_file.html#writefileoptions"><em>WriteFileOptions</em></a>&gt;</p></td>
-<td><p>…</p></td>
-<td><p>Additional parameters for file creation (e.g. a slug, or media type).</p></td>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
+<td class="text-align:left"><p><em>Partial</em>&lt;<a class="reference external" href="resource_file.html#writefileoptions"><em>WriteFileOptions</em></a>&gt;</p></td>
+<td class="text-align:left"><p>Additional parameters for file creation (e.g. a slug, or media type).</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Promise</em>&lt;FileExt &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a>&gt;</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/c99d5df/src/resource/file.ts#L267">src/resource/file.ts:267</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c397c9/src/resource/file.ts#L267">src/resource/file.ts:267</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -667,13 +657,13 @@ will do the job just fine, and does not require the parent Container to exist in
 <h4>Type parameters:<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Type</p></th>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Type</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">FileExt</span></code></p></td>
-<td><p>Blob | <em>Buffer</em></p></td>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">FileExt</span></code></p></td>
+<td class="text-align:left"><p>Blob | <em>Buffer</em></p></td>
 </tr>
 </tbody>
 </table>
@@ -682,33 +672,29 @@ will do the job just fine, and does not require the parent Container to exist in
 <h4>Parameters:<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>Default value</p></th>
-<th class="head"><p>Description</p></th>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Type</p></th>
+<th class="text-align:left head"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">folderUrl</span></code></p></td>
-<td><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
-<td><p>-</p></td>
-<td><p>The URL of the folder where the new file is saved.</p></td>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">folderUrl</span></code></p></td>
+<td class="text-align:left"><p><a class="reference external" href="interfaces.html#url"><em>Url</em></a> | <a class="reference external" href="interfaces.html#urlstring"><em>UrlString</em></a></p></td>
+<td class="text-align:left"><p>The URL of the folder where the new file is saved.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">file</span></code></p></td>
-<td><p>FileExt</p></td>
-<td><p>-</p></td>
-<td><p>The file to be written.</p></td>
+<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">file</span></code></p></td>
+<td class="text-align:left"><p>FileExt</p></td>
+<td class="text-align:left"><p>The file to be written.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
-<td><p><em>Partial</em>&lt;SaveFileOptions&gt;</p></td>
-<td><p>…</p></td>
-<td><p>Additional parameters for file creation (e.g. a slug).</p></td>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">options</span></code></p></td>
+<td class="text-align:left"><p><em>Partial</em>&lt;SaveFileOptions&gt;</p></td>
+<td class="text-align:left"><p>Additional parameters for file creation (e.g. a slug).</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <em>Promise</em>&lt;FileExt &amp; <a class="reference external" href="interfaces.html#withresourceinfo"><em>WithResourceInfo</em></a>&gt;</p>
 <p>A Promise that resolves to the saved file, if available, or <code class="docutils literal notranslate"><span class="pre">null</span></code> if the current user does not have Read access to the newly-saved file. It rejects if saving fails.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/c99d5df/src/resource/file.ts#L188">src/resource/file.ts:188</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c397c9/src/resource/file.ts#L188">src/resource/file.ts:188</a></p>
 </div>
 </div>
 </div>

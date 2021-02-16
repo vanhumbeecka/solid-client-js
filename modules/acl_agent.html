@@ -486,7 +486,7 @@
 <p>The Web Access Control specification is not yet finalised. As such, this
 function is still experimental and subject to change, even in a non-major release.</p>
 </div>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/c99d5df/src/acl/agent.ts#L62">src/acl/agent.ts:62</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c397c9/src/acl/agent.ts#L62">src/acl/agent.ts:62</a></p>
 </div>
 </div>
 <div class="section" id="id2">
@@ -505,25 +505,25 @@ ACL rules, e.g., public or group-specific permissions.</p>
 <h4>Parameters:<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>Description</p></th>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Type</p></th>
+<th class="text-align:left head"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">resourceInfo</span></code></p></td>
-<td><p>WithAcl &amp; <a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a></p></td>
-<td><p>Information about the Resource to which the given Agent may have been granted access.</p></td>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">resourceInfo</span></code></p></td>
+<td class="text-align:left"><p>WithAcl &amp; <a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a></p></td>
+<td class="text-align:left"><p>Information about the Resource to which the given Agent may have been granted access.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">agent</span></code></p></td>
-<td><p><a class="reference external" href="interfaces.html#webid"><em>WebId</em></a></p></td>
-<td><p>WebID of the Agent for which to retrieve what access it has to the Resource.</p></td>
+<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">agent</span></code></p></td>
+<td class="text-align:left"><p><a class="reference external" href="interfaces.html#webid"><em>WebId</em></a></p></td>
+<td class="text-align:left"><p>WebID of the Agent for which to retrieve what access it has to the Resource.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <a class="reference external" href="acl_acl.html#access"><em>Access</em></a> | <em>null</em></p>
 <p>Access Modes that have been explicitly granted to the Agent for the given Resource, or <code class="docutils literal notranslate"><span class="pre">null</span></code> if it could not be determined (e.g. because the current user does not have Control access to a given Resource or its Container).</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/c99d5df/src/acl/agent.ts#L78">src/acl/agent.ts:78</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c397c9/src/acl/agent.ts#L78">src/acl/agent.ts:78</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -541,21 +541,21 @@ ACL rules, e.g., public or group-specific permissions.</p>
 <h4>Parameters:<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>Description</p></th>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Type</p></th>
+<th class="text-align:left head"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">resourceInfo</span></code></p></td>
-<td><p>WithAcl &amp; <a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a></p></td>
-<td><p>Information about the Resource to which Agents may have been granted access.</p></td>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">resourceInfo</span></code></p></td>
+<td class="text-align:left"><p>WithAcl &amp; <a class="reference external" href="interfaces.html#withserverresourceinfo"><em>WithServerResourceInfo</em></a></p></td>
+<td class="text-align:left"><p>Information about the Resource to which Agents may have been granted access.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <a class="reference external" href="acl_agent.html#agentaccess"><em>AgentAccess</em></a> | <em>null</em></p>
 <p>Access Modes per Agent that have been explicitly granted for the given Resource, or <code class="docutils literal notranslate"><span class="pre">null</span></code> if it could not be determined (e.g. because the current user does not have Control access to a given Resource or its Container).</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/c99d5df/src/acl/agent.ts#L103">src/acl/agent.ts:103</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c397c9/src/acl/agent.ts#L103">src/acl/agent.ts:103</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -577,25 +577,25 @@ Container associated with the given ACL (Access Control List).</p>
 <h4>Parameters:<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>Description</p></th>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Type</p></th>
+<th class="text-align:left head"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aclDataset</span></code></p></td>
-<td><p><a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p></td>
-<td><p>The SolidDataset that contains Access-Control List rules for a certain Container.</p></td>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">aclDataset</span></code></p></td>
+<td class="text-align:left"><p><a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p></td>
+<td class="text-align:left"><p>The SolidDataset that contains Access-Control List rules for a certain Container.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">agent</span></code></p></td>
-<td><p><a class="reference external" href="interfaces.html#webid"><em>WebId</em></a></p></td>
-<td><p>WebID of the Agent for which to retrieve what access it has to the Container’s children.</p></td>
+<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">agent</span></code></p></td>
+<td class="text-align:left"><p><a class="reference external" href="interfaces.html#webid"><em>WebId</em></a></p></td>
+<td class="text-align:left"><p>WebID of the Agent for which to retrieve what access it has to the Container’s children.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <a class="reference external" href="acl_acl.html#access"><em>Access</em></a></p>
 <p>Access Modes that have been explicitly granted to an Agent for the children of the Container associated with the given ACL.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/c99d5df/src/acl/agent.ts#L226">src/acl/agent.ts:226</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c397c9/src/acl/agent.ts#L226">src/acl/agent.ts:226</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -617,21 +617,21 @@ of the Container associated with the given ACL (Access Control List).</p>
 <h4>Parameters:<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>Description</p></th>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Type</p></th>
+<th class="text-align:left head"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aclDataset</span></code></p></td>
-<td><p><a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p></td>
-<td><p>The SolidDataset that contains Access-Control List rules.</p></td>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">aclDataset</span></code></p></td>
+<td class="text-align:left"><p><a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p></td>
+<td class="text-align:left"><p>The SolidDataset that contains Access-Control List rules.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <a class="reference external" href="acl_agent.html#agentaccess"><em>AgentAccess</em></a></p>
 <p>Access Modes, per Agent, that have been explicitly granted for the children of the Container associated with the given ACL.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/c99d5df/src/acl/agent.ts#L256">src/acl/agent.ts:256</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c397c9/src/acl/agent.ts#L256">src/acl/agent.ts:256</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -653,25 +653,25 @@ associated with an ACL (Access ControlList).</p>
 <h4>Parameters:<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>Description</p></th>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Type</p></th>
+<th class="text-align:left head"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aclDataset</span></code></p></td>
-<td><p><a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p></td>
-<td><p>The SolidDataset that contains ACL rules.</p></td>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">aclDataset</span></code></p></td>
+<td class="text-align:left"><p><a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p></td>
+<td class="text-align:left"><p>The SolidDataset that contains ACL rules.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">agent</span></code></p></td>
-<td><p><a class="reference external" href="interfaces.html#webid"><em>WebId</em></a></p></td>
-<td><p>WebID of the Agent for which to retrieve what access it has to the Resource.</p></td>
+<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">agent</span></code></p></td>
+<td class="text-align:left"><p><a class="reference external" href="interfaces.html#webid"><em>WebId</em></a></p></td>
+<td class="text-align:left"><p>WebID of the Agent for which to retrieve what access it has to the Resource.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <a class="reference external" href="acl_acl.html#access"><em>Access</em></a></p>
 <p>Access Modes that have been explicitly granted to an Agent for the Resource associated with an ACL SolidDataset.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/c99d5df/src/acl/agent.ts#L134">src/acl/agent.ts:134</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c397c9/src/acl/agent.ts#L134">src/acl/agent.ts:134</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -693,21 +693,21 @@ with an ACL (Access Control List).</p>
 <h4>Parameters:<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>Description</p></th>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Type</p></th>
+<th class="text-align:left head"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aclDataset</span></code></p></td>
-<td><p><a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p></td>
-<td><p>The SolidDataset that contains ACL rules.</p></td>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">aclDataset</span></code></p></td>
+<td class="text-align:left"><p><a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p></td>
+<td class="text-align:left"><p>The SolidDataset that contains ACL rules.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <a class="reference external" href="acl_agent.html#agentaccess"><em>AgentAccess</em></a></p>
 <p>Access Modes per Agent that have been explicitly granted for the Resource associated with an ACL SolidDataset.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/c99d5df/src/acl/agent.ts#L164">src/acl/agent.ts:164</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c397c9/src/acl/agent.ts#L164">src/acl/agent.ts:164</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -732,29 +732,29 @@ new rules for the Agent’s access.</p>
 <h4>Parameters:<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>Description</p></th>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Type</p></th>
+<th class="text-align:left head"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aclDataset</span></code></p></td>
-<td><p><a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p></td>
-<td><p>The SolidDataset that contains Access-Control List rules.</p></td>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">aclDataset</span></code></p></td>
+<td class="text-align:left"><p><a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p></td>
+<td class="text-align:left"><p>The SolidDataset that contains Access-Control List rules.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">agent</span></code></p></td>
-<td><p><a class="reference external" href="interfaces.html#webid"><em>WebId</em></a></p></td>
-<td><p>The Agent to grant specific Access Modes.</p></td>
+<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">agent</span></code></p></td>
+<td class="text-align:left"><p><a class="reference external" href="interfaces.html#webid"><em>WebId</em></a></p></td>
+<td class="text-align:left"><p>The Agent to grant specific Access Modes.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">access</span></code></p></td>
-<td><p><a class="reference external" href="acl_acl.html#access"><em>Access</em></a></p></td>
-<td><p>The Access Modes to grant to the Agent.</p></td>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">access</span></code></p></td>
+<td class="text-align:left"><p><a class="reference external" href="acl_acl.html#access"><em>Access</em></a></p></td>
+<td class="text-align:left"><p>The Access Modes to grant to the Agent.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a> &amp; WithChangeLog</p>
 <p>A new default ACL initialised with the given <code class="docutils literal notranslate"><span class="pre">aclDataset</span></code> and <code class="docutils literal notranslate"><span class="pre">access</span></code> for the <code class="docutils literal notranslate"><span class="pre">agent</span></code>.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/c99d5df/src/acl/agent.ts#L288">src/acl/agent.ts:288</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c397c9/src/acl/agent.ts#L288">src/acl/agent.ts:288</a></p>
 </div>
 </div>
 <hr class="docutils" />
@@ -780,29 +780,29 @@ they are replaced by the new rules.</p>
 <h4>Parameters:<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
 <table class="colwidths-auto table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Name</p></th>
-<th class="head"><p>Type</p></th>
-<th class="head"><p>Description</p></th>
+<tr class="row-odd"><th class="text-align:left head"><p>Name</p></th>
+<th class="text-align:left head"><p>Type</p></th>
+<th class="text-align:left head"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aclDataset</span></code></p></td>
-<td><p><a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p></td>
-<td><p>The SolidDataset that contains Access-Control List rules.</p></td>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">aclDataset</span></code></p></td>
+<td class="text-align:left"><p><a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a></p></td>
+<td class="text-align:left"><p>The SolidDataset that contains Access-Control List rules.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">agent</span></code></p></td>
-<td><p><a class="reference external" href="interfaces.html#webid"><em>WebId</em></a></p></td>
-<td><p>The Agent to grant specific Access Modes.</p></td>
+<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">agent</span></code></p></td>
+<td class="text-align:left"><p><a class="reference external" href="interfaces.html#webid"><em>WebId</em></a></p></td>
+<td class="text-align:left"><p>The Agent to grant specific Access Modes.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">access</span></code></p></td>
-<td><p><a class="reference external" href="acl_acl.html#access"><em>Access</em></a></p></td>
-<td><p>The Access Modes to grant to the Agent for the Resource.</p></td>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">access</span></code></p></td>
+<td class="text-align:left"><p><a class="reference external" href="acl_acl.html#access"><em>Access</em></a></p></td>
+<td class="text-align:left"><p>The Access Modes to grant to the Agent for the Resource.</p></td>
 </tr>
 </tbody>
 </table>
 <p><strong>Returns:</strong> <a class="reference external" href="acl_acl.html#acldataset"><em>AclDataset</em></a> &amp; WithChangeLog</p>
 <p>A new resource ACL initialised with the given <code class="docutils literal notranslate"><span class="pre">aclDataset</span></code> and <code class="docutils literal notranslate"><span class="pre">access</span></code> for the <code class="docutils literal notranslate"><span class="pre">agent</span></code>.</p>
-<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/c99d5df/src/acl/agent.ts#L196">src/acl/agent.ts:196</a></p>
+<p>Defined in: <a class="reference external" href="https://github.com/inrupt/solid-client-js/blob/7c397c9/src/acl/agent.ts#L196">src/acl/agent.ts:196</a></p>
 </div>
 </div>
 </div>
