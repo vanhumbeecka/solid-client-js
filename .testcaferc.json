@@ -1,5 +1,5 @@
 {
-  "appCommand": "cd .codesandbox/sandbox && npx parcel --port 1234 end-to-end-test.html",
+  "appCommand": "cd .codesandbox/sandbox && echo 'The version of Parcel is currently pinned due to https://github.com/parcel-bundler/parcel/issues/5943' && npx parcel@1.12.3 --port 1234 end-to-end-test.html",
   "appInitDelay": 3000,
   "browsers": ["firefox:headless"],
   "src": "src/e2e-browser/**/*.testcafe.ts",
