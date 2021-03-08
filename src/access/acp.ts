@@ -645,6 +645,32 @@ export function internal_setActorAccess<
     policyHasOtherActors(policy, actorRelation, actor, acr)
   );
 
+  // ...check what access the current actor would have if we removed them...
+  const otherActorAcrPolicyUrls = otherActorAcrPolicies.map((acrPolicy) =>
+    asIri(acrPolicy)
+  );
+  const otherActorPolicyUrls = otherActorPolicies.map((policy) =>
+    asIri(policy)
+  );
+  let resourceWithPoliciesExcluded = otherActorAcrPolicyUrls.reduce(
+    removeAcrPolicyUrl,
+    resource
+  );
+  resourceWithPoliciesExcluded = otherActorPolicyUrls.reduce(
+    removePolicyUrl,
+    resourceWithPoliciesExcluded
+  );
+  const remainingAccess = internal_getActorAccess(
+    resourceWithPoliciesExcluded,
+    actorRelation,
+    actor
+  );
+
+  /* istanbul ignore if: It returns null if the ACR has inaccessible Policies, which should happen since we already check for that at the start. */
+  if (remainingAccess === null) {
+    return null;
+  }
+
   // ...add copies of those Policies and their Rules, but excluding the given actor...
   let updatedAcr = acr;
   const newAcrPolicyUrls: IriString[] = [];
@@ -685,8 +711,8 @@ export function internal_setActorAccess<
   let acrPoliciesToUnapply = otherActorAcrPolicies;
   // Only replace existing Policies if the defined access actually changes:
   if (
-    newControlReadAccess !== existingAccess.controlRead ||
-    newControlWriteAccess !== existingAccess.controlWrite
+    newControlReadAccess !== remainingAccess.controlRead ||
+    newControlWriteAccess !== remainingAccess.controlWrite
   ) {
     const newAcrPolicyIri =
       getSourceIri(acr) +
@@ -719,9 +745,9 @@ export function internal_setActorAccess<
   let policiesToUnapply = otherActorPolicies;
   // Only replace existing Policies if the defined access actually changes:
   if (
-    newReadAccess !== existingAccess.read ||
-    newAppendAccess !== existingAccess.append ||
-    newWriteAccess !== existingAccess.write
+    newReadAccess !== remainingAccess.read ||
+    newAppendAccess !== remainingAccess.append ||
+    newWriteAccess !== remainingAccess.write
   ) {
     const newPolicyIri =
       getSourceIri(acr) +

@@ -4823,6 +4823,112 @@ describe("setActorAccess", () => {
         internal_getActorAccess(updatedResource!, actorRelation, actorUrl)
       ).toStrictEqual(accessToSet);
     });
+
+    it("adds a new Policy with the desired access if a Policy that already applies the access gets removed", () => {
+      const acrConfig = {
+        acrPolicies: {
+          "https://some.pod/resource?ext=acl#policy1": {
+            allow: { read: true, write: true },
+            anyOf: {
+              "https://some.pod/resource?ext=acl#rule2": {
+                "http://www.w3.org/ns/solid/acp#agent": [
+                  "http://www.w3.org/ns/solid/acp#PublicAgent",
+                  "http://www.w3.org/ns/solid/acp#AuthenticatedAgent",
+                ],
+              },
+            },
+          },
+          "https://some.pod/resource?ext=acl#policy2": { deny: { read: true } },
+          "https://some.pod/resource?ext=acl#policy3": {
+            noneOf: {
+              "https://some.pod/resource?ext=acl#rule2": {
+                "http://www.w3.org/ns/solid/acp#agent": [
+                  "http://www.w3.org/ns/solid/acp#PublicAgent",
+                  "http://www.w3.org/ns/solid/acp#AuthenticatedAgent",
+                ],
+              },
+            },
+          },
+        },
+        memberAcrPolicies: {},
+        memberPolicies: {},
+        policies: {},
+      };
+      const accessToSet = {
+        append: false,
+        controlRead: false,
+        controlWrite: true,
+        read: false,
+        write: false,
+      };
+      const actorRelation = "http://www.w3.org/ns/solid/acp#agent";
+      const actorUrl = "http://www.w3.org/ns/solid/acp#AuthenticatedAgent";
+
+      const resourceWithAcr = mockResourceWithAcr(
+        "https://some.pod/resource",
+        "https://some.pod/resource?ext=acr",
+        acrConfig
+      );
+      const updatedResource = internal_setActorAccess(
+        resourceWithAcr,
+        actorRelation,
+        actorUrl,
+        accessToSet
+      );
+      expect(
+        internal_getActorAccess(updatedResource!, actorRelation, actorUrl)
+      ).toStrictEqual(accessToSet);
+    });
+
+    it("properly replaces Policies if removing them results in changed access", () => {
+      const acrConfig = {
+        acrPolicies: {},
+        memberAcrPolicies: {},
+        memberPolicies: {},
+        policies: {
+          "https://some.pod/resource?ext=acl#policy1": {
+            allow: { read: true },
+            deny: { append: true },
+            anyOf: {
+              "https://some.pod/resource?ext=acl#rule1": {},
+              "https://some.pod/resource?ext=acl#rule3": {
+                "http://www.w3.org/ns/solid/acp#group": [
+                  "https://some.pod/groups#group2",
+                ],
+              },
+            },
+          },
+          "https://some.pod/resource?ext=acl#policy3": {
+            allow: { append: true },
+            deny: { read: true },
+          },
+        },
+      };
+      const accessToSet = {
+        append: false,
+        controlRead: false,
+        controlWrite: false,
+        read: false,
+        write: false,
+      };
+      const actorRelation = "http://www.w3.org/ns/solid/acp#agent";
+      const actorUrl = "http://www.w3.org/ns/solid/acp#CreatorAgent";
+
+      const resourceWithAcr = mockResourceWithAcr(
+        "https://some.pod/resource",
+        "https://some.pod/resource?ext=acr",
+        acrConfig
+      );
+      const updatedResource = internal_setActorAccess(
+        resourceWithAcr,
+        actorRelation,
+        actorUrl,
+        accessToSet
+      );
+      expect(
+        internal_getActorAccess(updatedResource!, actorRelation, actorUrl)
+      ).toStrictEqual(accessToSet);
+    });
   });
 
   describe("giving an Actor access", () => {
